@@ -11,782 +11,1107 @@
     content="Pati Yestro is a contemporary Rwandan artist exploring memory, identity, resilience, transformation, and the human experience through painting."
   >
 
- <style>
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  html {
-    scroll-behavior: smooth;
-  }
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500&display=swap"
+    rel="stylesheet"
+  >
 
-  body {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    background: #f3eee5;
-    color: #171513;
-    line-height: 1.6;
-    -webkit-font-smoothing: antialiased;
-  }
+  <style>
 
-  a {
-    color: inherit;
-    text-decoration: none;
-  }
+    /* =========================
+       RESET
+    ========================= */
 
-  /* NAVIGATION */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-  header {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    background: rgba(243, 238, 229, 0.96);
-    border-bottom: 1px solid #d6cec2;
-    backdrop-filter: blur(8px);
-  }
+    html {
+      scroll-behavior: smooth;
+    }
 
-  nav {
-    max-width: 1250px;
-    margin: auto;
-    padding: 22px 35px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+    body {
+      background: #f5f1ea;
+      color: #171513;
+      font-family: "Inter", Arial, sans-serif;
+      line-height: 1.6;
+    }
 
-  .logo {
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 19px;
-    letter-spacing: 4px;
-    font-weight: normal;
-  }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
-  .nav-links {
-    display: flex;
-    gap: 32px;
-    font-size: 11px;
-    text-transform: uppercase;
-    letter-spacing: 1.8px;
-  }
 
-  .nav-links a {
-    transition: opacity 0.3s ease;
-  }
+    /* =========================
+       HEADER
+    ========================= */
 
-  .nav-links a:hover {
-    opacity: 0.45;
-  }
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
 
-  /* HERO */
+      background: rgba(245, 241, 234, 0.94);
+      backdrop-filter: blur(12px);
 
-  .hero {
-    min-height: 88vh;
-    max-width: 1250px;
-    margin: auto;
-    padding: 100px 35px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-  }
-
-  .hero-inner {
-    max-width: 950px;
-  }
-
-  .hero h1 {
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: clamp(70px, 11vw, 145px);
-    font-weight: normal;
-    line-height: 0.88;
-    letter-spacing: -5px;
-    margin-bottom: 42px;
-  }
-
-  .hero-subtitle {
-    max-width: 650px;
-    margin: auto;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 17px;
-    line-height: 1.8;
-    letter-spacing: 0.2px;
-    color: #625d56;
-  }
-
-  .hero-button {
-    display: inline-block;
-    margin-top: 40px;
-    padding: 15px 34px;
-    border: 1px solid #171513;
-    font-size: 10px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    transition: all 0.3s ease;
-  }
-
-  .hero-button:hover {
-    background: #171513;
-    color: #f3eee5;
-  }
-
-  /* GENERAL SECTIONS */
-
-  section {
-    max-width: 1250px;
-    margin: auto;
-    padding: 115px 35px;
-  }
-
-  .section-label {
-    font-size: 10px;
-    text-transform: uppercase;
-    letter-spacing: 2.8px;
-    color: #777067;
-    margin-bottom: 18px;
-  }
-
-  .section-title {
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: clamp(44px, 6vw, 72px);
-    font-weight: normal;
-    line-height: 1;
-    letter-spacing: -2px;
-    margin-bottom: 55px;
-  }
-
-  /* ABOUT */
-
-  .about-grid {
-    display: grid;
-    grid-template-columns: 0.8fr 1.4fr;
-    gap: 100px;
-    align-items: start;
-  }
-
-  .about-text {
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 20px;
-    line-height: 1.75;
-    color: #4e4943;
-  }
-
-  .about-text p + p {
-    margin-top: 27px;
-  }
-
-  /* ARTWORKS */
-
-  .works-intro {
-    max-width: 680px;
-    color: #625d56;
-    font-size: 16px;
-    line-height: 1.8;
-    margin-bottom: 60px;
-  }
-
-  .artwork-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 70px 35px;
-  }
-
-  .artwork-image {
-    width: 100%;
-    aspect-ratio: 4 / 5;
-    background: #ded7cc;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-  }
-
-  .artwork-image span {
-    font-size: 9px;
-    text-transform: uppercase;
-    letter-spacing: 2.5px;
-    color: #817a72;
-  }
-
-  .artwork-info {
-    padding-top: 17px;
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    border-top: 1px solid #d1c8bc;
-    margin-top: 12px;
-  }
-
-  .artwork-title {
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 20px;
-    line-height: 1.3;
-  }
-
-  .artwork-details {
-    font-size: 10px;
-    line-height: 1.6;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    color: #777067;
-    text-align: right;
-  }
-
-  /* STATEMENT */
-
-  .statement-section {
-    border-top: 1px solid #d6cec2;
-    border-bottom: 1px solid #d6cec2;
-  }
-
-  .statement {
-    max-width: 900px;
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: clamp(30px, 4vw, 50px);
-    line-height: 1.35;
-    letter-spacing: -1px;
-  }
-
-  /* EXPERIENCE */
-
-  .experience-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 55px 25px;
-  }
-
-  .experience-card {
-    border-top: 1px solid #cfc6b9;
-    padding-top: 20px;
-  }
-
-  .experience-year {
-    font-size: 10px;
-    letter-spacing: 1.5px;
-    color: #777067;
-    margin-bottom: 12px;
-  }
-
-  .experience-card h3 {
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 21px;
-    font-weight: normal;
-    line-height: 1.3;
-    margin-bottom: 9px;
-  }
-
-  .experience-card p {
-    font-size: 12px;
-    line-height: 1.6;
-    color: #625d56;
-  }
-
-  /* CONTACT */
-
-  .contact-section {
-    text-align: center;
-  }
-
-  .contact-section .section-title {
-    margin-bottom: 25px;
-  }
-
-  .contact-text {
-    color: #625d56;
-    font-size: 16px;
-    line-height: 1.8;
-  }
-
-  .contact-link {
-    display: inline-block;
-    margin-top: 30px;
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 22px;
-    border-bottom: 1px solid #171513;
-    padding-bottom: 5px;
-  }
-
-  .social {
-    margin-top: 25px;
-    font-size: 10px;
-    letter-spacing: 1.5px;
-  }
-
-  /* FOOTER */
-
-  footer {
-    border-top: 1px solid #d6cec2;
-    padding: 30px 35px;
-    text-align: center;
-    font-size: 9px;
-    color: #777067;
-    text-transform: uppercase;
-    letter-spacing: 1.8px;
-  }
-
-  /* MOBILE */
-
-  @media (max-width: 750px) {
+      border-bottom: 1px solid #d8d0c5;
+    }
 
     nav {
-      padding: 17px 20px;
+      max-width: 1350px;
+      margin: auto;
+
+      padding: 22px 40px;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
 
     .logo {
-      font-size: 16px;
-      letter-spacing: 3px;
+      font-family: "Inter", Arial, sans-serif;
+
+      font-size: 15px;
+      font-weight: 500;
+
+      letter-spacing: 4px;
     }
 
     .nav-links {
-      gap: 12px;
-      font-size: 8px;
-      letter-spacing: 1.2px;
+      display: flex;
+      gap: 32px;
+
+      font-size: 11px;
+      font-weight: 400;
+
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
     }
 
+    .nav-links a {
+      transition: opacity 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      opacity: 0.45;
+    }
+
+
+    /* =========================
+       HERO
+    ========================= */
+
     .hero {
-      min-height: 78vh;
-      padding: 70px 20px;
+      min-height: 90vh;
+
+      max-width: 1350px;
+      margin: auto;
+
+      padding: 100px 40px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      text-align: center;
+    }
+
+    .hero-inner {
+      max-width: 1100px;
     }
 
     .hero h1 {
-      font-size: clamp(58px, 17vw, 95px);
-      letter-spacing: -3px;
-      margin-bottom: 30px;
+      font-family: "Cormorant Garamond", Georgia, serif;
+
+      font-size: clamp(75px, 13vw, 175px);
+
+      font-weight: 400;
+
+      line-height: 0.8;
+
+      letter-spacing: -6px;
+
+      margin-bottom: 55px;
     }
 
     .hero-subtitle {
-      font-size: 15px;
-      line-height: 1.7;
+      max-width: 680px;
+      margin: auto;
+
+      font-size: 18px;
+
+      font-weight: 300;
+
+      color: #625d56;
+
+      line-height: 1.8;
     }
 
+    .hero-button {
+      display: inline-block;
+
+      margin-top: 45px;
+
+      padding: 15px 32px;
+
+      border: 1px solid #171513;
+
+      font-size: 10px;
+
+      text-transform: uppercase;
+
+      letter-spacing: 2px;
+
+      transition: all 0.3s ease;
+    }
+
+    .hero-button:hover {
+      background: #171513;
+      color: #f5f1ea;
+    }
+
+
+    /* =========================
+       GENERAL SECTIONS
+    ========================= */
+
     section {
-      padding: 85px 20px;
+      max-width: 1350px;
+      margin: auto;
+
+      padding: 120px 40px;
+    }
+
+    .section-label {
+      font-size: 10px;
+
+      text-transform: uppercase;
+
+      letter-spacing: 2.5px;
+
+      color: #777067;
+
+      margin-bottom: 18px;
     }
 
     .section-title {
-      letter-spacing: -1px;
+      font-family: "Cormorant Garamond", Georgia, serif;
+
+      font-size: clamp(55px, 7vw, 90px);
+
+      font-weight: 400;
+
+      line-height: 0.95;
+
+      margin-bottom: 55px;
     }
 
-    .about-grid {
-      grid-template-columns: 1fr;
-      gap: 35px;
-    }
 
-    .about-text {
-      font-size: 18px;
-    }
+    /* =========================
+       WORKS
+    ========================= */
 
-    .artwork-grid {
-      grid-template-columns: 1fr;
-      gap: 55px;
-    }
+    .works-intro {
+      max-width: 650px;
 
-    .experience-grid {
-      grid-template-columns: 1fr;
-      gap: 40px;
-    }
+      color: #625d56;
 
-    .artwork-info {
-      flex-direction: column;
-      gap: 6px;
-    }
-
-    .artwork-details {
-      text-align: left;
-    }
-
-    footer {
-      padding: 25px 20px;
-    }
-  }
-</style><style>
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-
-  html {
-    scroll-behavior: smooth;
-  }
-
-  body {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    background: #f3eee5;
-    color: #171513;
-    line-height: 1.6;
-    -webkit-font-smoothing: antialiased;
-  }
-
-  a {
-    color: inherit;
-    text-decoration: none;
-  }
-
-  /* NAVIGATION */
-
-  header {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    background: rgba(243, 238, 229, 0.96);
-    border-bottom: 1px solid #d6cec2;
-    backdrop-filter: blur(8px);
-  }
-
-  nav {
-    max-width: 1250px;
-    margin: auto;
-    padding: 22px 35px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .logo {
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 19px;
-    letter-spacing: 4px;
-    font-weight: normal;
-  }
-
-  .nav-links {
-    display: flex;
-    gap: 32px;
-    font-size: 11px;
-    text-transform: uppercase;
-    letter-spacing: 1.8px;
-  }
-
-  .nav-links a {
-    transition: opacity 0.3s ease;
-  }
-
-  .nav-links a:hover {
-    opacity: 0.45;
-  }
-
-  /* HERO */
-
-  .hero {
-    min-height: 88vh;
-    max-width: 1250px;
-    margin: auto;
-    padding: 100px 35px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-  }
-
-  .hero-inner {
-    max-width: 950px;
-  }
-
-  .hero h1 {
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: clamp(70px, 11vw, 145px);
-    font-weight: normal;
-    line-height: 0.88;
-    letter-spacing: -5px;
-    margin-bottom: 42px;
-  }
-
-  .hero-subtitle {
-    max-width: 650px;
-    margin: auto;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 17px;
-    line-height: 1.8;
-    letter-spacing: 0.2px;
-    color: #625d56;
-  }
-
-  .hero-button {
-    display: inline-block;
-    margin-top: 40px;
-    padding: 15px 34px;
-    border: 1px solid #171513;
-    font-size: 10px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    transition: all 0.3s ease;
-  }
-
-  .hero-button:hover {
-    background: #171513;
-    color: #f3eee5;
-  }
-
-  /* GENERAL SECTIONS */
-
-  section {
-    max-width: 1250px;
-    margin: auto;
-    padding: 115px 35px;
-  }
-
-  .section-label {
-    font-size: 10px;
-    text-transform: uppercase;
-    letter-spacing: 2.8px;
-    color: #777067;
-    margin-bottom: 18px;
-  }
-
-  .section-title {
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: clamp(44px, 6vw, 72px);
-    font-weight: normal;
-    line-height: 1;
-    letter-spacing: -2px;
-    margin-bottom: 55px;
-  }
-
-  /* ABOUT */
-
-  .about-grid {
-    display: grid;
-    grid-template-columns: 0.8fr 1.4fr;
-    gap: 100px;
-    align-items: start;
-  }
-
-  .about-text {
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 20px;
-    line-height: 1.75;
-    color: #4e4943;
-  }
-
-  .about-text p + p {
-    margin-top: 27px;
-  }
-
-  /* ARTWORKS */
-
-  .works-intro {
-    max-width: 680px;
-    color: #625d56;
-    font-size: 16px;
-    line-height: 1.8;
-    margin-bottom: 60px;
-  }
-
-  .artwork-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 70px 35px;
-  }
-
-  .artwork-image {
-    width: 100%;
-    aspect-ratio: 4 / 5;
-    background: #ded7cc;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-  }
-
-  .artwork-image span {
-    font-size: 9px;
-    text-transform: uppercase;
-    letter-spacing: 2.5px;
-    color: #817a72;
-  }
-
-  .artwork-info {
-    padding-top: 17px;
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    border-top: 1px solid #d1c8bc;
-    margin-top: 12px;
-  }
-
-  .artwork-title {
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 20px;
-    line-height: 1.3;
-  }
-
-  .artwork-details {
-    font-size: 10px;
-    line-height: 1.6;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    color: #777067;
-    text-align: right;
-  }
-
-  /* STATEMENT */
-
-  .statement-section {
-    border-top: 1px solid #d6cec2;
-    border-bottom: 1px solid #d6cec2;
-  }
-
-  .statement {
-    max-width: 900px;
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: clamp(30px, 4vw, 50px);
-    line-height: 1.35;
-    letter-spacing: -1px;
-  }
-
-  /* EXPERIENCE */
-
-  .experience-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 55px 25px;
-  }
-
-  .experience-card {
-    border-top: 1px solid #cfc6b9;
-    padding-top: 20px;
-  }
-
-  .experience-year {
-    font-size: 10px;
-    letter-spacing: 1.5px;
-    color: #777067;
-    margin-bottom: 12px;
-  }
-
-  .experience-card h3 {
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 21px;
-    font-weight: normal;
-    line-height: 1.3;
-    margin-bottom: 9px;
-  }
-
-  .experience-card p {
-    font-size: 12px;
-    line-height: 1.6;
-    color: #625d56;
-  }
-
-  /* CONTACT */
-
-  .contact-section {
-    text-align: center;
-  }
-
-  .contact-section .section-title {
-    margin-bottom: 25px;
-  }
-
-  .contact-text {
-    color: #625d56;
-    font-size: 16px;
-    line-height: 1.8;
-  }
-
-  .contact-link {
-    display: inline-block;
-    margin-top: 30px;
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 22px;
-    border-bottom: 1px solid #171513;
-    padding-bottom: 5px;
-  }
-
-  .social {
-    margin-top: 25px;
-    font-size: 10px;
-    letter-spacing: 1.5px;
-  }
-
-  /* FOOTER */
-
-  footer {
-    border-top: 1px solid #d6cec2;
-    padding: 30px 35px;
-    text-align: center;
-    font-size: 9px;
-    color: #777067;
-    text-transform: uppercase;
-    letter-spacing: 1.8px;
-  }
-
-  /* MOBILE */
-
-  @media (max-width: 750px) {
-
-    nav {
-      padding: 17px 20px;
-    }
-
-    .logo {
       font-size: 16px;
-      letter-spacing: 3px;
-    }
 
-    .nav-links {
-      gap: 12px;
-      font-size: 8px;
-      letter-spacing: 1.2px;
-    }
+      font-weight: 300;
 
-    .hero {
-      min-height: 78vh;
-      padding: 70px 20px;
-    }
+      line-height: 1.8;
 
-    .hero h1 {
-      font-size: clamp(58px, 17vw, 95px);
-      letter-spacing: -3px;
-      margin-bottom: 30px;
-    }
-
-    .hero-subtitle {
-      font-size: 15px;
-      line-height: 1.7;
-    }
-
-    section {
-      padding: 85px 20px;
-    }
-
-    .section-title {
-      letter-spacing: -1px;
-    }
-
-    .about-grid {
-      grid-template-columns: 1fr;
-      gap: 35px;
-    }
-
-    .about-text {
-      font-size: 18px;
+      margin-bottom: 65px;
     }
 
     .artwork-grid {
-      grid-template-columns: 1fr;
-      gap: 55px;
+      display: grid;
+
+      grid-template-columns: repeat(2, 1fr);
+
+      gap: 80px 35px;
     }
 
-    .experience-grid {
-      grid-template-columns: 1fr;
-      gap: 40px;
+    .artwork-image {
+      width: 100%;
+
+      aspect-ratio: 4 / 5;
+
+      background: #ded7cc;
+
+      display: flex;
+
+      align-items: center;
+      justify-content: center;
+
+      overflow: hidden;
+    }
+
+    .artwork-image span {
+      font-size: 10px;
+
+      text-transform: uppercase;
+
+      letter-spacing: 2px;
+
+      color: #817a72;
     }
 
     .artwork-info {
-      flex-direction: column;
-      gap: 6px;
+      padding-top: 16px;
+
+      display: flex;
+
+      justify-content: space-between;
+
+      gap: 20px;
+
+      border-top: 1px solid #d1c8bc;
+
+      margin-top: 12px;
+    }
+
+    .artwork-title {
+      font-family: "Cormorant Garamond", Georgia, serif;
+
+      font-size: 25px;
+
+      font-weight: 500;
     }
 
     .artwork-details {
-      text-align: left;
+      font-size: 10px;
+
+      color: #777067;
+
+      text-align: right;
+
+      text-transform: uppercase;
+
+      letter-spacing: 1px;
+
+      line-height: 1.7;
     }
+
+
+    /* =========================
+       ABOUT
+    ========================= */
+
+    .about-grid {
+      display: grid;
+
+      grid-template-columns: 0.8fr 1.4fr;
+
+      gap: 120px;
+
+      align-items: start;
+    }
+
+    .about-text {
+      max-width: 720px;
+
+      font-family: "Cormorant Garamond", Georgia, serif;
+
+      font-size: 27px;
+
+      line-height: 1.45;
+
+      color: #4e4943;
+    }
+
+    .about-text p + p {
+      margin-top: 30px;
+    }
+
+
+    /* =========================
+       ARTIST STATEMENT
+    ========================= */
+
+    .statement-section {
+      border-top: 1px solid #d6cec2;
+
+      border-bottom: 1px solid #d6cec2;
+    }
+
+    .statement {
+      max-width: 1000px;
+
+      font-family: "Cormorant Garamond", Georgia, serif;
+
+      font-size: clamp(38px, 5vw, 68px);
+
+      line-height: 1.2;
+
+      font-weight: 400;
+    }
+
+
+    /* =========================
+       EXPERIENCE
+    ========================= */
+
+    .experience-grid {
+      display: grid;
+
+      grid-template-columns: repeat(3, 1fr);
+
+      gap: 55px 35px;
+    }
+
+    .experience-card {
+      border-top: 1px solid #cfc6b9;
+
+      padding-top: 20px;
+    }
+
+    .experience-year {
+      font-size: 10px;
+
+      color: #777067;
+
+      margin-bottom: 10px;
+
+      letter-spacing: 1.5px;
+    }
+
+    .experience-card h3 {
+      font-family: "Cormorant Garamond", Georgia, serif;
+
+      font-size: 27px;
+
+      font-weight: 500;
+
+      margin-bottom: 8px;
+    }
+
+    .experience-card p {
+      font-size: 12px;
+
+      color: #625d56;
+    }
+
+
+    /* =========================
+       CONTACT
+    ========================= */
+
+    .contact-section {
+      text-align: center;
+    }
+
+    .contact-section .section-title {
+      margin-bottom: 25px;
+    }
+
+    .contact-text {
+      max-width: 600px;
+
+      margin: auto;
+
+      color: #625d56;
+
+      font-size: 16px;
+
+      font-weight: 300;
+
+      line-height: 1.8;
+    }
+
+    .contact-link {
+      display: inline-block;
+
+      margin-top: 35px;
+
+      font-family: "Cormorant Garamond", Georgia, serif;
+
+      font-size: 30px;
+
+      border-bottom: 1px solid #171513;
+
+      padding-bottom: 5px;
+    }
+
+    .social {
+      margin-top: 30px;
+
+      font-size: 11px;
+
+      letter-spacing: 1.5px;
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================= */
 
     footer {
-      padding: 25px 20px;
-    }
-  }
-</style>
+      border-top: 1px solid #d6cec2;
 
-  
+      padding: 30px 40px;
+
+      text-align: center;
+
+      font-size: 9px;
+
+      color: #777067;
+
+      text-transform: uppercase;
+
+      letter-spacing: 1.5px;
+    }
+
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media (max-width: 750px) {
+
+      nav {
+        padding: 18px 20px;
+      }
+
+      .logo {
+        font-size: 12px;
+
+        letter-spacing: 3px;
+      }
+
+      .nav-links {
+        gap: 13px;
+
+        font-size: 8px;
+
+        letter-spacing: 1px;
+      }
+
+      .hero {
+        min-height: 82vh;
+
+        padding: 70px 20px;
+      }
+
+      .hero h1 {
+        font-size: clamp(65px, 20vw, 105px);
+
+        letter-spacing: -4px;
+
+        margin-bottom: 35px;
+      }
+
+      .hero-subtitle {
+        font-size: 16px;
+
+        line-height: 1.7;
+      }
+
+      section {
+        padding: 85px 20px;
+      }
+
+      .section-title {
+        font-size: 58px;
+
+        margin-bottom: 40px;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+      }
+
+      .about-text {
+        font-size: 23px;
+      }
+
+      .artwork-grid {
+        grid-template-columns: 1fr;
+
+        gap: 55px;
+      }
+
+      .artwork-title {
+        font-size: 23px;
+      }
+
+      .artwork-info {
+        flex-direction: column;
+
+        gap: 7px;
+      }
+
+      .artwork-details {
+        text-align: left;
+      }
+
+      .experience-grid {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+      }
+
+      .statement {
+        font-size: 40px;
+      }
+
+      .contact-link {
+        font-size: 25px;
+      }
+
+      footer {
+        padding: 25px 20px;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- =========================
+       HEADER
+  ========================= -->
+
+  <header>
+
+    <nav>
+
+      <a href="#" class="logo">
+        PATI YESTRO
+      </a>
+
+      <div class="nav-links">
+
+        <a href="#work">Work</a>
+
+        <a href="#about">About</a>
+
+        <a href="#statement">Statement</a>
+
+        <a href="#contact">Contact</a>
+
+      </div>
+
+    </nav>
+
+  </header>
+
+
+  <main>
+
+
+    <!-- =========================
+         HERO
+    ========================= -->
+
+    <section class="hero">
+
+      <div class="hero-inner">
+
+        <h1>
+          Pati Yestro
+        </h1>
+
+        <p class="hero-subtitle">
+
+          Contemporary Rwandan artist exploring
+          memory, identity, resilience,
+          transformation, and the human experience
+          through painting.
+
+        </p>
+
+        <a href="#work" class="hero-button">
+          Explore the Work
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         WORK
+    ========================= -->
+
+    <section id="work">
+
+      <div class="section-label">
+        Selected Works
+      </div>
+
+      <h2 class="section-title">
+        The Paintings
+      </h2>
+
+      <p class="works-intro">
+
+        A selection of works exploring the stories
+        carried by the body, the strength of women,
+        memory, time, identity, and transformation.
+
+      </p>
+
+
+      <div class="artwork-grid">
+
+
+        <!-- WORK 1 -->
+
+        <article>
+
+          <div class="artwork-image">
+
+            <span>
+              Painting Image
+            </span>
+
+          </div>
+
+          <div class="artwork-info">
+
+            <div class="artwork-title">
+              What Time Couldn't Erase
+            </div>
+
+            <div class="artwork-details">
+
+              Oil on Canvas<br>
+              2025
+
+            </div>
+
+          </div>
+
+        </article>
+
+
+        <!-- WORK 2 -->
+
+        <article>
+
+          <div class="artwork-image">
+
+            <span>
+              Painting Image
+            </span>
+
+          </div>
+
+          <div class="artwork-info">
+
+            <div class="artwork-title">
+              Bound Yet Burning
+            </div>
+
+            <div class="artwork-details">
+
+              Oil on Canvas<br>
+              2025
+
+            </div>
+
+          </div>
+
+        </article>
+
+
+        <!-- WORK 3 -->
+
+        <article>
+
+          <div class="artwork-image">
+
+            <span>
+              Painting Image
+            </span>
+
+          </div>
+
+          <div class="artwork-info">
+
+            <div class="artwork-title">
+              She Who Stays
+            </div>
+
+            <div class="artwork-details">
+
+              Oil on Canvas<br>
+              2024
+
+            </div>
+
+          </div>
+
+        </article>
+
+
+        <!-- WORK 4 -->
+
+        <article>
+
+          <div class="artwork-image">
+
+            <span>
+              Painting Image
+            </span>
+
+          </div>
+
+          <div class="artwork-info">
+
+            <div class="artwork-title">
+              The Body Remembers
+            </div>
+
+            <div class="artwork-details">
+
+              Oil on Canvas<br>
+              2024
+
+            </div>
+
+          </div>
+
+        </article>
+
+
+        <!-- WORK 5 -->
+
+        <article>
+
+          <div class="artwork-image">
+
+            <span>
+              Painting Image
+            </span>
+
+          </div>
+
+          <div class="artwork-info">
+
+            <div class="artwork-title">
+              Guardian of Eternity
+            </div>
+
+            <div class="artwork-details">
+
+              Oil on Canvas<br>
+              2023
+
+            </div>
+
+          </div>
+
+        </article>
+
+
+        <!-- WORK 6 -->
+
+        <article>
+
+          <div class="artwork-image">
+
+            <span>
+              Painting Image
+            </span>
+
+          </div>
+
+          <div class="artwork-info">
+
+            <div class="artwork-title">
+              Not Fragile as Flowers,
+              Fragile as Bomb
+            </div>
+
+            <div class="artwork-details">
+
+              Oil on Canvas
+
+            </div>
+
+          </div>
+
+        </article>
+
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         ABOUT
+    ========================= -->
+
+    <section id="about">
+
+      <div class="about-grid">
+
+
+        <div>
+
+          <div class="section-label">
+            About the Artist
+          </div>
+
+          <h2 class="section-title">
+            Pati Yestro
+          </h2>
+
+        </div>
+
+
+        <div class="about-text">
+
+          <p>
+
+            Pati Yestro is a contemporary Rwandan
+            artist based in Kigali, working primarily
+            with oil and mixed media.
+
+          </p>
+
+          <p>
+
+            His practice explores memory, identity,
+            resilience, transformation, and the
+            emotional stories carried by the human body.
+
+          </p>
+
+          <p>
+
+            Women and children frequently occupy
+            the center of his work, reflecting themes
+            of strength, vulnerability, beauty,
+            memory, and the experiences that shape us.
+
+          </p>
+
+          <p>
+
+            Through painting, Pati seeks to communicate
+            what words sometimes cannot.
+
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         STATEMENT
+    ========================= -->
+
+    <section id="statement" class="statement-section">
+
+      <div class="section-label">
+        Artist Statement
+      </div>
+
+      <p class="statement">
+
+        “I want to change the world without talking,
+        only using my hands.”
+
+      </p>
+
+    </section>
+
+
+    <!-- =========================
+         EXPERIENCE
+    ========================= -->
+
+    <section>
+
+      <div class="section-label">
+        Selected Experience
+      </div>
+
+      <h2 class="section-title">
+        Exhibitions & Projects
+      </h2>
+
+
+      <div class="experience-grid">
+
+
+        <div class="experience-card">
+
+          <div class="experience-year">
+            2024
+          </div>
+
+          <h3>
+            High Art Competition
+          </h3>
+
+          <p>
+            Third Place
+          </p>
+
+        </div>
+
+
+        <div class="experience-card">
+
+          <div class="experience-year">
+            2024
+          </div>
+
+          <h3>
+            Envision Rwanda
+          </h3>
+
+          <p>
+            5 Years Anniversary Exhibition
+          </p>
+
+        </div>
+
+
+        <div class="experience-card">
+
+          <div class="experience-year">
+            2020
+          </div>
+
+          <h3>
+            Genesis
+          </h3>
+
+          <p>
+            Solo Online Exhibition
+          </p>
+
+        </div>
+
+
+        <div class="experience-card">
+
+          <div class="experience-year">
+            2019
+          </div>
+
+          <h3>
+            Anda Arts Festival
+          </h3>
+
+          <p>
+            Participating Artist
+          </p>
+
+        </div>
+
+
+        <div class="experience-card">
+
+          <div class="experience-year">
+            2016
+          </div>
+
+          <h3>
+            Kwita Izina
+          </h3>
+
+          <p>
+            Participating Artist
+          </p>
+
+        </div>
+
+
+        <div class="experience-card">
+
+          <div class="experience-year">
+            2014
+          </div>
+
+          <h3>
+            Kivu Nuru
+          </h3>
+
+          <p>
+            Participating Artist
+          </p>
+
+        </div>
+
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         CONTACT
+    ========================= -->
+
+    <section id="contact" class="contact-section">
+
+      <div class="section-label">
+        Contact
+      </div>
+
+      <h2 class="section-title">
+        Let's Work Together
+      </h2>
+
+      <p class="contact-text">
+
+        For exhibitions, commissions,
+        collaborations, acquisitions,
+        and artwork inquiries.
+
+      </p>
+
+      <a
+        href="mailto:patiyestro@gmail.com"
+        class="contact-link"
+      >
+        Contact Pati Yestro
+      </a>
+
+      <div class="social">
+
+        Instagram: @Pati_yestro
+
+      </div>
+
+    </section>
+
+
+  </main>
+
+
+  <!-- =========================
+       FOOTER
+  ========================= -->
+
+  <footer>
+
+    © 2026 Pati Yestro — Contemporary Artist
+
+  </footer>
+
+
+</body>
+</html>
