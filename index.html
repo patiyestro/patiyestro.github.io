@@ -1,8 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
     <title>Pati Yestro — Contemporary Visual Artist</title>
 
@@ -11,9 +16,13 @@
         content="Pati Yestro is a Rwandan contemporary visual artist working with oil and mixed media."
     >
 
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
 
     <link
         href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500&display=swap"
@@ -21,10 +30,6 @@
     >
 
     <style>
-
-        /* =====================================================
-           RESET
-        ===================================================== */
 
         * {
             margin: 0;
@@ -59,9 +64,9 @@
         }
 
 
-        /* =====================================================
+        /* =========================
            HEADER
-        ===================================================== */
+        ========================= */
 
         header {
             position: sticky;
@@ -111,9 +116,9 @@
         }
 
 
-        /* =====================================================
-           GENERAL
-        ===================================================== */
+        /* =========================
+           GENERAL SECTIONS
+        ========================= */
 
         section {
             max-width: 1350px;
@@ -134,18 +139,20 @@
             font-size: clamp(55px, 7vw, 90px);
 
             font-weight: 400;
+
             line-height: 0.95;
 
             margin-bottom: 70px;
         }
 
 
-        /* =====================================================
+        /* =========================
            HERO
-        ===================================================== */
+        ========================= */
 
         .hero {
             max-width: none;
+
             min-height: 82vh;
 
             padding: 90px 40px;
@@ -166,6 +173,7 @@
             font-size: clamp(65px, 11vw, 155px);
 
             font-weight: 400;
+
             line-height: 0.85;
 
             letter-spacing: 2px;
@@ -186,9 +194,9 @@
         }
 
 
-        /* =====================================================
-           SELECTED WORK
-        ===================================================== */
+        /* =========================
+           SELECTED WORKS
+        ========================= */
 
         .works-grid {
             display: grid;
@@ -200,6 +208,7 @@
 
         .work-card {
             cursor: pointer;
+
             overflow: hidden;
         }
 
@@ -245,17 +254,28 @@
         }
 
 
-        /* =====================================================
-           EXPLORE MORE
-        ===================================================== */
+        /* =========================
+           EXPLORE MORE + STUDIO
+        ========================= */
 
-        .explore-more {
-            text-align: center;
+        .explore-links {
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            gap: 55px;
+
             margin-top: 80px;
         }
 
-        .explore-more a {
-            display: inline-block;
+        .explore-links a {
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 12px;
 
             border-bottom: 1px solid #171513;
 
@@ -266,12 +286,30 @@
             letter-spacing: 2px;
 
             text-transform: uppercase;
+
+            transition: opacity 0.3s ease;
+        }
+
+        .explore-links a span {
+            font-size: 16px;
+
+            line-height: 1;
+
+            transition: transform 0.3s ease;
+        }
+
+        .explore-links a:hover {
+            opacity: 0.5;
+        }
+
+        .explore-links a:hover span {
+            transform: translateX(5px);
         }
 
 
-        /* =====================================================
+        /* =========================
            COLLECTIONS
-        ===================================================== */
+        ========================= */
 
         .collections {
             background: #EDEAE4;
@@ -293,7 +331,9 @@
             border: 1px solid rgba(23, 21, 19, 0.15);
 
             display: flex;
+
             flex-direction: column;
+
             justify-content: flex-end;
 
             transition:
@@ -303,12 +343,15 @@
 
         .collection-card:hover {
             background: #171513;
+
             color: #F5F1EA;
         }
 
         .collection-number {
             font-size: 10px;
+
             letter-spacing: 2px;
+
             margin-bottom: 20px;
         }
 
@@ -333,15 +376,15 @@
         }
 
 
-        /* =====================================================
+        /* =========================
            BIOGRAPHY
-           COMPACT VERSION
-        ===================================================== */
+        ========================= */
 
         .bio {
             background: #F5F1EA;
 
             padding-top: 90px;
+
             padding-bottom: 90px;
         }
 
@@ -368,15 +411,15 @@
         }
 
 
-        /* =====================================================
+        /* =========================
            ARTIST STATEMENT
-           COMPACT VERSION
-        ===================================================== */
+        ========================= */
 
         .statement {
             background: #EDEAE4;
 
             padding-top: 90px;
+
             padding-bottom: 90px;
         }
 
@@ -403,9 +446,9 @@
         }
 
 
-        /* =====================================================
+        /* =========================
            QUOTE
-        ===================================================== */
+        ========================= */
 
         .quote {
             background: #F5F1EA;
@@ -413,6 +456,7 @@
             text-align: center;
 
             padding-top: 150px;
+
             padding-bottom: 150px;
         }
 
@@ -431,9 +475,9 @@
         }
 
 
-        /* =====================================================
+        /* =========================
            EXHIBITIONS
-        ===================================================== */
+        ========================= */
 
         .exhibitions {
             background: #F5F1EA;
@@ -459,6 +503,7 @@
 
         .exhibition-year {
             font-size: 11px;
+
             letter-spacing: 1px;
         }
 
@@ -479,9 +524,9 @@
         }
 
 
-        /* =====================================================
+        /* =========================
            CERTIFICATES
-        ===================================================== */
+        ========================= */
 
         .certificates {
             background: #EDEAE4;
@@ -507,6 +552,7 @@
 
         .certificate-year {
             font-size: 11px;
+
             letter-spacing: 1px;
         }
 
@@ -527,9 +573,9 @@
         }
 
 
-        /* =====================================================
+        /* =========================
            CONTACT
-        ===================================================== */
+        ========================= */
 
         .contact {
             max-width: 1350px;
@@ -582,9 +628,9 @@
         }
 
 
-        /* =====================================================
+        /* =========================
            FOOTER
-        ===================================================== */
+        ========================= */
 
         footer {
             background: #171513;
@@ -607,11 +653,9 @@
         }
 
 
-        /* =====================================================
-           PAINTING DETAILS POPUP
-           
-           NO IMAGE IS USED HERE.
-        ===================================================== */
+        /* =========================
+           PAINTING MODAL
+        ========================= */
 
         .modal {
             position: fixed;
@@ -653,6 +697,7 @@
             position: absolute;
 
             top: 20px;
+
             right: 25px;
 
             border: none;
@@ -749,9 +794,9 @@
         }
 
 
-        /* =====================================================
+        /* =========================
            MOBILE
-        ===================================================== */
+        ========================= */
 
         @media (max-width: 750px) {
 
@@ -761,6 +806,7 @@
 
             .logo {
                 font-size: 11px;
+
                 letter-spacing: 2px;
             }
 
@@ -770,15 +816,13 @@
 
             .nav-links a {
                 font-size: 8px;
+
                 letter-spacing: 1px;
             }
 
             section {
                 padding: 80px 20px;
             }
-
-
-            /* HERO */
 
             .hero {
                 min-height: 75vh;
@@ -798,15 +842,12 @@
                 font-size: 11px;
             }
 
-
-            /* TITLES */
-
             .section-title {
                 margin-bottom: 45px;
             }
 
 
-            /* WORK */
+            /* WORKS */
 
             .works-grid {
                 grid-template-columns: 1fr;
@@ -816,6 +857,17 @@
 
             .work-title {
                 font-size: 24px;
+            }
+
+
+            /* EXPLORE + STUDIO */
+
+            .explore-links {
+                flex-direction: column;
+
+                gap: 25px;
+
+                margin-top: 60px;
             }
 
 
@@ -834,11 +886,12 @@
             }
 
 
-            /* BIOGRAPHY + STATEMENT */
+            /* BIO + STATEMENT */
 
             .bio,
             .statement {
                 padding-top: 70px;
+
                 padding-bottom: 70px;
             }
 
@@ -957,977 +1010,968 @@
         }
 
     </style>
+
 </head>
 
 
 <body>
 
 
-    <!-- =====================================================
-         HEADER
-    ===================================================== -->
+<!-- =========================
+     HEADER
+========================= -->
 
-    <header>
+<header>
 
-        <nav class="nav">
+    <nav class="nav">
 
-            <a href="#top" class="logo">
-                PATI YESTRO
+        <a href="#top" class="logo">
+            PATI YESTRO
+        </a>
+
+        <div class="nav-links">
+
+            <a href="#work">
+                Work
             </a>
 
-            <div class="nav-links">
-
-                <a href="#work">Work</a>
-
-                <a href="#collections">Collections</a>
-
-                <a href="#about">About</a>
-
-                <a href="#statement">Statement</a>
-
-                <a href="#contact">Contact</a>
-
-            </div>
-
-        </nav>
-
-    </header>
-
-
-    <!-- =====================================================
-         MAIN
-    ===================================================== -->
-
-    <main id="top">
-
-
-        <!-- =================================================
-             HERO
-        ================================================= -->
-
-        <section class="hero">
-
-            <h1>PATI YESTRO</h1>
-
-            <p>
-                Rwandan contemporary visual artist working with oil and mixed media,
-                exploring memory, resilience, identity, history, and human nature.
-            </p>
-
-        </section>
-
-
-        <!-- =================================================
-             SELECTED WORK
-        ================================================= -->
-
-        <section id="work">
-
-            <div class="section-label">
-                Selected Work
-            </div>
-
-            <h2 class="section-title">
-                Recent Works
-            </h2>
-
-
-            <div class="works-grid">
-
-
-                <!-- =========================================
-                     PAINTING 1
-                ========================================== -->
-
-                <div
-                    class="work-card"
-                    onclick="openModal(
-                        'Women Who Remain',
-                        'What Time Couldn’t Erase',
-                        '100 × 80 cm',
-                        'Oil on Canvas',
-                        '2025',
-                        'This painting explores memory, time, and the things that remain within us despite the passage of time.'
-                    )"
-                >
-
-                    <div class="work-image">
-
-                        <img
-                            src="https://placehold.co/1000x1250/ded8cf/171513?text=Painting+1"
-                            alt="What Time Couldn't Erase"
-                        >
-
-                    </div>
-
-                    <div class="work-title">
-                        What Time Couldn’t Erase
-                    </div>
-
-                </div>
-
-
-                <!-- =========================================
-                     PAINTING 2
-                ========================================== -->
-
-                <div
-                    class="work-card"
-                    onclick="openModal(
-                        'Women Who Remain',
-                        'Bound Yet Burning',
-                        '110 × 80 cm',
-                        'Oil on Canvas',
-                        '2025',
-                        'A reflection on restriction, inner strength, and the human desire to remain alive and free despite difficult circumstances.'
-                    )"
-                >
-
-                    <div class="work-image">
-
-                        <img
-                            src="https://placehold.co/1000x1250/ded8cf/171513?text=Painting+2"
-                            alt="Bound Yet Burning"
-                        >
-
-                    </div>
-
-                    <div class="work-title">
-                        Bound Yet Burning
-                    </div>
-
-                </div>
-
-
-                <!-- =========================================
-                     PAINTING 3
-                ========================================== -->
-
-                <div
-                    class="work-card"
-                    onclick="openModal(
-                        'Women Who Remain',
-                        'She Who Stays',
-                        '110 × 94 cm',
-                        'Oil on Canvas',
-                        '2024',
-                        'A work centered on endurance, presence, and the quiet strength of a woman who continues to carry what others cannot see.'
-                    )"
-                >
-
-                    <div class="work-image">
-
-                        <img
-                            src="https://placehold.co/1000x1250/ded8cf/171513?text=Painting+3"
-                            alt="She Who Stays"
-                        >
-
-                    </div>
-
-                    <div class="work-title">
-                        She Who Stays
-                    </div>
-
-                </div>
-
-
-                <!-- =========================================
-                     PAINTING 4
-                ========================================== -->
-
-                <div
-                    class="work-card"
-                    onclick="openModal(
-                        'Women Who Remain',
-                        'The Body Remembers',
-                        '120 × 90 cm',
-                        'Oil on Canvas',
-                        '2024',
-                        'The human body becomes an archive of memory, carrying experiences that may remain long after words have disappeared.'
-                    )"
-                >
-
-                    <div class="work-image">
-
-                        <img
-                            src="https://placehold.co/1000x1250/ded8cf/171513?text=Painting+4"
-                            alt="The Body Remembers"
-                        >
-
-                    </div>
-
-                    <div class="work-title">
-                        The Body Remembers
-                    </div>
-
-                </div>
-
-
-                <!-- =========================================
-                     PAINTING 5
-                ========================================== -->
-
-                <div
-                    class="work-card"
-                    onclick="openModal(
-                        'Women Who Remain',
-                        'Guardian of Eternity',
-                        '120 × 90 cm',
-                        'Oil on Canvas',
-                        '2023',
-                        'A symbolic work exploring protection, memory, history, and the enduring strength carried through generations.'
-                    )"
-                >
-
-                    <div class="work-image">
-
-                        <img
-                            src="https://placehold.co/1000x1250/ded8cf/171513?text=Painting+5"
-                            alt="Guardian of Eternity"
-                        >
-
-                    </div>
-
-                    <div class="work-title">
-                        Guardian of Eternity
-                    </div>
-
-                </div>
-
-
-                <!-- =========================================
-                     PAINTING 6
-                ========================================== -->
-
-                <div
-                    class="work-card"
-                    onclick="openModal(
-                        'Women Who Remain',
-                        'Not Fragile as Flowers, Fragile as Bomb',
-                        '120 × 90 cm',
-                        'Oil on Canvas',
-                        '',
-                        'A meditation on fragility, beauty, danger, and the complex strength contained within the human experience.'
-                    )"
-                >
-
-                    <div class="work-image">
-
-                        <img
-                            src="https://placehold.co/1000x1250/ded8cf/171513?text=Painting+6"
-                            alt="Not Fragile as Flowers, Fragile as Bomb"
-                        >
-
-                    </div>
-
-                    <div class="work-title">
-                        Not Fragile as Flowers, Fragile as Bomb
-                    </div>
-
-                </div>
-
-
-            </div>
-
-
-            <!-- EXPLORE MORE -->
-
-            <div class="explore-more">
-
-                <a href="works.html">
-                    Explore More
-                </a>
-
-            </div>
-
-        </section>
-
-
-        <!-- =================================================
-             COLLECTIONS
-        ================================================= -->
-
-        <section id="collections" class="collections">
-
-            <div class="section-label">
+            <a href="#collections">
                 Collections
-            </div>
+            </a>
 
-            <h2 class="section-title">
-                Bodies of Work
-            </h2>
-
-
-            <div class="collections-grid">
-
-
-                <a href="works.html" class="collection-card">
-
-                    <div class="collection-number">
-                        01
-                    </div>
-
-                    <h3>
-                        Women Who Remain
-                    </h3>
-
-                    <p>
-                        A body of work exploring feminine strength, resilience,
-                        beauty, transformation, and the quiet power of women.
-                    </p>
-
-                </a>
-
-
-                <a href="works.html" class="collection-card">
-
-                    <div class="collection-number">
-                        02
-                    </div>
-
-                    <h3>
-                        What Survived Me
-                    </h3>
-
-                    <p>
-                        A body of work exploring inner pressure, struggle,
-                        memory, endurance, and the possibility of light.
-                    </p>
-
-                </a>
-
-
-            </div>
-
-        </section>
-
-
-        <!-- =================================================
-             BIOGRAPHY
-        ================================================= -->
-
-        <section id="about" class="bio">
-
-            <div class="section-label">
+            <a href="#about">
                 About
-            </div>
+            </a>
 
-            <h2 class="section-title">
-                Biography
-            </h2>
-
-
-            <div class="bio-text">
-
-                <p>
-                    IRADUKUNDA Patient, known professionally as Pati Yestro,
-                    is a Rwandan contemporary visual artist born on April 17, 1994,
-                    in the district of Rubavu, Western Rwanda.
-                </p>
-
-                <p>
-                    His works are grounded in memories, resilience, identity,
-                    and history. He lost his parents at a young age and grew up
-                    with his sister, which shaped his understanding of female
-                    nature – care and pain in the same measure.
-                </p>
-
-                <p>
-                    This, together with the experience of the Rwandan Genocide
-                    of 1994, influenced his art, in which he often puts women
-                    and children at the center of the narrative.
-                </p>
-
-                <p>
-                    Pati found his talent for drawing at the age of nine and
-                    graduated from Ecole d’Arts de Nyundo in 2014. Since 2015,
-                    he has been exhibiting his works in local and international
-                    galleries.
-                </p>
-
-                <p>
-                    He paints with oil and mixed mediums on canvas, creating
-                    surrealistic figurative worlds full of silence, memories,
-                    healing, and cultural codes.
-                </p>
-
-                <p>
-                    His works contain flowers, clocks, spaces, and human bodies
-                    as drivers of reflection on a personal and collective
-                    unconscious, long-lasting pain, time, and resilience.
-                </p>
-
-            </div>
-
-        </section>
-
-
-        <!-- =================================================
-             ARTIST STATEMENT
-        ================================================= -->
-
-        <section id="statement" class="statement">
-
-            <div class="section-label">
+            <a href="#statement">
                 Statement
-            </div>
+            </a>
 
-            <h2 class="section-title">
-                Artist Statement
-            </h2>
-
-
-            <div class="statement-text">
-
-                <p>
-                    My works are an exercise in memory, history, and human nature.
-                    I was born and raised in Rwanda where the Genocide against
-                    the Tutsi ethnic group happened in 1994. Painting allows me
-                    to make sense of what happened and its reverberations in the
-                    collective and individual consciousness.
-                </p>
-
-                <p>
-                    I depict women and children in my paintings because I grew up
-                    with women, having lost my parents at a young age.
-                </p>
-
-                <p>
-                    Women taught me their strength, their weaknesses, their
-                    resilience, and their capacity for suffering.
-                </p>
-
-                <p>
-                    I paint topics of time, fragility, healing, memory, and space,
-                    using clocks, flowers, building structures, and human bodies
-                    as my vehicles. My works court the tension between universal
-                    and introspective, making the intimate history of the
-                    individual, their pain, and memories a collective search
-                    for meaning. Painting is my medium to confront, reconcile,
-                    remember, and heal.
-                </p>
-
-            </div>
-
-        </section>
-
-
-        <!-- =================================================
-             QUOTE
-        ================================================= -->
-
-        <section class="quote">
-
-            <p>
-                “Change the world without talking,
-                only using my hands.”
-            </p>
-
-        </section>
-
-
-        <!-- =================================================
-             EXHIBITIONS
-        ================================================= -->
-
-        <section class="exhibitions">
-
-            <div class="section-label">
-                Exhibitions & Awards
-            </div>
-
-            <h2 class="section-title">
-                Selected Exhibitions
-            </h2>
-
-
-            <div class="exhibition-list">
-
-
-                <div class="exhibition-item">
-
-                    <div class="exhibition-year">
-                        2024
-                    </div>
-
-                    <div class="exhibition-name">
-                        Envision Rwanda 5 Years Anniversary
-                    </div>
-
-                    <div class="exhibition-location">
-                        Rwanda · Group Exhibition
-                    </div>
-
-                </div>
-
-
-                <div class="exhibition-item">
-
-                    <div class="exhibition-year">
-                        2024
-                    </div>
-
-                    <div class="exhibition-name">
-                        High Art Competition
-                    </div>
-
-                    <div class="exhibition-location">
-                        USA · 3rd Place Award
-                    </div>
-
-                </div>
-
-
-                <div class="exhibition-item">
-
-                    <div class="exhibition-year">
-                        2019
-                    </div>
-
-                    <div class="exhibition-name">
-                        Anda Arts Festival
-                    </div>
-
-                    <div class="exhibition-location">
-                        Rwanda · Group Exhibition
-                    </div>
-
-                </div>
-
-
-                <div class="exhibition-item">
-
-                    <div class="exhibition-year">
-                        2019
-                    </div>
-
-                    <div class="exhibition-name">
-                        YouthConnekt Africa Summit
-                    </div>
-
-                    <div class="exhibition-location">
-                        Rwanda · Group Exhibition
-                    </div>
-
-                </div>
-
-
-                <div class="exhibition-item">
-
-                    <div class="exhibition-year">
-                        2016
-                    </div>
-
-                    <div class="exhibition-name">
-                        Kwita Izina Art Exhibition
-                    </div>
-
-                    <div class="exhibition-location">
-                        Rwanda · Group Exhibition
-                    </div>
-
-                </div>
-
-
-                <div class="exhibition-item">
-
-                    <div class="exhibition-year">
-                        2014
-                    </div>
-
-                    <div class="exhibition-name">
-                        Kivu Nuru Exhibition
-                    </div>
-
-                    <div class="exhibition-location">
-                        RDC Congo · Group Exhibition
-                    </div>
-
-                </div>
-
-
-                <div class="exhibition-item">
-
-                    <div class="exhibition-year">
-                        2014
-                    </div>
-
-                    <div class="exhibition-name">
-                        My Democracy Art Exhibition
-                    </div>
-
-                    <div class="exhibition-location">
-                        Rwanda · Group Exhibition
-                    </div>
-
-                </div>
-
-
-            </div>
-
-        </section>
-
-
-        <!-- =================================================
-             CERTIFICATES
-        ================================================= -->
-
-        <section class="certificates">
-
-            <div class="section-label">
-                Professional Development
-            </div>
-
-            <h2 class="section-title">
-                Certificates
-            </h2>
-
-
-            <div class="certificate-list">
-
-
-                <div class="certificate-item">
-
-                    <div class="certificate-year">
-                        2024
-                    </div>
-
-                    <div class="certificate-name">
-                        SoCreative Entrepreneurship Program
-                    </div>
-
-                    <div class="certificate-provider">
-                        British Council in partnership with
-                        African Leadership University
-                    </div>
-
-                </div>
-
-
-                <div class="certificate-item">
-
-                    <div class="certificate-year">
-                        2014
-                    </div>
-
-                    <div class="certificate-name">
-                        Mixed Media
-                    </div>
-
-                    <div class="certificate-provider">
-                        Jason Corder
-                    </div>
-
-                </div>
-
-
-            </div>
-
-        </section>
-
-
-        <!-- =================================================
-             CONTACT
-        ================================================= -->
-
-        <section id="contact" class="contact">
-
-            <div class="section-label">
+            <a href="#contact">
                 Contact
-            </div>
-
-
-            <h2>
-                Let's Work<br>
-                Together.
-            </h2>
-
-
-            <div class="contact-links">
-
-                <a href="mailto:partalent@gmail.com">
-                    EMAIL
-                </a>
-
-                <a
-                    href="https://www.instagram.com/Pati_yestro/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    INSTAGRAM
-                </a>
-
-                <a
-                    href="https://wa.me/250788290510"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    WHATSAPP
-                </a>
-
-                <a
-                    href="https://www.facebook.com/share/1AswegpcPm/?mibextid=wwXIfr"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    FACEBOOK
-                </a>
-
-            </div>
-
-        </section>
-
-    </main>
-
-
-    <!-- =====================================================
-         FOOTER
-    ===================================================== -->
-
-    <footer>
-
-        <div>
-            © 2026 Pati Yestro
-        </div>
-
-        <div>
-            Contemporary Visual Artist
-        </div>
-
-    </footer>
-
-
-    <!-- =====================================================
-         PAINTING DETAILS POPUP
-         
-         IMPORTANT:
-         THERE IS NO IMAGE IN THIS POPUP.
-    ===================================================== -->
-
-    <div
-        class="modal"
-        id="workModal"
-        aria-hidden="true"
-    >
-
-        <div class="modal-content">
-
-            <button
-                class="modal-close"
-                onclick="closeModal()"
-                aria-label="Close painting details"
-            >
-                ×
-            </button>
-
-
-            <!-- SERIES TITLE -->
-
-            <div
-                id="modalSeries"
-                class="modal-series"
-            ></div>
-
-
-            <!-- TITLE -->
-
-            <h2
-                id="modalTitle"
-                class="modal-title"
-            ></h2>
-
-
-            <!-- SIZE / MEDIUM / YEAR -->
-
-            <div
-                id="modalDetails"
-                class="modal-details"
-            ></div>
-
-
-            <!-- DESCRIPTION -->
-
-            <div class="modal-description-label">
-                Description
-            </div>
-
-            <p
-                id="modalDescription"
-                class="modal-description"
-            ></p>
+            </a>
 
         </div>
+
+    </nav>
+
+</header>
+
+
+<main id="top">
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero">
+
+    <h1>
+        PATI YESTRO
+    </h1>
+
+    <p>
+        Rwandan contemporary visual artist working with oil and mixed media,
+        exploring memory, resilience, identity, history, and human nature.
+    </p>
+
+</section>
+
+
+<!-- =========================
+     SELECTED WORK
+========================= -->
+
+<section id="work">
+
+    <div class="section-label">
+        Selected Work
+    </div>
+
+    <h2 class="section-title">
+        Recent Works
+    </h2>
+
+
+    <div class="works-grid">
+
+
+        <!-- PAINTING 1 -->
+
+        <div
+            class="work-card"
+            onclick="openModal(
+                'Women Who Remain',
+                'What Time Couldn’t Erase',
+                '100 × 80 cm',
+                'Oil on Canvas',
+                '2025',
+                'This painting explores memory, time, and the things that remain within us despite the passage of time.'
+            )"
+        >
+
+            <div class="work-image">
+
+                <img
+                    src="https://placehold.co/1000x1250/ded8cf/171513?text=Painting+1"
+                    alt="What Time Couldn't Erase"
+                >
+
+            </div>
+
+            <div class="work-title">
+                What Time Couldn’t Erase
+            </div>
+
+        </div>
+
+
+        <!-- PAINTING 2 -->
+
+        <div
+            class="work-card"
+            onclick="openModal(
+                'Women Who Remain',
+                'Bound Yet Burning',
+                '110 × 80 cm',
+                'Oil on Canvas',
+                '2025',
+                'A reflection on restriction, inner strength, and the human desire to remain alive and free despite difficult circumstances.'
+            )"
+        >
+
+            <div class="work-image">
+
+                <img
+                    src="https://placehold.co/1000x1250/ded8cf/171513?text=Painting+2"
+                    alt="Bound Yet Burning"
+                >
+
+            </div>
+
+            <div class="work-title">
+                Bound Yet Burning
+            </div>
+
+        </div>
+
+
+        <!-- PAINTING 3 -->
+
+        <div
+            class="work-card"
+            onclick="openModal(
+                'Women Who Remain',
+                'She Who Stays',
+                '110 × 94 cm',
+                'Oil on Canvas',
+                '2024',
+                'A work centered on endurance, presence, and the quiet strength of a woman who continues to carry what others cannot see.'
+            )"
+        >
+
+            <div class="work-image">
+
+                <img
+                    src="https://placehold.co/1000x1250/ded8cf/171513?text=Painting+3"
+                    alt="She Who Stays"
+                >
+
+            </div>
+
+            <div class="work-title">
+                She Who Stays
+            </div>
+
+        </div>
+
+
+        <!-- PAINTING 4 -->
+
+        <div
+            class="work-card"
+            onclick="openModal(
+                'Women Who Remain',
+                'The Body Remembers',
+                '120 × 90 cm',
+                'Oil on Canvas',
+                '2024',
+                'The human body becomes an archive of memory, carrying experiences that may remain long after words have disappeared.'
+            )"
+        >
+
+            <div class="work-image">
+
+                <img
+                    src="https://placehold.co/1000x1250/ded8cf/171513?text=Painting+4"
+                    alt="The Body Remembers"
+                >
+
+            </div>
+
+            <div class="work-title">
+                The Body Remembers
+            </div>
+
+        </div>
+
+
+        <!-- PAINTING 5 -->
+
+        <div
+            class="work-card"
+            onclick="openModal(
+                'Women Who Remain',
+                'Guardian of Eternity',
+                '120 × 90 cm',
+                'Oil on Canvas',
+                '2023',
+                'A symbolic work exploring protection, memory, history, and the enduring strength carried through generations.'
+            )"
+        >
+
+            <div class="work-image">
+
+                <img
+                    src="https://placehold.co/1000x1250/ded8cf/171513?text=Painting+5"
+                    alt="Guardian of Eternity"
+                >
+
+            </div>
+
+            <div class="work-title">
+                Guardian of Eternity
+            </div>
+
+        </div>
+
+
+        <!-- PAINTING 6 -->
+
+        <div
+            class="work-card"
+            onclick="openModal(
+                'Women Who Remain',
+                'Not Fragile as Flowers, Fragile as Bomb',
+                '120 × 90 cm',
+                'Oil on Canvas',
+                '',
+                'A meditation on fragility, beauty, danger, and the complex strength contained within the human experience.'
+            )"
+        >
+
+            <div class="work-image">
+
+                <img
+                    src="https://placehold.co/1000x1250/ded8cf/171513?text=Painting+6"
+                    alt="Not Fragile as Flowers, Fragile as Bomb"
+                >
+
+            </div>
+
+            <div class="work-title">
+                Not Fragile as Flowers, Fragile as Bomb
+            </div>
+
+        </div>
+
 
     </div>
 
 
-    <!-- =====================================================
-         JAVASCRIPT
-    ===================================================== -->
+    <!-- =========================
+         EXPLORE + STUDIO
+    ========================= -->
 
-    <script>
+    <div class="explore-links">
 
-        function openModal(
-            series,
-            title,
-            size,
-            medium,
-            year,
-            description
-        ) {
+        <a href="works.html">
+            Explore More <span>→</span>
+        </a>
 
-            const modal =
-                document.getElementById("workModal");
+        <a href="studio.html">
+            Inside the Studio <span>→</span>
+        </a>
 
-            const modalSeries =
-                document.getElementById("modalSeries");
-
-            const modalTitle =
-                document.getElementById("modalTitle");
-
-            const modalDetails =
-                document.getElementById("modalDetails");
-
-            const modalDescription =
-                document.getElementById("modalDescription");
+    </div>
 
 
-            /* SERIES TITLE */
-
-            modalSeries.textContent =
-                "Series Title: " + series;
+</section>
 
 
-            /* PAINTING TITLE */
+<!-- =========================
+     COLLECTIONS
+========================= -->
 
-            modalTitle.textContent =
-                title;
+<section
+    id="collections"
+    class="collections"
+>
 
+    <div class="section-label">
+        Collections
+    </div>
 
-            /* CLEAR OLD DETAILS */
-
-            modalDetails.innerHTML = "";
-
-
-            /* DETAILS */
-
-            const details = [
-                ["Size", size],
-                ["Medium", medium],
-                ["Year", year]
-            ];
+    <h2 class="section-title">
+        Bodies of Work
+    </h2>
 
 
-            details.forEach(function(detail) {
-
-                const wrapper =
-                    document.createElement("div");
+    <div class="collections-grid">
 
 
-                const label =
-                    document.createElement("span");
+        <a
+            href="works.html"
+            class="collection-card"
+        >
 
-                label.className =
-                    "detail-label";
+            <div class="collection-number">
+                01
+            </div>
 
-                label.textContent =
-                    detail[0];
+            <h3>
+                Women Who Remain
+            </h3>
 
+            <p>
+                A body of work exploring feminine strength, resilience,
+                beauty, transformation, and the quiet power of women.
+            </p>
 
-                const value =
-                    document.createElement("span");
-
-                value.className =
-                    "detail-value";
-
-                value.textContent =
-                    detail[1] || "—";
-
-
-                wrapper.appendChild(label);
-
-                wrapper.appendChild(value);
-
-                modalDetails.appendChild(wrapper);
-
-            });
+        </a>
 
 
-            /* DESCRIPTION */
+        <a
+            href="works.html"
+            class="collection-card"
+        >
 
-            modalDescription.textContent =
-                description;
+            <div class="collection-number">
+                02
+            </div>
 
+            <h3>
+                What Survived Me
+            </h3>
 
-            /* SHOW POPUP */
+            <p>
+                A body of work exploring inner pressure, struggle,
+                memory, endurance, and the possibility of light.
+            </p>
 
-            modal.classList.add("active");
-
-            modal.setAttribute(
-                "aria-hidden",
-                "false"
-            );
-
-            document.body.classList.add(
-                "modal-open"
-            );
-
-        }
-
-
-        /* =====================================================
-           CLOSE MODAL
-        ===================================================== */
-
-        function closeModal() {
-
-            const modal =
-                document.getElementById("workModal");
+        </a>
 
 
-            modal.classList.remove("active");
+    </div>
 
-            modal.setAttribute(
-                "aria-hidden",
-                "true"
-            );
-
-            document.body.classList.remove(
-                "modal-open"
-            );
-
-        }
+</section>
 
 
-        /* =====================================================
-           CLOSE WHEN CLICKING OUTSIDE POPUP
-        ===================================================== */
+<!-- =========================
+     BIOGRAPHY
+========================= -->
 
-        document
-            .getElementById("workModal")
-            .addEventListener(
-                "click",
-                function(event) {
+<section
+    id="about"
+    class="bio"
+>
 
-                    if (event.target === this) {
+    <div class="section-label">
+        About
+    </div>
 
-                        closeModal();
-
-                    }
-
-                }
-            );
+    <h2 class="section-title">
+        Biography
+    </h2>
 
 
-        /* =====================================================
-           CLOSE WITH ESCAPE KEY
-        ===================================================== */
+    <div class="bio-text">
 
-        document.addEventListener(
-            "keydown",
+
+        <p>
+            IRADUKUNDA Patient, known professionally as Pati Yestro, is a Rwandan contemporary visual artist born on April 17, 1994, in the district of Rubavu, Western Rwanda.
+        </p>
+
+
+        <p>
+            His works are grounded in memories, resilience, identity, and history. He lost his parents at a young age and grew up with his sister, which shaped his understanding of female nature – care and pain in the same measure.
+        </p>
+
+
+        <p>
+            This, together with the experience of the Rwandan Genocide of 1994, influenced his art, in which he often puts women and children at the center of the narrative.
+        </p>
+
+
+        <p>
+            Pati found his talent for drawing at the age of nine and graduated from Ecole d’Arts de Nyundo in 2014. Since 2015, he has been exhibiting his works in local and international galleries.
+        </p>
+
+
+        <p>
+            He paints with oil and mixed mediums on canvas, creating surrealistic figurative worlds full of silence, memories, healing, and cultural codes.
+        </p>
+
+
+        <p>
+            His works contain flowers, clocks, spaces, and human bodies as drivers of reflection on a personal and collective unconscious, long-lasting pain, time, and resilience.
+        </p>
+
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     ARTIST STATEMENT
+========================= -->
+
+<section
+    id="statement"
+    class="statement"
+>
+
+    <div class="section-label">
+        Statement
+    </div>
+
+    <h2 class="section-title">
+        Artist Statement
+    </h2>
+
+
+    <div class="statement-text">
+
+
+        <p>
+            My works are an exercise in memory, history, and human nature. I was born and raised in Rwanda where the Genocide against the Tutsi ethnic group happened in 1994. Painting allows me to make sense of what happened and its reverberations in the collective and individual consciousness.
+        </p>
+
+
+        <p>
+            I depict women and children in my paintings because I grew up with women, having lost my parents at a young age.
+        </p>
+
+
+        <p>
+            Women taught me their strength, their weaknesses, their resilience, and their capacity for suffering.
+        </p>
+
+
+        <p>
+            I paint topics of time, fragility, healing, memory, and space, using clocks, flowers, building structures, and human bodies as my vehicles. My works court the tension between universal and introspective, making the intimate history of the individual, their pain, and memories a collective search for meaning. Painting is my medium to confront, reconcile, remember, and heal.
+        </p>
+
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     QUOTE
+========================= -->
+
+<section class="quote">
+
+    <p>
+        “Change the world without talking,
+        only using my hands.”
+    </p>
+
+</section>
+
+
+<!-- =========================
+     EXHIBITIONS & AWARDS
+========================= -->
+
+<section class="exhibitions">
+
+    <div class="section-label">
+        Exhibitions & Awards
+    </div>
+
+    <h2 class="section-title">
+        Selected Exhibitions
+    </h2>
+
+
+    <div class="exhibition-list">
+
+
+        <div class="exhibition-item">
+
+            <div class="exhibition-year">
+                2024
+            </div>
+
+            <div class="exhibition-name">
+                Envision Rwanda 5 Years Anniversary
+            </div>
+
+            <div class="exhibition-location">
+                Rwanda · Group Exhibition
+            </div>
+
+        </div>
+
+
+        <div class="exhibition-item">
+
+            <div class="exhibition-year">
+                2024
+            </div>
+
+            <div class="exhibition-name">
+                High Art Competition
+            </div>
+
+            <div class="exhibition-location">
+                USA · 3rd Place Award
+            </div>
+
+        </div>
+
+
+        <div class="exhibition-item">
+
+            <div class="exhibition-year">
+                2019
+            </div>
+
+            <div class="exhibition-name">
+                Anda Arts Festival
+            </div>
+
+            <div class="exhibition-location">
+                Rwanda · Group Exhibition
+            </div>
+
+        </div>
+
+
+        <div class="exhibition-item">
+
+            <div class="exhibition-year">
+                2019
+            </div>
+
+            <div class="exhibition-name">
+                YouthConnekt Africa Summit
+            </div>
+
+            <div class="exhibition-location">
+                Rwanda · Group Exhibition
+            </div>
+
+        </div>
+
+
+        <div class="exhibition-item">
+
+            <div class="exhibition-year">
+                2016
+            </div>
+
+            <div class="exhibition-name">
+                Kwita Izina Art Exhibition
+            </div>
+
+            <div class="exhibition-location">
+                Rwanda · Group Exhibition
+            </div>
+
+        </div>
+
+
+        <div class="exhibition-item">
+
+            <div class="exhibition-year">
+                2014
+            </div>
+
+            <div class="exhibition-name">
+                Kivu Nuru Exhibition
+            </div>
+
+            <div class="exhibition-location">
+                RDC Congo · Group Exhibition
+            </div>
+
+        </div>
+
+
+        <div class="exhibition-item">
+
+            <div class="exhibition-year">
+                2014
+            </div>
+
+            <div class="exhibition-name">
+                My Democracy Art Exhibition
+            </div>
+
+            <div class="exhibition-location">
+                Rwanda · Group Exhibition
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CERTIFICATES
+========================= -->
+
+<section class="certificates">
+
+    <div class="section-label">
+        Professional Development
+    </div>
+
+    <h2 class="section-title">
+        Certificates
+    </h2>
+
+
+    <div class="certificate-list">
+
+
+        <div class="certificate-item">
+
+            <div class="certificate-year">
+                2024
+            </div>
+
+            <div class="certificate-name">
+                SoCreative Entrepreneurship Program
+            </div>
+
+            <div class="certificate-provider">
+                British Council in partnership with African Leadership University
+            </div>
+
+        </div>
+
+
+        <div class="certificate-item">
+
+            <div class="certificate-year">
+                2014
+            </div>
+
+            <div class="certificate-name">
+                Mixed Media
+            </div>
+
+            <div class="certificate-provider">
+                Jason Corder
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section
+    id="contact"
+    class="contact"
+>
+
+    <div class="section-label">
+        Contact
+    </div>
+
+    <h2>
+        Let's Work<br>
+        Together.
+    </h2>
+
+
+    <div class="contact-links">
+
+
+        <a href="mailto:partalent@gmail.com">
+            EMAIL
+        </a>
+
+
+        <a
+            href="https://www.instagram.com/Pati_yestro/"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            INSTAGRAM
+        </a>
+
+
+        <a
+            href="https://wa.me/250788290510"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            WHATSAPP
+        </a>
+
+
+        <a
+            href="https://www.facebook.com/share/1AswegpcPm/?mibextid=wwXIfr"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            FACEBOOK
+        </a>
+
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <div>
+        © 2026 Pati Yestro
+    </div>
+
+    <div>
+        Contemporary Visual Artist
+    </div>
+
+</footer>
+
+
+<!-- =========================
+     PAINTING DETAILS POPUP
+     
+     NO PAINTING IMAGE HERE
+========================= -->
+
+<div
+    class="modal"
+    id="workModal"
+    aria-hidden="true"
+>
+
+    <div class="modal-content">
+
+
+        <button
+            class="modal-close"
+            onclick="closeModal()"
+            aria-label="Close painting details"
+        >
+            ×
+        </button>
+
+
+        <div
+            id="modalSeries"
+            class="modal-series"
+        ></div>
+
+
+        <h2
+            id="modalTitle"
+            class="modal-title"
+        ></h2>
+
+
+        <div
+            id="modalDetails"
+            class="modal-details"
+        ></div>
+
+
+        <div class="modal-description-label">
+            Description
+        </div>
+
+
+        <p
+            id="modalDescription"
+            class="modal-description"
+        ></p>
+
+
+    </div>
+
+</div>
+
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
+<script>
+
+
+    function openModal(
+        series,
+        title,
+        size,
+        medium,
+        year,
+        description
+    ) {
+
+
+        const modal =
+            document.getElementById("workModal");
+
+
+        const modalSeries =
+            document.getElementById("modalSeries");
+
+
+        const modalTitle =
+            document.getElementById("modalTitle");
+
+
+        const modalDetails =
+            document.getElementById("modalDetails");
+
+
+        const modalDescription =
+            document.getElementById("modalDescription");
+
+
+        modalSeries.textContent =
+            "Series Title: " + series;
+
+
+        modalTitle.textContent =
+            title;
+
+
+        modalDetails.innerHTML = "";
+
+
+        const details = [
+
+            ["Size", size],
+
+            ["Medium", medium],
+
+            ["Year", year]
+
+        ];
+
+
+        details.forEach(function(detail) {
+
+
+            const wrapper =
+                document.createElement("div");
+
+
+            const label =
+                document.createElement("span");
+
+
+            label.className =
+                "detail-label";
+
+
+            label.textContent =
+                detail[0];
+
+
+            const value =
+                document.createElement("span");
+
+
+            value.className =
+                "detail-value";
+
+
+            value.textContent =
+                detail[1] || "—";
+
+
+            wrapper.appendChild(label);
+
+
+            wrapper.appendChild(value);
+
+
+            modalDetails.appendChild(wrapper);
+
+
+        });
+
+
+        modalDescription.textContent =
+            description;
+
+
+        modal.classList.add("active");
+
+
+        modal.setAttribute(
+            "aria-hidden",
+            "false"
+        );
+
+
+        document.body.classList.add(
+            "modal-open"
+        );
+
+    }
+
+
+    function closeModal() {
+
+
+        const modal =
+            document.getElementById("workModal");
+
+
+        modal.classList.remove("active");
+
+
+        modal.setAttribute(
+            "aria-hidden",
+            "true"
+        );
+
+
+        document.body.classList.remove(
+            "modal-open"
+        );
+
+    }
+
+
+    document
+        .getElementById("workModal")
+        .addEventListener(
+            "click",
             function(event) {
 
-                if (event.key === "Escape") {
+                if (event.target === this) {
 
                     closeModal();
 
@@ -1936,7 +1980,23 @@
             }
         );
 
-    </script>
+
+    document.addEventListener(
+        "keydown",
+        function(event) {
+
+            if (event.key === "Escape") {
+
+                closeModal();
+
+            }
+
+        }
+    );
+
+
+</script>
+
 
 </body>
 </html>
