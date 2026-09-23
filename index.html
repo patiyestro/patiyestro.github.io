@@ -261,16 +261,16 @@
         .explore-links {
             display: flex;
 
-            justify-content: center;
+            flex-direction: column;
 
             align-items: center;
 
-            gap: 55px;
+            gap: 28px;
 
             margin-top: 80px;
         }
 
-        .explore-links a {
+        .explore-more-link {
             display: inline-flex;
 
             align-items: center;
@@ -290,7 +290,7 @@
             transition: opacity 0.3s ease;
         }
 
-        .explore-links a span {
+        .explore-more-link span {
             font-size: 16px;
 
             line-height: 1;
@@ -298,12 +298,66 @@
             transition: transform 0.3s ease;
         }
 
-        .explore-links a:hover {
+        .explore-more-link:hover {
             opacity: 0.5;
         }
 
-        .explore-links a:hover span {
+        .explore-more-link:hover span {
             transform: translateX(5px);
+        }
+
+
+        /* =========================
+           INSIDE THE STUDIO BOX
+        ========================= */
+
+        .studio-link {
+            width: min(650px, 100%);
+
+            padding: 30px 35px;
+
+            border: 1px solid rgba(23, 21, 19, 0.22);
+
+            background: #EDEAE4;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 25px;
+
+            font-size: 13px;
+
+            letter-spacing: 2.5px;
+
+            text-transform: uppercase;
+
+            transition:
+                background 0.4s ease,
+                color 0.4s ease,
+                border-color 0.4s ease;
+        }
+
+        .studio-link span {
+            font-size: 22px;
+
+            line-height: 1;
+
+            transition: transform 0.3s ease;
+        }
+
+        .studio-link:hover {
+            background: #171513;
+
+            color: #F5F1EA;
+
+            border-color: #171513;
+        }
+
+        .studio-link:hover span {
+            transform: translateX(6px);
         }
 
 
@@ -863,11 +917,19 @@
             /* EXPLORE + STUDIO */
 
             .explore-links {
-                flex-direction: column;
+                margin-top: 60px;
 
                 gap: 25px;
+            }
 
-                margin-top: 60px;
+            .studio-link {
+                width: 100%;
+
+                padding: 25px 22px;
+
+                font-size: 11px;
+
+                letter-spacing: 2px;
             }
 
 
@@ -1254,7 +1316,7 @@
             onclick="openModal(
                 'Women Who Remain',
                 'Not Fragile as Flowers, Fragile as Bomb',
-                '120 × 90 cm',
+                '',
                 'Oil on Canvas',
                 '',
                 'A meditation on fragility, beauty, danger, and the complex strength contained within the human experience.'
@@ -1281,17 +1343,32 @@
 
 
     <!-- =========================
-         EXPLORE + STUDIO
+         EXPLORE MORE + STUDIO
     ========================= -->
 
     <div class="explore-links">
 
-        <a href="works.html">
+        <a
+            href="works.html"
+            class="explore-more-link"
+        >
             Explore More <span>→</span>
         </a>
 
-        <a href="studio.html">
-            Inside the Studio <span>→</span>
+
+        <a
+            href="studio.html"
+            class="studio-link"
+        >
+
+            <span class="studio-text">
+                Inside the Studio
+            </span>
+
+            <span>
+                →
+            </span>
+
         </a>
 
     </div>
@@ -1764,7 +1841,7 @@
 
 <!-- =========================
      PAINTING DETAILS POPUP
-     
+
      NO PAINTING IMAGE HERE
 ========================= -->
 
