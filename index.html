@@ -202,28 +202,6 @@
         }
 
         /* =========================
-           INTRO
-        ========================= */
-
-        .intro {
-            display: grid;
-            grid-template-columns: 1fr 1.4fr;
-            gap: 100px;
-            align-items: start;
-        }
-
-        .intro-text {
-            max-width: 700px;
-        }
-
-        .intro-text p {
-            margin-bottom: 25px;
-
-            font-size: 16px;
-            line-height: 1.9;
-        }
-
-        /* =========================
            SELECTED WORK
         ========================= */
 
@@ -265,6 +243,8 @@
             aspect-ratio: 4 / 5;
 
             background: var(--placeholder);
+
+            transition: transform 0.5s ease;
         }
 
         .artwork::after {
@@ -284,10 +264,6 @@
 
         .work-card:hover .artwork {
             transform: scale(0.99);
-        }
-
-        .artwork {
-            transition: transform 0.5s ease;
         }
 
         .artwork-placeholder {
@@ -802,7 +778,6 @@
                 padding: 85px 20px;
             }
 
-            .intro,
             .about,
             .statement-grid,
             .exhibitions,
@@ -846,8 +821,7 @@
             }
 
             .statement-content p,
-            .about-content p,
-            .intro-text p {
+            .about-content p {
                 font-size: 14px;
                 line-height: 1.85;
             }
@@ -943,9 +917,7 @@
 
 <body>
 
-    <!-- =========================
-         HEADER
-    ========================= -->
+    <!-- HEADER -->
 
     <header>
 
@@ -964,9 +936,7 @@
     </header>
 
 
-    <!-- =========================
-         HERO
-    ========================= -->
+    <!-- HERO -->
 
     <main>
 
@@ -994,54 +964,7 @@
         </section>
 
 
-        <!-- =========================
-             INTRO
-        ========================= -->
-
-        <section class="intro">
-
-            <div>
-
-                <div class="section-label">
-                    The Artist
-                </div>
-
-                <h2 class="section-title">
-                    Pati<br>
-                    Yestro
-                </h2>
-
-            </div>
-
-            <div class="intro-text">
-
-                <p>
-                    IRADUKUNDA Patient, known professionally as Pati Yestro,
-                    is a Rwandan contemporary visual artist born on April 17,
-                    1994, in the district of Rubavu, Western Rwanda.
-                </p>
-
-                <p>
-                    His works are grounded in memories, resilience, identity,
-                    and history. He lost his parents at a young age and grew
-                    up with his sister, which shaped his understanding of
-                    female nature – care and pain in the same measure.
-                </p>
-
-                <p>
-                    This, together with the experience of the Rwandan
-                    Genocide of 1994, influenced his art, in which he often
-                    puts women and children at the center of the narrative.
-                </p>
-
-            </div>
-
-        </section>
-
-
-        <!-- =========================
-             SELECTED WORK
-        ========================= -->
+        <!-- SELECTED WORK -->
 
         <section id="work">
 
@@ -1294,9 +1217,7 @@
             </div>
 
 
-            <!-- =========================
-                 EXPLORE LINKS
-            ========================= -->
+            <!-- EXPLORE LINKS -->
 
             <div class="explore-links">
 
@@ -1307,7 +1228,6 @@
                     Explore More
                     <span>→</span>
                 </a>
-
 
                 <a
                     href="studio.html"
@@ -1329,9 +1249,7 @@
         </section>
 
 
-        <!-- =========================
-             ABOUT
-        ========================= -->
+        <!-- ABOUT -->
 
         <section id="about" class="about">
 
@@ -1393,9 +1311,7 @@
         </section>
 
 
-        <!-- =========================
-             ARTIST STATEMENT
-        ========================= -->
+        <!-- ARTIST STATEMENT -->
 
         <div id="statement" class="statement-section">
 
@@ -1458,9 +1374,7 @@
         </div>
 
 
-        <!-- =========================
-             EXHIBITIONS & AWARDS
-        ========================= -->
+        <!-- EXHIBITIONS & AWARDS -->
 
         <section class="exhibitions">
 
@@ -1501,7 +1415,6 @@
 
                     </div>
 
-
                     <div class="exhibition-item">
 
                         <div class="exhibition-year">
@@ -1521,7 +1434,6 @@
                         </div>
 
                     </div>
-
 
                     <div class="exhibition-item">
 
@@ -1543,7 +1455,6 @@
 
                     </div>
 
-
                     <div class="exhibition-item">
 
                         <div class="exhibition-year">
@@ -1563,7 +1474,6 @@
                         </div>
 
                     </div>
-
 
                     <div class="exhibition-item">
 
@@ -1585,7 +1495,6 @@
 
                     </div>
 
-
                     <div class="exhibition-item">
 
                         <div class="exhibition-year">
@@ -1605,7 +1514,6 @@
                         </div>
 
                     </div>
-
 
                     <div class="exhibition-item">
 
@@ -1630,9 +1538,7 @@
                 </div>
 
 
-                <!-- =========================
-                     CERTIFICATES
-                ========================= -->
+                <!-- CERTIFICATES -->
 
                 <div class="certificates">
 
@@ -1656,7 +1562,6 @@
 
                         </div>
 
-
                         <div class="certificate-item">
 
                             <div class="certificate-title">
@@ -1678,9 +1583,7 @@
         </section>
 
 
-        <!-- =========================
-             QUOTE
-        ========================= -->
+        <!-- QUOTE -->
 
         <section class="quote-section">
 
@@ -1692,9 +1595,7 @@
         </section>
 
 
-        <!-- =========================
-             CONTACT
-        ========================= -->
+        <!-- CONTACT -->
 
         <div id="contact" class="contact-section">
 
@@ -1713,7 +1614,6 @@
                         </h2>
 
                     </div>
-
 
                     <div class="contact-links">
 
@@ -1756,9 +1656,7 @@
     </main>
 
 
-    <!-- =========================
-         FOOTER
-    ========================= -->
+    <!-- FOOTER -->
 
     <footer>
 
@@ -1773,9 +1671,7 @@
     </footer>
 
 
-    <!-- =========================
-         ARTWORK MODAL
-    ========================= -->
+    <!-- ARTWORK MODAL -->
 
     <div
         class="modal"
@@ -1803,7 +1699,6 @@
                 id="modalTitle"
             ></h2>
 
-
             <div class="modal-details">
 
                 <div>
@@ -1819,7 +1714,6 @@
 
                 </div>
 
-
                 <div>
 
                     <span class="detail-label">
@@ -1832,7 +1726,6 @@
                     ></span>
 
                 </div>
-
 
                 <div>
 
@@ -1849,7 +1742,6 @@
 
             </div>
 
-
             <div
                 class="modal-description"
                 id="modalDescription"
@@ -1860,9 +1752,7 @@
     </div>
 
 
-    <!-- =========================
-         JAVASCRIPT
-    ========================= -->
+    <!-- JAVASCRIPT -->
 
     <script>
 
