@@ -6,7 +6,7 @@
 
 <title>Pati Yestro | Contemporary Artist</title>
 
-<meta name="description" content="Pati Yestro is a contemporary Rwandan artist exploring memory, identity, resilience, transformation, and human experience through painting.">
+<meta name="description" content="Pati Yestro is a Rwandan contemporary visual artist working with oil and mixed media on canvas.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,10 +14,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
-
-/* =========================
-   RESET
-========================= */
 
 * {
     margin: 0;
@@ -37,27 +33,21 @@ body {
     line-height: 1.6;
 }
 
-img {
-    max-width: 100%;
-    display: block;
-}
-
 a {
     color: inherit;
     text-decoration: none;
 }
 
-
-/* =========================
-   HEADER
-========================= */
+/* HEADER */
 
 header {
     position: sticky;
     top: 0;
     z-index: 1000;
+
     background: rgba(245, 241, 234, 0.94);
     backdrop-filter: blur(12px);
+
     border-bottom: 1px solid rgba(23, 21, 19, 0.08);
 }
 
@@ -93,36 +83,45 @@ header {
     opacity: 0.5;
 }
 
-
-/* =========================
-   HERO
-========================= */
+/* HERO */
 
 .hero {
-    min-height: 90vh;
     max-width: 1350px;
+    min-height: 90vh;
     margin: auto;
     padding: 100px 40px;
 
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
 
     text-align: center;
 }
 
+.hero-label {
+    margin-bottom: 35px;
+
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+
+    opacity: 0.55;
+}
+
 .hero h1 {
     font-family: "Cormorant Garamond", serif;
+
     font-size: clamp(75px, 13vw, 175px);
     font-weight: 400;
+
     line-height: 0.8;
     letter-spacing: -6px;
 }
 
-.hero-subtitle {
-    margin-top: 45px;
+.hero p {
     max-width: 600px;
+    margin-top: 45px;
 
     font-size: 18px;
     line-height: 1.8;
@@ -130,13 +129,13 @@ header {
 
 .hero-button {
     display: inline-block;
-    margin-top: 40px;
 
-    padding: 15px 28px;
+    margin-top: 45px;
+    padding: 16px 28px;
 
     border: 1px solid #171513;
 
-    font-size: 11px;
+    font-size: 10px;
     text-transform: uppercase;
     letter-spacing: 2px;
 
@@ -148,12 +147,9 @@ header {
     color: #f5f1ea;
 }
 
+/* GENERAL SECTIONS */
 
-/* =========================
-   GENERAL SECTIONS
-========================= */
-
-section {
+.section {
     max-width: 1350px;
     margin: auto;
     padding: 120px 40px;
@@ -165,39 +161,28 @@ section {
     font-size: 10px;
     text-transform: uppercase;
     letter-spacing: 2.5px;
+
     opacity: 0.55;
 }
 
 .section-title {
     font-family: "Cormorant Garamond", serif;
+
     font-size: clamp(55px, 7vw, 90px);
     font-weight: 400;
+
     line-height: 0.95;
 }
 
-.section-intro {
-    max-width: 650px;
-    margin-top: 30px;
-
-    font-size: 16px;
-    line-height: 1.8;
-}
-
-
-/* =========================
-   SELECTED WORKS
-========================= */
+/* SELECTED WORKS */
 
 .works-grid {
-    margin-top: 75px;
+    margin-top: 70px;
 
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 80px 35px;
-}
 
-.artwork-card {
-    display: block;
+    gap: 80px 35px;
 }
 
 .artwork-image {
@@ -209,27 +194,12 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
-
-    overflow: hidden;
-}
-
-.artwork-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-
-    transition: transform 0.6s ease;
-}
-
-.artwork-card:hover .artwork-image img {
-    transform: scale(1.025);
 }
 
 .placeholder {
     text-align: center;
-    padding: 30px;
 
-    font-size: 11px;
+    font-size: 10px;
     text-transform: uppercase;
     letter-spacing: 2px;
 
@@ -237,22 +207,21 @@ section {
 }
 
 .artwork-info {
-    padding-top: 18px;
-    border-top: 1px solid rgba(23, 21, 19, 0.25);
+    padding-top: 17px;
 
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
+    border-top: 1px solid rgba(23, 21, 19, 0.2);
+
+    margin-top: 12px;
 }
 
 .artwork-title {
     font-family: "Cormorant Garamond", serif;
     font-size: 27px;
-    font-weight: 500;
+    line-height: 1.2;
 }
 
 .artwork-details {
-    text-align: right;
+    margin-top: 6px;
 
     font-size: 10px;
     text-transform: uppercase;
@@ -261,29 +230,49 @@ section {
     opacity: 0.55;
 }
 
+/* EXPLORE MORE */
 
-/* =========================
-   COLLECTIONS
-========================= */
-
-.collections {
-    border-top: 1px solid rgba(23, 21, 19, 0.1);
+.explore-more {
+    text-align: center;
+    margin-top: 85px;
 }
 
-.collection-grid {
+.explore-button {
+    display: inline-block;
+
+    padding: 18px 35px;
+
+    border: 1px solid #171513;
+
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
+    transition: all 0.3s ease;
+}
+
+.explore-button:hover {
+    background: #171513;
+    color: #f5f1ea;
+}
+
+/* COLLECTIONS */
+
+.collections-grid {
     margin-top: 70px;
 
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+
     gap: 35px;
 }
 
 .collection-card {
     min-height: 430px;
 
-    padding: 45px;
+    border: 1px solid rgba(23, 21, 19, 0.2);
 
-    border: 1px solid rgba(23, 21, 19, 0.22);
+    padding: 40px;
 
     display: flex;
     flex-direction: column;
@@ -302,209 +291,262 @@ section {
 
     font-size: 10px;
     letter-spacing: 2px;
-    opacity: 0.55;
+
+    opacity: 0.5;
 }
 
 .collection-card h3 {
     font-family: "Cormorant Garamond", serif;
+
     font-size: clamp(40px, 5vw, 65px);
     font-weight: 400;
+
     line-height: 0.95;
 }
 
 .collection-card p {
     max-width: 500px;
-    margin-top: 20px;
 
-    font-size: 14px;
-    line-height: 1.7;
-}
-
-.collection-link {
-    display: inline-block;
-    margin-top: 30px;
-
-    font-size: 10px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-
-
-/* =========================
-   BIOGRAPHY
-========================= */
-
-.about {
-    border-top: 1px solid rgba(23, 21, 19, 0.1);
-}
-
-.biography {
-    max-width: 900px;
-    margin-top: 55px;
-}
-
-.biography p {
-    margin-bottom: 28px;
+    margin-top: 25px;
 
     font-family: "Cormorant Garamond", serif;
+
+    font-size: 22px;
+    line-height: 1.5;
+}
+
+/* BIOGRAPHY */
+
+.bio-text {
+    max-width: 1050px;
+    margin-top: 55px;
+
+    font-family: "Cormorant Garamond", serif;
+
     font-size: clamp(25px, 3vw, 34px);
     line-height: 1.45;
 }
 
-
-/* =========================
-   ARTIST STATEMENT
-========================= */
+/* ARTIST STATEMENT */
 
 .statement {
-    border-top: 1px solid rgba(23, 21, 19, 0.1);
+    background: #171513;
+    color: #f5f1ea;
 }
 
 .statement-text {
-    max-width: 1000px;
+    max-width: 1100px;
     margin-top: 55px;
-}
-
-.statement-text p {
-    margin-bottom: 30px;
 
     font-family: "Cormorant Garamond", serif;
-    font-size: clamp(25px, 3vw, 38px);
+
+    font-size: clamp(25px, 3.5vw, 38px);
     line-height: 1.45;
 }
 
-.statement-quote {
-    max-width: 900px;
-    margin-top: 80px;
-    padding-left: 30px;
+/* QUOTE */
 
-    border-left: 1px solid #171513;
+.quote-section {
+    max-width: 1350px;
+    margin: auto;
+
+    padding: 140px 40px;
+}
+
+.quote {
+    max-width: 1100px;
 
     font-family: "Cormorant Garamond", serif;
-    font-size: clamp(35px, 5vw, 65px);
+
+    font-size: clamp(35px, 6vw, 65px);
+
+    line-height: 1.05;
+}
+
+/* EXHIBITIONS */
+
+.exhibitions {
+    margin-top: 70px;
+
+    max-width: 1050px;
+}
+
+.exhibition {
+    display: grid;
+    grid-template-columns: 100px 1fr 180px;
+
+    gap: 30px;
+
+    padding: 22px 0;
+
+    border-top: 1px solid rgba(23, 21, 19, 0.15);
+}
+
+.exhibition:last-child {
+    border-bottom: 1px solid rgba(23, 21, 19, 0.15);
+}
+
+.exhibition-year {
+    font-size: 11px;
+    opacity: 0.55;
+}
+
+.exhibition-name {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 23px;
+}
+
+.exhibition-location {
+    font-size: 10px;
+
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+    opacity: 0.55;
+}
+
+/* PROFESSIONAL DEVELOPMENT */
+
+.certificates {
+    margin-top: 70px;
+
+    max-width: 1000px;
+}
+
+.certificate {
+    padding: 30px 0;
+
+    border-top: 1px solid rgba(23, 21, 19, 0.15);
+
+    display: grid;
+    grid-template-columns: 100px 1fr;
+
+    gap: 30px;
+}
+
+.certificate:last-child {
+    border-bottom: 1px solid rgba(23, 21, 19, 0.15);
+}
+
+.certificate-year {
+    font-size: 11px;
+    opacity: 0.55;
+}
+
+.certificate-name {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 26px;
+    line-height: 1.2;
+}
+
+.certificate-provider {
+    margin-top: 8px;
+
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+    opacity: 0.55;
+}
+
+/* SERIES */
+
+.series-grid {
+    margin-top: 70px;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 80px 60px;
+}
+
+.series-title {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 42px;
+    font-weight: 400;
+
     line-height: 1;
 }
 
-
-/* =========================
-   EXPERIENCE
-========================= */
-
-.experience {
-    border-top: 1px solid rgba(23, 21, 19, 0.1);
-}
-
-.experience-grid {
-    margin-top: 65px;
-
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 50px;
-}
-
-.experience-item {
-    padding-top: 20px;
-    border-top: 1px solid rgba(23, 21, 19, 0.25);
-}
-
-.experience-year {
-    font-size: 11px;
-    letter-spacing: 2px;
-    opacity: 0.5;
-}
-
-.experience-item h3 {
-    margin-top: 15px;
+.series-description {
+    margin-top: 20px;
 
     font-family: "Cormorant Garamond", serif;
-    font-size: 28px;
-    font-weight: 500;
-    line-height: 1.1;
+
+    font-size: 24px;
+    line-height: 1.5;
 }
 
-.experience-item p {
-    margin-top: 10px;
+/* CONTACT */
 
-    font-size: 13px;
-    line-height: 1.6;
-    opacity: 0.65;
+.contact-section {
+    text-align: center;
 }
 
-
-/* =========================
-   CONTACT
-========================= */
-
-.contact {
-    min-height: 65vh;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-    border-top: 1px solid rgba(23, 21, 19, 0.1);
-}
-
-.contact h2 {
-    max-width: 850px;
-
+.contact-title {
     font-family: "Cormorant Garamond", serif;
-    font-size: clamp(60px, 9vw, 120px);
+
+    font-size: clamp(60px, 10vw, 120px);
     font-weight: 400;
+
     line-height: 0.9;
 }
 
 .contact-text {
-    margin-top: 35px;
+    max-width: 600px;
 
-    font-size: 15px;
+    margin: 35px auto 55px;
+
+    font-size: 16px;
     line-height: 1.8;
 }
 
 .contact-links {
     display: flex;
-    flex-wrap: wrap;
-    gap: 25px;
 
-    margin-top: 30px;
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 30px;
 }
 
 .contact-links a {
-    font-size: 11px;
-    text-transform: uppercase;
-    letter-spacing: 1.8px;
+    padding-bottom: 5px;
 
     border-bottom: 1px solid #171513;
-    padding-bottom: 5px;
+
+    font-size: 10px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1.8px;
 }
 
-
-/* =========================
-   FOOTER
-========================= */
+/* FOOTER */
 
 footer {
     max-width: 1350px;
     margin: auto;
+
     padding: 30px 40px 45px;
 
     border-top: 1px solid rgba(23, 21, 19, 0.15);
 
     display: flex;
     justify-content: space-between;
-    gap: 20px;
 
     font-size: 10px;
+
     text-transform: uppercase;
+
     letter-spacing: 1.5px;
 
     opacity: 0.55;
 }
 
-
-/* =========================
-   MOBILE
-========================= */
+/* MOBILE */
 
 @media (max-width: 750px) {
 
@@ -527,32 +569,26 @@ footer {
     }
 
     .hero {
-        min-height: 80vh;
         padding: 80px 20px;
+        min-height: 80vh;
     }
 
     .hero h1 {
-        font-size: clamp(65px, 21vw, 110px);
+        font-size: clamp(70px, 20vw, 120px);
         letter-spacing: -3px;
     }
 
-    .hero-subtitle {
-        font-size: 15px;
-    }
-
-    section {
-        padding: 85px 20px;
+    .section {
+        padding: 90px 20px;
     }
 
     .works-grid {
         grid-template-columns: 1fr;
         gap: 60px;
-        margin-top: 50px;
     }
 
-    .collection-grid {
+    .collections-grid {
         grid-template-columns: 1fr;
-        margin-top: 50px;
     }
 
     .collection-card {
@@ -560,38 +596,40 @@ footer {
         padding: 30px;
     }
 
-    .artwork-info {
-        flex-direction: column;
+    .bio-text,
+    .statement-text {
+        font-size: 27px;
+    }
+
+    .exhibition {
+        grid-template-columns: 1fr;
+        gap: 5px;
+    }
+
+    .certificate {
+        grid-template-columns: 1fr;
         gap: 8px;
     }
 
-    .artwork-details {
-        text-align: left;
-    }
-
-    .biography,
-    .statement-text {
-        margin-top: 40px;
-    }
-
-    .experience-grid {
+    .series-grid {
         grid-template-columns: 1fr;
-        gap: 40px;
+        gap: 55px;
     }
 
-    .statement-quote {
-        margin-top: 60px;
-    }
-
-    .contact {
-        min-height: 55vh;
+    .contact-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
     }
 
     footer {
         padding: 25px 20px 35px;
 
         flex-direction: column;
+
+        gap: 10px;
     }
+
 }
 
 </style>
@@ -601,646 +639,741 @@ footer {
 <body>
 
 
-<!-- =========================
-     HEADER
-========================= -->
-
 <header>
 
-    <nav class="nav">
+<nav class="nav">
 
-        <a href="#top" class="logo">
-            PATI YESTRO
-        </a>
+<a href="#home" class="logo">
+PATI YESTRO
+</a>
 
-        <div class="nav-links">
-            <a href="#work">Work</a>
-            <a href="#collections">Collections</a>
-            <a href="#about">About</a>
-            <a href="#statement">Statement</a>
-            <a href="#contact">Contact</a>
-        </div>
+<div class="nav-links">
 
-    </nav>
+<a href="#work">Work</a>
+
+<a href="#collections">Collections</a>
+
+<a href="#about">About</a>
+
+<a href="#statement">Statement</a>
+
+<a href="#contact">Contact</a>
+
+</div>
+
+</nav>
 
 </header>
 
 
+<!-- HERO -->
 
-<main id="top">
+<section class="hero" id="home">
 
+<div class="hero-label">
+Contemporary Visual Artist · Rwanda
+</div>
 
-<!-- =========================
-     HERO
-========================= -->
+<h1>
+Pati<br>Yestro
+</h1>
 
-<section class="hero">
+<p>
+Oil and mixed media paintings exploring memory,
+identity, history, resilience, healing, and human nature.
+</p>
 
-    <h1>Pati Yestro</h1>
-
-    <p class="hero-subtitle">
-        Contemporary Rwandan artist exploring memory, identity,
-        resilience, transformation, and the human experience through painting.
-    </p>
-
-    <a href="#work" class="hero-button">
-        Explore the Work
-    </a>
+<a href="#work" class="hero-button">
+Explore the Work
+</a>
 
 </section>
 
 
+<!-- SELECTED WORK -->
 
-<!-- =========================
-     SELECTED WORKS
-========================= -->
+<section class="section" id="work">
 
-<section id="work">
+<div class="section-label">
+01 · Selected Works
+</div>
 
-    <div class="section-label">
-        Selected Works
-    </div>
+<h2 class="section-title">
+Selected Works
+</h2>
 
-    <h2 class="section-title">
-        The Paintings
-    </h2>
 
-    <p class="section-intro">
-        A selection of paintings exploring memory, resilience,
-        identity, time, beauty, and the human experience.
-    </p>
+<div class="works-grid">
 
 
-    <div class="works-grid">
+<div class="artwork">
 
+<div class="artwork-image">
 
-        <!-- PAINTING 1 -->
+<div class="placeholder">
+Painting Image
+</div>
 
-        <a href="#" class="artwork-card">
+</div>
 
-            <div class="artwork-image">
+<div class="artwork-info">
 
-                <!-- Replace this placeholder with your painting image later -->
+<div class="artwork-title">
+What Time Couldn't Erase
+</div>
 
-                <div class="placeholder">
-                    Painting Image<br>
-                    Add Image Here
-                </div>
+<div class="artwork-details">
+Oil on Canvas · 100 × 80 cm · 2025
+</div>
 
-            </div>
+</div>
 
-            <div class="artwork-info">
+</div>
 
-                <div>
-                    <div class="artwork-title">
-                        What Time Couldn't Erase
-                    </div>
-                </div>
 
-                <div class="artwork-details">
-                    Oil on Canvas<br>
-                    2025
-                </div>
+<div class="artwork">
 
-            </div>
+<div class="artwork-image">
 
-        </a>
+<div class="placeholder">
+Painting Image
+</div>
 
+</div>
 
+<div class="artwork-info">
 
-        <!-- PAINTING 2 -->
+<div class="artwork-title">
+Bound Yet Burning
+</div>
 
-        <a href="#" class="artwork-card">
+<div class="artwork-details">
+Oil on Canvas · 110 × 80 cm · 2025
+</div>
 
-            <div class="artwork-image">
+</div>
 
-                <div class="placeholder">
-                    Painting Image<br>
-                    Add Image Here
-                </div>
+</div>
 
-            </div>
 
-            <div class="artwork-info">
+<div class="artwork">
 
-                <div class="artwork-title">
-                    Bound Yet Burning
-                </div>
+<div class="artwork-image">
 
-                <div class="artwork-details">
-                    Oil on Canvas<br>
-                    2025
-                </div>
+<div class="placeholder">
+Painting Image
+</div>
 
-            </div>
+</div>
 
-        </a>
+<div class="artwork-info">
 
+<div class="artwork-title">
+She Who Stays
+</div>
 
+<div class="artwork-details">
+Oil on Canvas · 110 × 94 cm · 2024
+</div>
 
-        <!-- PAINTING 3 -->
+</div>
 
-        <a href="#" class="artwork-card">
+</div>
 
-            <div class="artwork-image">
 
-                <div class="placeholder">
-                    Painting Image<br>
-                    Add Image Here
-                </div>
+<div class="artwork">
 
-            </div>
+<div class="artwork-image">
 
-            <div class="artwork-info">
+<div class="placeholder">
+Painting Image
+</div>
 
-                <div class="artwork-title">
-                    She Who Stays
-                </div>
+</div>
 
-                <div class="artwork-details">
-                    Oil on Canvas<br>
-                    2024
-                </div>
+<div class="artwork-info">
 
-            </div>
+<div class="artwork-title">
+The Body Remembers
+</div>
 
-        </a>
+<div class="artwork-details">
+Oil on Canvas · 120 × 90 cm · 2024
+</div>
 
+</div>
 
+</div>
 
-        <!-- PAINTING 4 -->
 
-        <a href="#" class="artwork-card">
+<div class="artwork">
 
-            <div class="artwork-image">
+<div class="artwork-image">
 
-                <div class="placeholder">
-                    Painting Image<br>
-                    Add Image Here
-                </div>
+<div class="placeholder">
+Painting Image
+</div>
 
-            </div>
+</div>
 
-            <div class="artwork-info">
+<div class="artwork-info">
 
-                <div class="artwork-title">
-                    The Body Remembers
-                </div>
+<div class="artwork-title">
+Guardian of Eternity
+</div>
 
-                <div class="artwork-details">
-                    Oil on Canvas<br>
-                    2024
-                </div>
+<div class="artwork-details">
+Oil on Canvas · 120 × 90 cm · 2023
+</div>
 
-            </div>
+</div>
 
-        </a>
+</div>
 
 
+<div class="artwork">
 
-        <!-- PAINTING 5 -->
+<div class="artwork-image">
 
-        <a href="#" class="artwork-card">
+<div class="placeholder">
+Painting Image
+</div>
 
-            <div class="artwork-image">
+</div>
 
-                <div class="placeholder">
-                    Painting Image<br>
-                    Add Image Here
-                </div>
+<div class="artwork-info">
 
-            </div>
+<div class="artwork-title">
+Not Fragile as Flowers, Fragile as Bomb
+</div>
 
-            <div class="artwork-info">
+<div class="artwork-details">
+Oil on Canvas
+</div>
 
-                <div class="artwork-title">
-                    Guardian of Eternity
-                </div>
+</div>
 
-                <div class="artwork-details">
-                    Oil on Canvas<br>
-                    2023
-                </div>
+</div>
 
-            </div>
 
-        </a>
+</div>
 
 
+<!-- EXPLORE MORE BUTTON -->
 
-        <!-- PAINTING 6 -->
+<div class="explore-more">
 
-        <a href="#" class="artwork-card">
+<a href="works.html" class="explore-button">
+Explore More →
+</a>
 
-            <div class="artwork-image">
-
-                <div class="placeholder">
-                    Painting Image<br>
-                    Add Image Here
-                </div>
-
-            </div>
-
-            <div class="artwork-info">
-
-                <div class="artwork-title">
-                    Not Fragile as Flowers, Fragile as Bomb
-                </div>
-
-                <div class="artwork-details">
-                    Oil on Canvas
-                </div>
-
-            </div>
-
-        </a>
-
-
-    </div>
+</div>
 
 </section>
 
 
+<!-- COLLECTIONS -->
 
-<!-- =========================
-     COLLECTIONS
-========================= -->
+<section class="section" id="collections">
 
-<section id="collections" class="collections">
+<div class="section-label">
+02 · Collections
+</div>
 
-    <div class="section-label">
-        Explore More
-    </div>
-
-    <h2 class="section-title">
-        Collections
-    </h2>
-
-    <p class="section-intro">
-        Explore bodies of work developed around recurring ideas,
-        symbols, stories, and experiences.
-    </p>
+<h2 class="section-title">
+Collections
+</h2>
 
 
-    <div class="collection-grid">
+<div class="collections-grid">
 
 
-        <!-- COLLECTION 1 -->
+<a href="works.html" class="collection-card">
 
-        <a href="#" class="collection-card">
+<div class="collection-number">
+01
+</div>
 
-            <div class="collection-number">
-                COLLECTION 01
-            </div>
+<h3>
+Women Who Remain
+</h3>
 
-            <h3>
-                Women Who Remain
-            </h3>
+<p>
+A collection inspired by the strength, beauty,
+and resilience of women.
+</p>
 
-            <p>
-                A body of work exploring women's strength, beauty,
-                resilience, expectations, transformation, and the
-                many roles women carry within family and society.
-            </p>
-
-            <div class="collection-link">
-                Explore Collection →
-            </div>
-
-        </a>
+</a>
 
 
+<a href="works.html" class="collection-card">
 
-        <!-- COLLECTION 2 -->
+<div class="collection-number">
+02
+</div>
 
-        <a href="#" class="collection-card">
+<h3>
+What Survived Me
+</h3>
 
-            <div class="collection-number">
-                COLLECTION 02
-            </div>
+<p>
+A body of work exploring struggle, internal
+collapse, endurance, and what remains.
+</p>
 
-            <h3>
-                What Survived Me
-            </h3>
-
-            <p>
-                A developing body of work reflecting on inner
-                struggles, memory, fragility, resilience, and
-                the possibility of finding light within difficult experiences.
-            </p>
-
-            <div class="collection-link">
-                Explore Collection →
-            </div>
-
-        </a>
+</a>
 
 
-    </div>
+</div>
 
 </section>
 
 
+<!-- BIOGRAPHY -->
 
-<!-- =========================
-     BIOGRAPHY
-========================= -->
+<section class="section" id="about">
 
-<section id="about" class="about">
+<div class="section-label">
+03 · Biography
+</div>
 
-    <div class="section-label">
-        Biography
-    </div>
-
-    <h2 class="section-title">
-        About the Artist
-    </h2>
+<h2 class="section-title">
+About the Artist
+</h2>
 
 
-    <div class="biography">
+<div class="bio-text">
 
-        <p>
-            IRADUKUNDA Patient, known professionally as Pati Yestro,
-            is a Rwandan contemporary visual artist born on April 17,
-            1994, in the district of Rubavu, Western Rwanda.
-        </p>
+<p>
+IRADUKUNDA Patient, known professionally as Pati Yestro,
+is a Rwandan contemporary visual artist born on April 17,
+1994, in the district of Rubavu, Western Rwanda.
+</p>
 
-        <p>
-            His works are grounded in memories, resilience, identity,
-            and history. He lost his parents at a young age and grew
-            up with his sister, which shaped his understanding of
-            female nature – care and pain in the same measure.
-        </p>
+<br>
 
-        <p>
-            This, together with the experience of the Rwandan Genocide
-            of 1994, influenced his art, in which he often puts women
-            and children at the center of the narrative.
-        </p>
+<p>
+His works are grounded in memories, resilience, identity,
+and history. He lost his parents at a young age and grew
+up with his sister, which shaped his understanding of
+female nature – care and pain in the same measure.
+</p>
 
-        <p>
-            Pati found his talent for drawing at the age of nine and
-            graduated from Ecole d’Arts de Nyundo in 2014. Since 2015,
-            he has been exhibiting his works in local and international
-            galleries.
-        </p>
+<br>
 
-        <p>
-            He paints with oil and mixed mediums on canvas, creating
-            surrealistic figurative worlds full of silence, memories,
-            healing, and cultural codes.
-        </p>
+<p>
+This, together with the experience of the Rwandan Genocide
+of 1994, influenced his art, in which he often puts women
+and children at the center of the narrative.
+</p>
 
-        <p>
-            His works contain flowers, clocks, spaces, and human bodies
-            as drivers of reflection on a personal and collective
-            unconscious, long-lasting pain, time, and resilience.
-        </p>
+<br>
 
-    </div>
+<p>
+Pati found his talent for drawing at the age of nine and
+graduated from Ecole d’Arts de Nyundo in 2014. Since 2015,
+he has been exhibiting his works in local and international
+galleries.
+</p>
 
-</section>
+<br>
 
+<p>
+He paints with oil and mixed mediums on canvas, creating
+surrealistic figurative worlds full of silence, memories,
+healing, and cultural codes.
+</p>
 
+<br>
 
-<!-- =========================
-     ARTIST STATEMENT
-========================= -->
+<p>
+His works contain flowers, clocks, spaces, and human bodies
+as drivers of reflection on a personal and collective
+unconscious, long-lasting pain, time, and resilience.
+</p>
 
-<section id="statement" class="statement">
-
-    <div class="section-label">
-        Artist Statement
-    </div>
-
-    <h2 class="section-title">
-        The Practice
-    </h2>
-
-
-    <div class="statement-text">
-
-        <p>
-            My works are an exercise in memory, history, and human nature.
-            I was born and raised in Rwanda where the Genocide against
-            the Tutsi ethnic group happened in 1994. Painting allows me
-            to make sense of what happened and its reverberations in the
-            collective and individual consciousness.
-        </p>
-
-        <p>
-            I depict women and children in my paintings because I grew
-            up with women, having lost my parents at a young age.
-        </p>
-
-        <p>
-            Women taught me their strength, their weaknesses, their
-            resilience, and their capacity for suffering.
-        </p>
-
-        <p>
-            I paint topics of time, fragility, healing, memory, and space,
-            using clocks, flowers, building structures, and human bodies
-            as my vehicles. My works court the tension between universal
-            and introspective, making the intimate history of the individual,
-            their pain, and memories a collective search for meaning.
-            Painting is my medium to confront, reconcile, remember, and heal.
-        </p>
-
-    </div>
-
-
-    <div class="statement-quote">
-        “Painting is my medium to confront, reconcile, remember, and heal.”
-    </div>
+</div>
 
 </section>
 
 
+<!-- ARTIST STATEMENT -->
 
-<!-- =========================
-     EXPERIENCE
-========================= -->
+<section class="section statement" id="statement">
 
-<section class="experience">
+<div class="section-label">
+04 · Artist Statement
+</div>
 
-    <div class="section-label">
-        Selected Experience
-    </div>
-
-    <h2 class="section-title">
-        Exhibitions & Projects
-    </h2>
+<h2 class="section-title">
+Artist Statement
+</h2>
 
 
-    <div class="experience-grid">
+<div class="statement-text">
 
+<p>
+My works are an exercise in memory, history, and human nature.
+I was born and raised in Rwanda where the Genocide against
+the Tutsi ethnic group happened in 1994. Painting allows me
+to make sense of what happened and its reverberations in the
+collective and individual consciousness.
+</p>
 
-        <div class="experience-item">
+<br>
 
-            <div class="experience-year">
-                2024
-            </div>
+<p>
+I depict women and children in my paintings because I grew up
+with women, having lost my parents at a young age.
+</p>
 
-            <h3>
-                High Art Competition
-            </h3>
+<br>
 
-            <p>
-                Third Place
-            </p>
+<p>
+Women taught me their strength, their weaknesses, their
+resilience, and their capacity for suffering.
+</p>
 
-        </div>
+<br>
 
+<p>
+I paint topics of time, fragility, healing, memory, and space,
+using clocks, flowers, building structures, and human bodies
+as my vehicles. My works court the tension between universal
+and introspective, making the intimate history of the
+individual, their pain, and memories a collective search for
+meaning. Painting is my medium to confront, reconcile,
+remember, and heal.
+</p>
 
-
-        <div class="experience-item">
-
-            <div class="experience-year">
-                2024
-            </div>
-
-            <h3>
-                Envision Rwanda
-            </h3>
-
-            <p>
-                5 Years Anniversary Exhibition
-            </p>
-
-        </div>
-
-
-
-        <div class="experience-item">
-
-            <div class="experience-year">
-                2020
-            </div>
-
-            <h3>
-                Genesis
-            </h3>
-
-            <p>
-                Solo Online Exhibition
-            </p>
-
-        </div>
-
-
-
-        <div class="experience-item">
-
-            <div class="experience-year">
-                2019
-            </div>
-
-            <h3>
-                Anda Arts Festival
-            </h3>
-
-            <p>
-                Participating Artist
-            </p>
-
-        </div>
-
-
-
-        <div class="experience-item">
-
-            <div class="experience-year">
-                2016
-            </div>
-
-            <h3>
-                Kwita Izina
-            </h3>
-
-            <p>
-                Participating Artist
-            </p>
-
-        </div>
-
-
-
-        <div class="experience-item">
-
-            <div class="experience-year">
-                2014
-            </div>
-
-            <h3>
-                Kivu Nuru
-            </h3>
-
-            <p>
-                Participating Artist
-            </p>
-
-        </div>
-
-
-    </div>
+</div>
 
 </section>
 
 
+<!-- QUOTE -->
 
-<!-- =========================
-     CONTACT
-========================= -->
+<section class="quote-section">
 
-<section id="contact" class="contact">
-
-    <div class="section-label">
-        Contact
-    </div>
-
-    <h2>
-        Let's talk about art.
-    </h2>
-
-    <p class="contact-text">
-        For exhibitions, collaborations, commissions, acquisitions,
-        or professional inquiries, please get in touch.
-    </p>
-
-
-    <div class="contact-links">
-
-        <a href="mailto:patiyestro@gmail.com">
-            Email
-        </a>
-
-        <a href="https://www.instagram.com/pati_yestro/" target="_blank">
-            Instagram
-        </a>
-
-    </div>
+<div class="quote">
+“Change the world without talking,
+only using my hands.”
+</div>
 
 </section>
 
 
-</main>
+<!-- EXHIBITIONS -->
+
+<section class="section">
+
+<div class="section-label">
+05 · Exhibitions & Awards
+</div>
+
+<h2 class="section-title">
+Selected Exhibitions<br>& Awards
+</h2>
 
 
+<div class="exhibitions">
 
-<!-- =========================
-     FOOTER
-========================= -->
+
+<div class="exhibition">
+
+<div class="exhibition-year">
+2024
+</div>
+
+<div class="exhibition-name">
+Envision Rwanda 5 Years Anniversary
+</div>
+
+<div class="exhibition-location">
+Rwanda · Group Exhibition
+</div>
+
+</div>
+
+
+<div class="exhibition">
+
+<div class="exhibition-year">
+2024
+</div>
+
+<div class="exhibition-name">
+High Art Competition
+</div>
+
+<div class="exhibition-location">
+USA · 3rd Place Award
+</div>
+
+</div>
+
+
+<div class="exhibition">
+
+<div class="exhibition-year">
+2019
+</div>
+
+<div class="exhibition-name">
+Anda Arts Festival
+</div>
+
+<div class="exhibition-location">
+Rwanda · Group Exhibition
+</div>
+
+</div>
+
+
+<div class="exhibition">
+
+<div class="exhibition-year">
+2019
+</div>
+
+<div class="exhibition-name">
+YouthConnekt Africa Summit
+</div>
+
+<div class="exhibition-location">
+Rwanda · Group Exhibition
+</div>
+
+</div>
+
+
+<div class="exhibition">
+
+<div class="exhibition-year">
+2016
+</div>
+
+<div class="exhibition-name">
+Kwita Izina Art Exhibition
+</div>
+
+<div class="exhibition-location">
+Rwanda · Group Exhibition
+</div>
+
+</div>
+
+
+<div class="exhibition">
+
+<div class="exhibition-year">
+2014
+</div>
+
+<div class="exhibition-name">
+Kivu Nuru Exhibition
+</div>
+
+<div class="exhibition-location">
+RDC Congo · Group Exhibition
+</div>
+
+</div>
+
+
+<div class="exhibition">
+
+<div class="exhibition-year">
+2014
+</div>
+
+<div class="exhibition-name">
+My Democracy Art Exhibition
+</div>
+
+<div class="exhibition-location">
+Rwanda · Group Exhibition
+</div>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- PROFESSIONAL DEVELOPMENT -->
+
+<section class="section">
+
+<div class="section-label">
+06 · Professional Development
+</div>
+
+<h2 class="section-title">
+Certificates
+</h2>
+
+
+<div class="certificates">
+
+
+<div class="certificate">
+
+<div class="certificate-year">
+2024
+</div>
+
+<div>
+
+<div class="certificate-name">
+SoCreative Entrepreneurship Program
+</div>
+
+<div class="certificate-provider">
+British Council in partnership with African Leadership University
+</div>
+
+</div>
+
+</div>
+
+
+<div class="certificate">
+
+<div class="certificate-year">
+2014
+</div>
+
+<div>
+
+<div class="certificate-name">
+Mixed Media
+</div>
+
+<div class="certificate-provider">
+Jason Corder
+</div>
+
+</div>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- SERIES -->
+
+<section class="section">
+
+<div class="section-label">
+07 · Series
+</div>
+
+<h2 class="section-title">
+Current Series
+</h2>
+
+
+<div class="series-grid">
+
+
+<div>
+
+<div class="series-title">
+Women Who Remain
+</div>
+
+<div class="series-description">
+Women Who Remain is a painting collection inspired by
+the strength, beauty, and resilience of women. Through
+expressive brush strokes, the series challenges societal
+expectations while celebrating feminine power and
+transformation.
+</div>
+
+</div>
+
+
+<div>
+
+<div class="series-title">
+What Survived Me
+</div>
+
+<div class="series-description">
+What Survived Me speaks about depression and struggle
+in a way that refuses the simple story of “I survived it.”
+Instead, it suggests that the experience was so heavy it
+consumed parts of you, and what exists now is what remained
+after that internal collapse.
+</div>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section class="section contact-section" id="contact">
+
+<div class="section-label">
+08 · Contact
+</div>
+
+<h2 class="contact-title">
+Let's Connect
+</h2>
+
+<p class="contact-text">
+For exhibitions, commissions, collaborations,
+studio visits, and other professional inquiries,
+please get in touch.
+</p>
+
+
+<div class="contact-links">
+
+<a href="mailto:partalent@gmail.com">
+Email
+</a>
+
+<a href="https://www.instagram.com/Pati_yestro/" target="_blank" rel="noopener">
+Instagram
+</a>
+
+<a href="https://wa.me/250788290510" target="_blank" rel="noopener">
+WhatsApp
+</a>
+
+<a href="https://www.facebook.com/share/1AswegpcPm/?mibextid=wwXIfr" target="_blank" rel="noopener">
+Facebook
+</a>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
 
 <footer>
 
-    <div>
-        © 2026 Pati Yestro
-    </div>
+<div>
+© 2026 Pati Yestro
+</div>
 
-    <div>
-        Contemporary Artist · Rwanda
-    </div>
+<div>
+Contemporary Artist · Rwanda
+</div>
 
 </footer>
 
