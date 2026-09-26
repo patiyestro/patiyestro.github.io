@@ -224,7 +224,7 @@ header {
 
 .artwork-detail {
     max-width: 1350px;
-    margin: 0 auto;
+    margin: auto;
 
     padding: 20px 40px 140px;
 }
@@ -232,13 +232,16 @@ header {
 .artwork-detail-inner {
     border-top: 1px solid rgba(23, 21, 19, 0.15);
 
-    padding-top: 70px;
+    padding-top: 60px;
 
     display: grid;
     grid-template-columns: minmax(0, 1.1fr) minmax(300px, 0.9fr);
 
     gap: 80px;
 }
+
+
+/* PAINTING */
 
 .artwork-detail-image {
     width: 100%;
@@ -262,62 +265,66 @@ header {
 /* ARTWORK INFORMATION */
 
 .artwork-information {
-    padding-top: 5px;
+    padding-top: 0;
 }
 
+
+/* SMALL SERIES */
+
 .artwork-series {
-    margin-bottom: 15px;
+    margin-bottom: 8px;
 
     font-size: 10px;
     text-transform: uppercase;
-    letter-spacing: 2.5px;
+    letter-spacing: 2px;
 
     opacity: 0.55;
 }
 
+
+/* SMALL TITLE */
+
 .artwork-information h3 {
-    max-width: 600px;
+    margin-bottom: 24px;
 
     font-family: "Cormorant Garamond", serif;
 
-    font-size: clamp(45px, 5vw, 75px);
+    font-size: 32px;
 
-    font-weight: 400;
+    font-weight: 500;
 
-    line-height: 0.95;
-
-    margin-bottom: 50px;
+    line-height: 1.05;
 }
 
 
 /* METADATA */
 
 .artwork-metadata {
-    margin-bottom: 55px;
+    margin-bottom: 42px;
 
-    border-top: 1px solid rgba(23, 21, 19, 0.15);
+    border-top: 1px solid rgba(23, 21, 19, 0.12);
 }
 
 .metadata-row {
     display: grid;
 
-    grid-template-columns: 90px 1fr;
+    grid-template-columns: 75px 1fr;
 
-    gap: 25px;
+    gap: 18px;
 
-    padding: 13px 0;
+    padding: 5px 0;
 
-    border-bottom: 1px solid rgba(23, 21, 19, 0.1);
+    border-bottom: 1px solid rgba(23, 21, 19, 0.07);
 
-    font-size: 12px;
+    font-size: 10px;
 
-    line-height: 1.5;
+    line-height: 1.35;
 }
 
 .metadata-label {
     text-transform: uppercase;
 
-    letter-spacing: 1.5px;
+    letter-spacing: 1.2px;
 
     opacity: 0.5;
 }
@@ -330,7 +337,7 @@ header {
 /* DESCRIPTION */
 
 .artwork-description-label {
-    margin-bottom: 20px;
+    margin-bottom: 24px;
 
     font-size: 10px;
 
@@ -348,7 +355,7 @@ header {
 
     font-size: 21px;
 
-    line-height: 1.7;
+    line-height: 1.75;
 }
 
 .artwork-description p {
@@ -477,30 +484,29 @@ footer {
     }
 
     .artwork-detail-image {
-        margin-bottom: 55px;
-    }
-
-    .artwork-information h3 {
-        font-size: clamp(45px, 14vw, 70px);
-
-        margin-bottom: 40px;
-    }
-
-    .artwork-metadata {
         margin-bottom: 45px;
     }
 
+    .artwork-information h3 {
+        font-size: 30px;
+        margin-bottom: 22px;
+    }
+
+    .artwork-metadata {
+        margin-bottom: 40px;
+    }
+
     .metadata-row {
-        grid-template-columns: 80px 1fr;
+        grid-template-columns: 75px 1fr;
+        gap: 15px;
 
-        gap: 20px;
-
-        font-size: 11px;
+        font-size: 10px;
+        padding: 5px 0;
     }
 
     .artwork-description {
         font-size: 20px;
-        line-height: 1.7;
+        line-height: 1.75;
     }
 
     .back-home {
@@ -691,7 +697,7 @@ footer {
 
 
 
-<!-- FULL ARTWORK DETAIL -->
+<!-- FULL ARTWORK -->
 
 <section
     class="artwork-detail"
@@ -713,15 +719,19 @@ footer {
         </div>
 
 
-        <!-- INFORMATION -->
+        <!-- ARTWORK INFORMATION -->
 
         <div class="artwork-information">
 
+
+            <!-- SMALL SERIES -->
 
             <div class="artwork-series">
                 What Survived Me
             </div>
 
+
+            <!-- SMALL TITLE -->
 
             <h3>
                 The Price of Becoming Human
@@ -812,7 +822,7 @@ footer {
                     This is the story of life's endless chain<br>
                     Of love, of loss, of joy and pain<br>
                     We fall and rise again, reborn<br>
-                    Life's never-ending reincarnation
+                    Life's never ending reincarnation
                 </p>
 
 
