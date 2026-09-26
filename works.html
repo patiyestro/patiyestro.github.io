@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -37,6 +38,7 @@ a {
     color: inherit;
     text-decoration: none;
 }
+
 
 /* NAVIGATION */
 
@@ -83,6 +85,7 @@ header {
     opacity: 0.5;
 }
 
+
 /* PAGE HEADER */
 
 .page-header {
@@ -117,6 +120,7 @@ header {
     line-height: 1.8;
 }
 
+
 /* COLLECTION */
 
 .collection {
@@ -148,6 +152,7 @@ header {
     font-size: 23px;
     line-height: 1.5;
 }
+
 
 /* PAINTINGS */
 
@@ -214,11 +219,153 @@ header {
     opacity: 0.55;
 }
 
+
+/* ARTWORK DETAIL */
+
+.artwork-detail {
+    max-width: 1350px;
+    margin: 0 auto;
+
+    padding: 20px 40px 140px;
+}
+
+.artwork-detail-inner {
+    border-top: 1px solid rgba(23, 21, 19, 0.15);
+
+    padding-top: 70px;
+
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(300px, 0.9fr);
+
+    gap: 80px;
+}
+
+.artwork-detail-image {
+    width: 100%;
+
+    aspect-ratio: 4 / 5;
+
+    background: #ded8cf;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+}
+
+.artwork-detail-image .placeholder {
+    text-align: center;
+}
+
+
+/* ARTWORK INFORMATION */
+
+.artwork-information {
+    padding-top: 5px;
+}
+
+.artwork-series {
+    margin-bottom: 15px;
+
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+
+    opacity: 0.55;
+}
+
+.artwork-information h3 {
+    max-width: 600px;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(45px, 5vw, 75px);
+
+    font-weight: 400;
+
+    line-height: 0.95;
+
+    margin-bottom: 50px;
+}
+
+
+/* METADATA */
+
+.artwork-metadata {
+    margin-bottom: 55px;
+
+    border-top: 1px solid rgba(23, 21, 19, 0.15);
+}
+
+.metadata-row {
+    display: grid;
+
+    grid-template-columns: 90px 1fr;
+
+    gap: 25px;
+
+    padding: 13px 0;
+
+    border-bottom: 1px solid rgba(23, 21, 19, 0.1);
+
+    font-size: 12px;
+
+    line-height: 1.5;
+}
+
+.metadata-label {
+    text-transform: uppercase;
+
+    letter-spacing: 1.5px;
+
+    opacity: 0.5;
+}
+
+.metadata-value {
+    font-weight: 400;
+}
+
+
+/* DESCRIPTION */
+
+.artwork-description-label {
+    margin-bottom: 20px;
+
+    font-size: 10px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 2.5px;
+
+    opacity: 0.55;
+}
+
+.artwork-description {
+    max-width: 650px;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 21px;
+
+    line-height: 1.7;
+}
+
+.artwork-description p {
+    margin-bottom: 30px;
+}
+
+.artwork-description p:last-child {
+    margin-bottom: 0;
+}
+
+
 /* BACK HOME */
 
 .back-home {
     max-width: 1350px;
     margin: auto;
+
     padding: 0 40px 80px;
 }
 
@@ -230,9 +377,12 @@ header {
     border-bottom: 1px solid #171513;
 
     font-size: 10px;
+
     text-transform: uppercase;
+
     letter-spacing: 2px;
 }
+
 
 /* FOOTER */
 
@@ -248,11 +398,14 @@ footer {
     justify-content: space-between;
 
     font-size: 10px;
+
     text-transform: uppercase;
+
     letter-spacing: 1.5px;
 
     opacity: 0.55;
 }
+
 
 /* MOBILE */
 
@@ -313,22 +466,64 @@ footer {
         text-align: left;
     }
 
+    .artwork-detail {
+        padding: 0 20px 90px;
+    }
+
+    .artwork-detail-inner {
+        display: block;
+
+        padding-top: 50px;
+    }
+
+    .artwork-detail-image {
+        margin-bottom: 55px;
+    }
+
+    .artwork-information h3 {
+        font-size: clamp(45px, 14vw, 70px);
+
+        margin-bottom: 40px;
+    }
+
+    .artwork-metadata {
+        margin-bottom: 45px;
+    }
+
+    .metadata-row {
+        grid-template-columns: 80px 1fr;
+
+        gap: 20px;
+
+        font-size: 11px;
+    }
+
+    .artwork-description {
+        font-size: 20px;
+        line-height: 1.7;
+    }
+
     .back-home {
         padding: 0 20px 60px;
     }
 
     footer {
         padding: 25px 20px 35px;
+
         flex-direction: column;
+
         gap: 10px;
     }
 
 }
 
 </style>
+
 </head>
 
+
 <body>
+
 
 <header>
 
@@ -355,6 +550,7 @@ footer {
 
 <main>
 
+
 <!-- PAGE HEADER -->
 
 <section class="page-header">
@@ -374,6 +570,7 @@ footer {
     </p>
 
 </section>
+
 
 
 <!-- WOMEN WHO REMAIN -->
@@ -397,7 +594,7 @@ footer {
     <div class="paintings-grid">
 
 
-        <!-- ADD PAINTING HERE -->
+        <!-- PLACEHOLDER FOR WOMEN WHO REMAIN WORK -->
 
         <div class="painting-card">
 
@@ -426,12 +623,13 @@ footer {
         </div>
 
 
-        <!-- ADD MORE PAINTINGS HERE -->
+        <!-- ADD MORE WOMEN WHO REMAIN PAINTINGS HERE -->
 
 
     </div>
 
 </section>
+
 
 
 <!-- WHAT SURVIVED ME -->
@@ -455,9 +653,9 @@ footer {
     <div class="paintings-grid">
 
 
-        <!-- ADD PAINTING HERE -->
+        <!-- THE PRICE OF BECOMING HUMAN -->
 
-        <div class="painting-card">
+        <a href="#the-price-of-becoming-human" class="painting-card">
 
             <div class="painting-image">
 
@@ -471,25 +669,200 @@ footer {
             <div class="painting-info">
 
                 <div class="painting-title">
-                    Painting Title
+                    The Price of Becoming Human
                 </div>
 
                 <div class="painting-details">
                     Oil on Canvas<br>
-                    Year
+                    2024
                 </div>
 
             </div>
 
-        </div>
+        </a>
 
 
-        <!-- ADD MORE PAINTINGS HERE -->
+        <!-- ADD MORE WHAT SURVIVED ME PAINTINGS HERE -->
 
 
     </div>
 
 </section>
+
+
+
+<!-- FULL ARTWORK DETAIL -->
+
+<section
+    class="artwork-detail"
+    id="the-price-of-becoming-human"
+>
+
+    <div class="artwork-detail-inner">
+
+
+        <!-- PAINTING -->
+
+        <div class="artwork-detail-image">
+
+            <div class="placeholder">
+                Painting Image<br>
+                Add Image Here
+            </div>
+
+        </div>
+
+
+        <!-- INFORMATION -->
+
+        <div class="artwork-information">
+
+
+            <div class="artwork-series">
+                What Survived Me
+            </div>
+
+
+            <h3>
+                The Price of Becoming Human
+            </h3>
+
+
+            <!-- METADATA -->
+
+            <div class="artwork-metadata">
+
+                <div class="metadata-row">
+
+                    <div class="metadata-label">
+                        Series:
+                    </div>
+
+                    <div class="metadata-value">
+                        What Survived Me
+                    </div>
+
+                </div>
+
+
+                <div class="metadata-row">
+
+                    <div class="metadata-label">
+                        Title:
+                    </div>
+
+                    <div class="metadata-value">
+                        The Price of Becoming Human
+                    </div>
+
+                </div>
+
+
+                <div class="metadata-row">
+
+                    <div class="metadata-label">
+                        Size:
+                    </div>
+
+                    <div class="metadata-value">
+                        180 × 110 cm
+                    </div>
+
+                </div>
+
+
+                <div class="metadata-row">
+
+                    <div class="metadata-label">
+                        Medium:
+                    </div>
+
+                    <div class="metadata-value">
+                        Oil on canvas
+                    </div>
+
+                </div>
+
+
+                <div class="metadata-row">
+
+                    <div class="metadata-label">
+                        Year:
+                    </div>
+
+                    <div class="metadata-value">
+                        2024
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- DESCRIPTION -->
+
+            <div class="artwork-description-label">
+                Description
+            </div>
+
+
+            <div class="artwork-description">
+
+                <p>
+                    This is the story of life's endless chain<br>
+                    Of love, of loss, of joy and pain<br>
+                    We fall and rise again, reborn<br>
+                    Life's never-ending reincarnation
+                </p>
+
+
+                <p>
+                    We come into this world as nothing<br>
+                    And slowly learn to know everything<br>
+                    The love we carry, the losses we bear<br>
+                    The dreams we chase and pay for with our tears
+                </p>
+
+
+                <p>
+                    We fall and fracture, change and grow<br>
+                    And leave behind us fragments of long ago<br>
+                    But always something remains<br>
+                    A memory, a scar, a flower<br>
+                    A trace of some long gone life<br>
+                    That lives within our next birth.
+                </p>
+
+
+                <p>
+                    Around us we see life's cycle<br>
+                    Of lives that turn into memories<br>
+                    That turn into stories and then<br>
+                    Become part of somebody's next life.
+                </p>
+
+
+                <p>
+                    Maybe becoming human isn't<br>
+                    About learning to escape all grief<br>
+                    And loss and pay and tears and broken leaves<br>
+                    But learning to carry all these things<br>
+                    And still become. This seems to be
+                </p>
+
+
+                <p>
+                    The price of being human.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
 
 
 <!-- BACK HOME -->
@@ -502,7 +875,9 @@ footer {
 
 </div>
 
+
 </main>
+
 
 
 <footer>
@@ -516,6 +891,7 @@ footer {
     </div>
 
 </footer>
+
 
 </body>
 </html>
