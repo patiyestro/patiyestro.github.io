@@ -247,6 +247,12 @@
             transition: transform 0.5s ease;
         }
 
+        .artwork img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
         .artwork::after {
             content: "";
             position: absolute;
@@ -302,6 +308,11 @@
             letter-spacing: 1.5px;
             text-transform: uppercase;
             color: var(--muted);
+        }
+
+        /* First painting: title only under painting */
+        .first-work .work-meta {
+            display: none;
         }
 
         /* =========================
@@ -678,56 +689,65 @@
         }
 
         .modal-series {
-            margin-bottom: 15px;
+            margin-bottom: 10px;
 
-            font-size: 10px;
-            letter-spacing: 2.5px;
-            text-transform: uppercase;
-
-            color: var(--muted);
+            font-size: 13px;
+            font-weight: 400;
+            letter-spacing: 1.2px;
         }
 
         .modal-title {
-            margin-bottom: 35px;
+            margin-bottom: 28px;
 
             font-family: "Cormorant Garamond", serif;
-            font-size: clamp(45px, 6vw, 75px);
+            font-size: clamp(38px, 5vw, 58px);
             font-weight: 500;
-            line-height: 0.95;
+            line-height: 1;
         }
 
+        /* Compact metadata, following top-to-bottom order */
+
         .modal-details {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            display: flex;
+            flex-direction: column;
 
-            gap: 25px;
+            gap: 6px;
 
-            padding: 25px 0;
+            padding: 18px 0;
 
             border-top: 1px solid rgba(23, 21, 19, 0.18);
             border-bottom: 1px solid rgba(23, 21, 19, 0.18);
         }
 
-        .detail-label {
-            display: block;
-            margin-bottom: 7px;
+        .modal-details > div {
+            display: flex;
+            align-items: baseline;
+            gap: 8px;
+        }
 
-            font-size: 9px;
-            letter-spacing: 1.5px;
+        .detail-label {
+            display: inline;
+
+            font-size: 10px;
+            font-weight: 500;
+            letter-spacing: 1px;
             text-transform: uppercase;
 
             color: var(--muted);
         }
 
         .detail-value {
-            font-size: 13px;
+            font-size: 12px;
         }
 
         .modal-description {
-            margin-top: 35px;
+            margin-top: 38px;
 
-            font-size: 15px;
-            line-height: 1.9;
+            font-family: "Cormorant Garamond", serif;
+            font-size: 20px;
+            line-height: 1.75;
+
+            white-space: pre-line;
         }
 
         /* =========================
@@ -872,9 +892,13 @@
                 padding: 55px 25px 35px;
             }
 
-            .modal-details {
-                grid-template-columns: 1fr;
-                gap: 20px;
+            .modal-title {
+                font-size: 42px;
+            }
+
+            .modal-description {
+                font-size: 18px;
+                line-height: 1.7;
             }
         }
 
@@ -993,37 +1017,80 @@
             <div class="works-grid">
 
 
-                <!-- WORK 1 -->
+                <!-- WORK 1 — THE PRICE OF BECOMING HUMAN -->
 
                 <article
-                    class="work-card"
+                    class="work-card first-work"
                     onclick="openModal(
-                        'Women Who Remain',
-                        'What Time Couldn’t Erase',
-                        '100 × 80 cm',
-                        'Oil on Canvas',
-                        '2025',
-                        'This painting explores memory, time, and the things that remain within us despite the passage of time.'
+                        'What Survived Me',
+                        'The Price of Becoming Human',
+                        '180 × 110 cm',
+                        'Oil on canvas',
+                        '2024',
+                        `This is the story of life's endless chain
+
+Of love, of loss, of joy and pain
+
+We fall and rise again, reborn
+
+Life's never ending reincarnation
+
+We come into this world as nothing
+
+And slowly learn to know everything
+
+The love we carry, the losses we bear
+
+The dreams we chase and pay for with our tears
+
+We fall and fracture, change and grow
+
+And leave behind us fragments of long ago
+
+But always something remains
+
+A memory, a scar, a flower
+
+A trace of some long gone life
+
+That lives within our next birth.
+
+Around us we see life's cycle
+
+Of lives that turn into memories
+
+That turn into stories and then
+
+Become part of somebody's next life.
+
+Maybe becoming human isn't
+
+About learning to escape all grief
+
+And loss and pain and tears and broken leaves
+
+But learning to carry all these things
+
+And still become.
+
+The price of being human.`
                     )"
                 >
 
                     <div class="artwork">
 
-                        <div class="artwork-placeholder">
-                            Artwork Image
-                        </div>
+                        <img
+                            src="IMG_4987.jpeg"
+                            alt="The Price of Becoming Human by Pati Yestro"
+                        >
 
                     </div>
 
                     <div class="work-info">
 
                         <h3 class="work-title">
-                            What Time Couldn’t Erase
+                            The Price of Becoming Human
                         </h3>
-
-                        <div class="work-meta">
-                            Oil on Canvas · 2025
-                        </div>
 
                     </div>
 
@@ -1704,6 +1771,32 @@
                 <div>
 
                     <span class="detail-label">
+                        Series
+                    </span>
+
+                    <span
+                        class="detail-value"
+                        id="modalSeriesDetail"
+                    ></span>
+
+                </div>
+
+                <div>
+
+                    <span class="detail-label">
+                        Title
+                    </span>
+
+                    <span
+                        class="detail-value"
+                        id="modalTitleDetail"
+                    ></span>
+
+                </div>
+
+                <div>
+
+                    <span class="detail-label">
                         Size
                     </span>
 
@@ -1765,15 +1858,26 @@
             description
         ) {
 
-            document.getElementById("modalSeries").textContent = series;
+            document.getElementById("modalSeries").textContent =
+                "Artwork Details";
 
-            document.getElementById("modalTitle").textContent = title;
+            document.getElementById("modalTitle").textContent =
+                title;
 
-            document.getElementById("modalSize").textContent = size;
+            document.getElementById("modalSeriesDetail").textContent =
+                series;
 
-            document.getElementById("modalMedium").textContent = medium;
+            document.getElementById("modalTitleDetail").textContent =
+                title;
 
-            document.getElementById("modalYear").textContent = year;
+            document.getElementById("modalSize").textContent =
+                size;
+
+            document.getElementById("modalMedium").textContent =
+                medium;
+
+            document.getElementById("modalYear").textContent =
+                year;
 
             document.getElementById("modalDescription").textContent =
                 description;
