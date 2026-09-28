@@ -755,7 +755,7 @@
 
         /* =========================
            POEM / DESCRIPTION
-           TIGHTER SPACING
+           TIGHT STANZA SPACING
         ========================= */
 
         .modal-description {
@@ -767,7 +767,16 @@
 
             line-height: 1.45;
 
-            white-space: pre-line;
+            color: var(--text);
+        }
+
+        .modal-description p {
+            margin: 0 0 8px;
+            padding: 0;
+        }
+
+        .modal-description p:last-child {
+            margin-bottom: 0;
         }
 
 
@@ -917,10 +926,15 @@
                 font-size: 25px;
             }
 
-            /* Tighter poem spacing on mobile */
+            /* Tighter poem on mobile */
+
             .modal-description {
                 font-size: 14px;
-                line-height: 1.5;
+                line-height: 1.45;
+            }
+
+            .modal-description p {
+                margin-bottom: 7px;
             }
         }
 
@@ -963,10 +977,15 @@
                 font-size: 24px;
             }
 
-            /* Tighter poem spacing */
+            /* Tighter poem on small screens */
+
             .modal-description {
                 font-size: 14px;
-                line-height: 1.5;
+                line-height: 1.45;
+            }
+
+            .modal-description p {
+                margin-bottom: 7px;
             }
         }
 
@@ -1928,8 +1947,29 @@ The price of being human.`
             document.getElementById("modalYear").textContent =
                 year;
 
-            document.getElementById("modalDescription").textContent =
-                description;
+
+            /*
+             * Convert blank lines in the poem into
+             * small stanza spaces instead of huge gaps.
+             */
+
+            document.getElementById("modalDescription").innerHTML =
+                description
+                    .trim()
+                    .split(/\n\s*\n/)
+                    .map(function(stanza) {
+
+                        return (
+                            "<p>" +
+                            stanza
+                                .trim()
+                                .replace(/\n/g, "<br>") +
+                            "</p>"
+                        );
+
+                    })
+                    .join("");
+
 
             document
                 .getElementById("artworkModal")
