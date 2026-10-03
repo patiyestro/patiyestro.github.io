@@ -215,9 +215,8 @@ section {
 .work-card {
   cursor: pointer;
 
-  /* Animation starting state */
   opacity: 0;
-  transform: translateY(28px);
+  transform: translateY(25px);
 }
 
 
@@ -607,7 +606,6 @@ footer {
   background: var(--background);
   color: var(--text);
 
-  /* Modal animation starting state */
   opacity: 0;
   transform: translateY(25px) scale(0.985);
 }
@@ -690,7 +688,8 @@ footer {
 
 
 /* ============================= */
-/* SUBTLE SCROLL REVEAL ANIMATION */
+/* SUBTLE SCROLL REVEAL */
+/* REPLAYS WHEN SCROLLING */
 /* ============================= */
 
 .reveal-element {
@@ -1974,7 +1973,9 @@ document.addEventListener(
     }
 
 
-    /* HERO */
+    /* HERO
+       This remains a one-time entrance animation.
+    */
 
     anime.timeline({
       easing: "easeOutCubic"
@@ -2036,69 +2037,102 @@ document.addEventListener(
     workCards.forEach(function(card) {
 
       card.style.opacity = "0";
+
       card.style.transform =
-        "translateY(28px)";
+        "translateY(25px)";
 
     });
 
 
     /* ================================= */
     /* INTERSECTION OBSERVER */
+    /* REPEATS ON SCROLL */
     /* ================================= */
 
     var observer =
       new IntersectionObserver(
-        function(entries, obs) {
+        function(entries) {
 
           entries.forEach(function(entry) {
-
-            if (!entry.isIntersecting) {
-              return;
-            }
-
 
             var element =
               entry.target;
 
 
-            if (
-              element.classList.contains(
-                "work-card"
-              )
-            ) {
+            /*
+             * Only animate when the element
+             * enters the viewport.
+             */
 
-              anime({
-                targets: element,
-                opacity: [0, 1],
-                translateY: [28, 0],
-                duration: 900,
-                easing: "easeOutCubic"
-              });
-
-
-              obs.unobserve(element);
+            if (!entry.isIntersecting) {
 
               return;
 
             }
 
 
+            /*
+             * Reset the element first.
+             *
+             * This is what allows the animation
+             * to happen again when the user scrolls
+             * away and then comes back.
+             */
+
             if (
+              element.classList.contains(
+                "work-card"
+              ) ||
               element.classList.contains(
                 "reveal-element"
               )
             ) {
 
+              anime.remove(element);
+
+              element.style.opacity = "0";
+
+              element.style.transform =
+                "translateY(25px)";
+
+
+              /*
+               * Artwork cards receive a very
+               * subtle stagger so they don't
+               * all move at exactly the same time.
+               */
+
+              var delay = 0;
+
+
+              if (
+                element.classList.contains(
+                  "work-card"
+                )
+              ) {
+
+                var cards =
+                  Array.from(
+                    document.querySelectorAll(
+                      ".work-card"
+                    )
+                  );
+
+
+                delay =
+                  cards.indexOf(element) * 90;
+
+              }
+
+
               anime({
                 targets: element,
                 opacity: [0, 1],
                 translateY: [25, 0],
-                duration: 900,
+                duration: 750,
+                delay: delay,
                 easing: "easeOutCubic"
               });
-
-
-              obs.unobserve(element);
 
             }
 
@@ -2107,10 +2141,12 @@ document.addEventListener(
         },
         {
           threshold: 0.12,
-          rootMargin: "0px 0px -40px 0px"
+          rootMargin: "0px 0px -60px 0px"
         }
       );
 
+
+    /* Watch artwork cards */
 
     workCards.forEach(function(card) {
 
@@ -2118,6 +2154,8 @@ document.addEventListener(
 
     });
 
+
+    /* Watch main sections */
 
     revealElements.forEach(function(element) {
 
