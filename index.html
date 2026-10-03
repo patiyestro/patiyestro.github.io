@@ -57,16 +57,20 @@ button {
     font: inherit;
 }
 
+
 /* HEADER */
 
 header {
     position: sticky;
     top: 0;
     z-index: 1000;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
+
     padding: 25px 40px;
+
     background: var(--warm-gray);
     border-bottom: 1px solid rgba(23, 21, 19, 0.08);
 }
@@ -101,10 +105,13 @@ nav a:hover {
 
 .hero {
     min-height: 82vh;
+
     display: flex;
     align-items: center;
     justify-content: center;
+
     padding: 100px 40px;
+
     background: var(--warm-gray);
     text-align: center;
 }
@@ -116,6 +123,7 @@ nav a:hover {
 
 .hero-label {
     margin-bottom: 35px;
+
     font-size: 10px;
     letter-spacing: 3px;
     text-transform: uppercase;
@@ -133,6 +141,7 @@ nav a:hover {
 .hero-subtitle {
     max-width: 650px;
     margin: 45px auto 0;
+
     font-size: 13px;
     line-height: 1.9;
     color: var(--muted);
@@ -141,12 +150,16 @@ nav a:hover {
 .hero-arrow {
     display: inline-block;
     margin-top: 65px;
+
     font-size: 20px;
+
     animation: floatArrow 2.5s ease-in-out infinite;
 }
 
 @keyframes floatArrow {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translateY(0);
     }
 
@@ -161,12 +174,14 @@ nav a:hover {
 section {
     width: 100%;
     max-width: 1350px;
+
     margin: 0 auto;
     padding: 120px 40px;
 }
 
 .section-label {
     margin-bottom: 20px;
+
     font-size: 10px;
     font-weight: 500;
     letter-spacing: 2.5px;
@@ -191,11 +206,13 @@ section {
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
+
     margin-bottom: 80px;
 }
 
 .work-heading p {
     max-width: 350px;
+
     font-size: 12px;
     line-height: 1.8;
     color: var(--muted);
@@ -203,7 +220,9 @@ section {
 
 .works-grid {
     display: grid;
+
     grid-template-columns: repeat(2, minmax(0, 1fr));
+
     column-gap: 35px;
     row-gap: 80px;
 }
@@ -213,44 +232,40 @@ section {
 }
 
 
-/* SMOOTH PAINTING REVEAL */
-
-.work-card .artwork {
-    opacity: 0;
-    transform: translateY(22px);
-    will-change: transform, opacity;
-}
-
-.work-card .work-info {
-    opacity: 0;
-    transform: translateY(10px);
-    will-change: transform, opacity;
-}
-
-
-/* ARTWORK — KEEPS ORIGINAL IMAGE PROPORTIONS */
+/* ARTWORK
+   ORIGINAL IMAGE PROPORTIONS ARE PRESERVED */
 
 .artwork {
     position: relative;
+
     overflow: hidden;
+
     background: var(--placeholder);
+
     transition: transform 0.5s ease;
 }
 
 .artwork img {
     display: block;
+
     width: 100%;
     height: auto;
+
     object-fit: contain;
 }
 
 .artwork::after {
     content: "";
+
     position: absolute;
     inset: 0;
+
     background: rgba(255, 255, 255, 0.04);
+
     opacity: 0;
+
     transition: opacity 0.4s ease;
+
     pointer-events: none;
 }
 
@@ -265,12 +280,17 @@ section {
 .artwork-placeholder {
     width: 100%;
     min-height: 300px;
+
     display: flex;
     align-items: center;
     justify-content: center;
+
     padding: 30px;
+
     text-align: center;
+
     color: rgba(23, 21, 19, 0.45);
+
     font-size: 10px;
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -289,13 +309,18 @@ section {
 
 .work-meta {
     margin-top: 7px;
+
     font-size: 10px;
     letter-spacing: 1.5px;
     text-transform: uppercase;
+
     color: var(--muted);
 }
 
-.first-work .work-meta {
+/* FIRST AND SECOND PAINTINGS SHOW TITLE ONLY */
+
+.first-work .work-meta,
+.second-work .work-meta {
     display: none;
 }
 
@@ -306,20 +331,27 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
+
     gap: 55px;
+
     margin-top: 80px;
 }
 
 .explore-more-link {
     display: inline-flex;
     align-items: center;
+
     gap: 12px;
+
     font-family: "Cormorant Garamond", serif;
     font-size: 28px;
     font-weight: 500;
     line-height: 1.1;
+
     border-bottom: 1px solid var(--text);
+
     padding-bottom: 7px;
+
     transition: opacity 0.3s ease;
 }
 
@@ -327,6 +359,7 @@ section {
     font-family: "Inter", sans-serif;
     font-size: 16px;
     line-height: 1;
+
     transition: transform 0.3s ease;
 }
 
@@ -340,16 +373,23 @@ section {
 
 .studio-link {
     width: min(650px, 100%);
+
     padding: 30px 35px;
+
     border: 1px solid rgba(23, 21, 19, 0.22);
+
     background: var(--warm-gray);
+
     display: flex;
     align-items: center;
     justify-content: space-between;
+
     gap: 25px;
+
     font-size: 13px;
     letter-spacing: 2.5px;
     text-transform: uppercase;
+
     transition:
         background 0.4s ease,
         color 0.4s ease,
@@ -359,6 +399,7 @@ section {
 .studio-link span {
     font-size: 22px;
     line-height: 1;
+
     transition: transform 0.3s ease;
 }
 
@@ -377,24 +418,10 @@ section {
 
 .about {
     display: grid;
+
     grid-template-columns: 0.8fr 1.5fr;
+
     gap: 100px;
-}
-
-/* SPLIT ANIMATION */
-
-.split-left,
-.split-right {
-    opacity: 0;
-    will-change: transform, opacity;
-}
-
-.split-left {
-    transform: translateX(-45px);
-}
-
-.split-right {
-    transform: translateX(45px);
 }
 
 .about-content {
@@ -403,6 +430,7 @@ section {
 
 .about-content p {
     margin-bottom: 28px;
+
     font-size: 16px;
     line-height: 1.95;
 }
@@ -417,13 +445,17 @@ section {
 
 .statement-inner {
     max-width: 1350px;
+
     margin: 0 auto;
+
     padding: 120px 40px;
 }
 
 .statement-grid {
     display: grid;
+
     grid-template-columns: 0.8fr 1.5fr;
+
     gap: 100px;
 }
 
@@ -433,6 +465,7 @@ section {
 
 .statement-content p {
     margin-bottom: 28px;
+
     font-size: 17px;
     line-height: 2;
 }
@@ -442,7 +475,9 @@ section {
 
 .exhibitions {
     display: grid;
+
     grid-template-columns: 0.8fr 1.5fr;
+
     gap: 100px;
 }
 
@@ -452,29 +487,37 @@ section {
 
 .exhibition-item {
     display: grid;
+
     grid-template-columns: 90px 1fr;
+
     gap: 25px;
+
     padding: 22px 0;
+
     border-bottom: 1px solid rgba(23, 21, 19, 0.18);
 }
 
 .exhibition-year {
     font-size: 11px;
     letter-spacing: 1px;
+
     color: var(--muted);
 }
 
 .exhibition-name {
     font-family: "Cormorant Garamond", serif;
+
     font-size: 23px;
     line-height: 1.25;
 }
 
 .exhibition-location {
     margin-top: 5px;
+
     font-size: 10px;
     letter-spacing: 1.2px;
     text-transform: uppercase;
+
     color: var(--muted);
 }
 
@@ -487,24 +530,30 @@ section {
 
 .certificates-list {
     margin-top: 45px;
+
     border-top: 1px solid rgba(23, 21, 19, 0.18);
 }
 
 .certificate-item {
     display: flex;
     justify-content: space-between;
+
     gap: 30px;
+
     padding: 22px 0;
+
     border-bottom: 1px solid rgba(23, 21, 19, 0.18);
 }
 
 .certificate-title {
     font-family: "Cormorant Garamond", serif;
+
     font-size: 23px;
 }
 
 .certificate-year {
     font-size: 11px;
+
     color: var(--muted);
 }
 
@@ -513,15 +562,21 @@ section {
 
 .quote-section {
     max-width: none;
+
     padding: 150px 40px;
+
     background: var(--background);
+
     text-align: center;
 }
 
 .quote {
     max-width: 1000px;
+
     margin: 0 auto;
+
     font-family: "Cormorant Garamond", serif;
+
     font-size: clamp(38px, 5vw, 65px);
     font-weight: 400;
     line-height: 1.15;
@@ -532,25 +587,33 @@ section {
 
 .contact-section {
     max-width: none;
+
     background: var(--dark);
+
     color: var(--background);
 }
 
 .contact-inner {
     max-width: 1350px;
+
     margin: 0 auto;
+
     padding: 120px 40px;
 }
 
 .contact-grid {
     display: grid;
+
     grid-template-columns: 1fr 1fr;
+
     gap: 80px;
 }
 
 .contact-title {
     max-width: 650px;
+
     font-family: "Cormorant Garamond", serif;
+
     font-size: clamp(55px, 7vw, 90px);
     font-weight: 500;
     line-height: 0.95;
@@ -561,6 +624,7 @@ section {
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
+
     gap: 22px;
 }
 
@@ -568,8 +632,11 @@ section {
     font-size: 11px;
     letter-spacing: 2.5px;
     text-transform: uppercase;
+
     border-bottom: 1px solid rgba(245, 241, 234, 0.4);
+
     padding-bottom: 5px;
+
     transition:
         opacity 0.3s ease,
         border-color 0.3s ease;
@@ -577,6 +644,7 @@ section {
 
 .contact-links a:hover {
     opacity: 0.5;
+
     border-color: transparent;
 }
 
@@ -585,11 +653,15 @@ section {
 
 footer {
     padding: 35px 40px;
+
     background: var(--footer);
+
     color: var(--background);
+
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     font-size: 9px;
     letter-spacing: 1.8px;
     text-transform: uppercase;
@@ -601,11 +673,16 @@ footer {
 .modal {
     position: fixed;
     inset: 0;
+
     z-index: 2000;
+
     display: none;
+
     align-items: center;
     justify-content: center;
+
     padding: 40px;
+
     background: rgba(23, 21, 19, 0.82);
 }
 
@@ -615,37 +692,52 @@ footer {
 
 .modal-content {
     position: relative;
+
     width: min(900px, 100%);
+
     max-height: 90vh;
+
     overflow-y: auto;
+
     padding: 70px;
+
     background: var(--background);
+
     color: var(--text);
 }
 
 .modal-close {
     position: absolute;
+
     top: 25px;
     right: 30px;
+
     border: 0;
+
     background: none;
+
     font-size: 28px;
     font-weight: 300;
+
     cursor: pointer;
 }
 
 .modal-series {
     margin-bottom: 7px;
+
     font-size: 11px;
     font-weight: 400;
     letter-spacing: 1px;
     text-transform: uppercase;
+
     color: var(--muted);
 }
 
 .modal-title {
     margin-bottom: 20px;
+
     font-family: "Cormorant Garamond", serif;
+
     font-size: 27px;
     font-weight: 500;
     line-height: 1.1;
@@ -654,8 +746,11 @@ footer {
 .modal-details {
     display: flex;
     flex-direction: column;
+
     gap: 4px;
+
     padding: 15px 0;
+
     border-top: 1px solid rgba(23, 21, 19, 0.18);
     border-bottom: 1px solid rgba(23, 21, 19, 0.18);
 }
@@ -663,6 +758,7 @@ footer {
 .modal-details > div {
     display: flex;
     align-items: baseline;
+
     gap: 7px;
 }
 
@@ -671,6 +767,7 @@ footer {
     font-weight: 500;
     letter-spacing: 0.7px;
     text-transform: uppercase;
+
     color: var(--muted);
 }
 
@@ -683,10 +780,14 @@ footer {
 
 .modal-description {
     margin-top: 18px;
+
     font-family: "Inter", sans-serif;
+
     font-size: 15px;
     font-weight: 300;
+
     line-height: 1.45;
+
     color: var(--text);
 }
 
@@ -697,32 +798,6 @@ footer {
 
 .modal-description p:last-child {
     margin-bottom: 0;
-}
-
-
-/* REDUCED MOTION */
-
-@media (prefers-reduced-motion: reduce) {
-
-    html {
-        scroll-behavior: auto;
-    }
-
-    *,
-    *::before,
-    *::after {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-    }
-
-    .split-left,
-    .split-right,
-    .work-card .artwork,
-    .work-card .work-info {
-        opacity: 1 !important;
-        transform: none !important;
-    }
 }
 
 
@@ -806,6 +881,7 @@ footer {
     .studio-link {
         width: 100%;
         padding: 25px 22px;
+
         font-size: 11px;
         letter-spacing: 2px;
     }
@@ -851,8 +927,11 @@ footer {
 
     footer {
         padding: 30px 20px;
+
         flex-direction: column;
+
         gap: 15px;
+
         text-align: center;
     }
 
@@ -875,19 +954,6 @@ footer {
 
     .modal-description p {
         margin-bottom: 7px;
-    }
-
-    /*
-       On phones the two-column "come together" effect
-       becomes a subtle vertical movement.
-    */
-
-    .split-left {
-        transform: translateY(-22px);
-    }
-
-    .split-right {
-        transform: translateY(22px);
     }
 }
 
@@ -966,9 +1032,10 @@ footer {
 </header>
 
 
-<!-- HERO -->
-
 <main>
+
+
+<!-- HERO -->
 
 <section class="hero">
 
@@ -981,8 +1048,8 @@ footer {
         <h1>PATI YESTRO</h1>
 
         <p class="hero-subtitle">
-            Oil and mixed-media paintings exploring memory, resilience,
-            identity, history, healing, and human nature.
+            Oil and mixed-media paintings exploring memory,
+            resilience, identity, history, healing, and human nature.
         </p>
 
         <div class="hero-arrow">
@@ -1013,8 +1080,8 @@ footer {
         </div>
 
         <p>
-            A selection of works exploring memory, time, resilience,
-            identity, healing, and the human body.
+            A selection of works exploring memory, time,
+            resilience, identity, healing, and the human body.
         </p>
 
     </div>
@@ -1033,7 +1100,19 @@ footer {
                 '180 × 110 cm',
                 'Oil on canvas',
                 '2024',
-                `This is the story of life's endless chain of love, of loss, of joy and pain. We fall and rise again, reborn. Life's never ending reincarnation. We come into this world as nothing and slowly learn to know everything. The love we carry, the losses we bear, the dreams we chase and pay for with our tears. We fall and fracture, change and grow, and leave behind us fragments of long ago. But always something remains—a memory, a scar, a flower, a trace of some long gone life that lives within our next birth. Around us we see life's cycle of lives that turn into memories, that turn into stories and then become part of somebody's next life. Maybe becoming human isn't about learning to escape all grief and loss and pain and tears and broken leaves, but learning to carry all these things and still become. The price of being human.`
+                `This is the story of life's endless chain of love, of loss, of joy and pain. We fall and rise again, reborn.
+
+Life's never ending reincarnation. We come into this world as nothing and slowly learn to know everything. The love we carry, the losses we bear, the dreams we chase and pay for with our tears.
+
+We fall and fracture, change and grow, and leave behind us fragments of long ago.
+
+But always something remains—a memory, a scar, a flower, a trace of some long gone life that lives within our next birth.
+
+Around us we see life's cycle of lives that turn into memories, that turn into stories and then become part of somebody's next life.
+
+Maybe becoming human isn't about learning to escape all grief and loss and pain and tears and broken leaves, but learning to carry all these things and still become.
+
+The price of being human.`
             )"
         >
 
@@ -1057,7 +1136,47 @@ footer {
         </article>
 
 
-        <!-- WORK 2 -->
+
+        <!-- WORK 2 — WHAT TIME COULDN'T ERASE -->
+
+        <article
+            class="work-card second-work"
+            onclick="openModal(
+                'Women Who Remain',
+                'What Time Couldn’t Erase',
+                '100 × 80 cm',
+                'Oil on Canvas',
+                '2025',
+                `The flower has a gentle face that only seems to be dreaming about the past. Through wounds, silence, and fading time, something is trying to stay with her. Her tears watered the ground where flowers bloom; her smiles make people remember. Even if time takes away her gentleness, hope, and dreams, somewhere, somehow, quietly, it will always stay in her heart and bloom, petal by petal.
+
+She will still wear the past in her face, showing everyone that she has been through something, and what she went through made her who she is. Every petal represents a memory that made her stronger, every shadow shows a path that led her to become stronger. Time cannot take away everything from her; what broke her made her more resilient, and what hurt her made her heal.
+
+Even if time erases her beauty, changes her face, and takes away her youth, somewhere, somehow, quietly, it will always stay in her heart and make her dreams come true. She will always carry her gentleness, hope, and dreams with her, showing the world that not everything is lost with time.`
+            )"
+        >
+
+            <div class="artwork">
+
+                <img
+                    src="what-time-couldn’t-erase.jpg.jpg"
+                    alt="What Time Couldn’t Erase by Pati Yestro"
+                >
+
+            </div>
+
+            <div class="work-info">
+
+                <h3 class="work-title">
+                    What Time Couldn’t Erase
+                </h3>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- WORK 3 -->
 
         <article
             class="work-card"
@@ -1094,7 +1213,8 @@ footer {
         </article>
 
 
-        <!-- WORK 3 -->
+
+        <!-- WORK 4 -->
 
         <article
             class="work-card"
@@ -1131,7 +1251,8 @@ footer {
         </article>
 
 
-        <!-- WORK 4 -->
+
+        <!-- WORK 5 -->
 
         <article
             class="work-card"
@@ -1168,7 +1289,8 @@ footer {
         </article>
 
 
-        <!-- WORK 5 -->
+
+        <!-- WORK 6 -->
 
         <article
             class="work-card"
@@ -1205,7 +1327,8 @@ footer {
         </article>
 
 
-        <!-- WORK 6 -->
+
+        <!-- WORK 7 -->
 
         <article
             class="work-card"
@@ -1241,6 +1364,7 @@ footer {
 
         </article>
 
+
     </div>
 
 
@@ -1256,10 +1380,12 @@ footer {
             <span>→</span>
         </a>
 
+
         <a
             href="studio.html"
             class="studio-link"
         >
+
             <span class="studio-text">
                 Inside the Studio
             </span>
@@ -1267,6 +1393,7 @@ footer {
             <span>
                 →
             </span>
+
         </a>
 
     </div>
@@ -1274,14 +1401,12 @@ footer {
 </section>
 
 
+
 <!-- ABOUT -->
 
-<section
-    id="about"
-    class="about"
->
+<section id="about" class="about">
 
-    <div class="split-left">
+    <div>
 
         <div class="section-label">
             Biography
@@ -1295,7 +1420,7 @@ footer {
     </div>
 
 
-    <div class="about-content split-right">
+    <div class="about-content">
 
         <p>
             IRADUKUNDA Patient, known professionally as Pati Yestro,
@@ -1340,19 +1465,16 @@ footer {
 </section>
 
 
+
 <!-- ARTIST STATEMENT -->
 
-<div
-    id="statement"
-    class="statement-section"
->
+<div id="statement" class="statement-section">
 
     <div class="statement-inner">
 
         <div class="statement-grid">
 
-
-            <div class="split-left">
+            <div>
 
                 <div class="section-label">
                     Artist Statement
@@ -1366,15 +1488,15 @@ footer {
             </div>
 
 
-            <div class="statement-content split-right">
+            <div class="statement-content">
 
                 <p>
-                    My works are an exercise in memory, history, and human
-                    nature. I was born and raised in Rwanda where the
-                    Genocide against the Tutsi ethnic group happened in
-                    1994. Painting allows me to make sense of what happened
-                    and its reverberations in the collective and individual
-                    consciousness.
+                    My works are an exercise in memory, history,
+                    and human nature. I was born and raised in Rwanda
+                    where the Genocide against the Tutsi ethnic group
+                    happened in 1994. Painting allows me to make sense
+                    of what happened and its reverberations in the
+                    collective and individual consciousness.
                 </p>
 
                 <p>
@@ -1408,11 +1530,12 @@ footer {
 </div>
 
 
+
 <!-- EXHIBITIONS & AWARDS -->
 
 <section class="exhibitions">
 
-    <div class="split-left">
+    <div>
 
         <div class="section-label">
             CV
@@ -1426,7 +1549,7 @@ footer {
     </div>
 
 
-    <div class="split-right">
+    <div>
 
         <div class="exhibitions-list">
 
@@ -1580,6 +1703,7 @@ footer {
         </div>
 
 
+
         <!-- CERTIFICATES -->
 
         <div class="certificates">
@@ -1588,15 +1712,15 @@ footer {
                 Professional Development
             </div>
 
-            <div class="certificates-list">
 
+            <div class="certificates-list">
 
                 <div class="certificate-item">
 
                     <div class="certificate-title">
                         SoCreative Entrepreneurship Program —
-                        British Council in partnership with African
-                        Leadership University
+                        British Council in partnership with
+                        African Leadership University
                     </div>
 
                     <div class="certificate-year">
@@ -1627,6 +1751,7 @@ footer {
 </section>
 
 
+
 <!-- QUOTE -->
 
 <section class="quote-section">
@@ -1638,12 +1763,10 @@ footer {
 </section>
 
 
+
 <!-- CONTACT -->
 
-<div
-    id="contact"
-    class="contact-section"
->
+<div id="contact" class="contact-section">
 
     <div class="contact-inner">
 
@@ -1700,7 +1823,9 @@ footer {
 
 </div>
 
+
 </main>
+
 
 
 <!-- FOOTER -->
@@ -1716,6 +1841,7 @@ footer {
     </div>
 
 </footer>
+
 
 
 <!-- ARTWORK MODAL -->
@@ -1833,19 +1959,10 @@ footer {
 </div>
 
 
-<!-- ANIME.JS -->
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js"></script>
-
 
 <!-- JAVASCRIPT -->
 
 <script>
-
-
-/* --------------------------------------------------
-   ARTWORK MODAL
--------------------------------------------------- */
 
 function openModal(
     series,
@@ -1900,40 +2017,18 @@ function openModal(
         .getElementById("artworkModal")
         .classList.add("active");
 
+
     document.body.style.overflow = "hidden";
-
-
-    /* Small professional modal entrance */
-
-    if (
-        typeof anime !== "undefined" &&
-        !window.matchMedia("(prefers-reduced-motion: reduce)").matches
-    ) {
-
-        anime.remove(".modal-content");
-
-        anime({
-            targets: ".modal-content",
-            opacity: [0, 1],
-            translateY: [18, 0],
-            scale: [0.985, 1],
-            duration: 500,
-            easing: "easeOutCubic"
-        });
-
-    }
-
 }
 
 
 function closeModal() {
 
-    var modal = document.getElementById("artworkModal");
-
-    modal.classList.remove("active");
+    document
+        .getElementById("artworkModal")
+        .classList.remove("active");
 
     document.body.style.overflow = "";
-
 }
 
 
@@ -1956,505 +2051,14 @@ document.addEventListener(
     function(event) {
 
         if (event.key === "Escape") {
-
             closeModal();
-
         }
-
-    }
-);
-
-
-/* --------------------------------------------------
-   PAGE ANIMATIONS
--------------------------------------------------- */
-
-document.addEventListener(
-    "DOMContentLoaded",
-    function() {
-
-
-        /* ------------------------------------------
-           REDUCED MOTION
-        ------------------------------------------ */
-
-        var reducedMotion =
-            window.matchMedia(
-                "(prefers-reduced-motion: reduce)"
-            ).matches;
-
-
-        if (
-            typeof anime === "undefined" ||
-            reducedMotion
-        ) {
-
-            document
-                .querySelectorAll(
-                    ".split-left, .split-right, .work-card .artwork, .work-card .work-info"
-                )
-                .forEach(function(element) {
-
-                    element.style.opacity = "1";
-                    element.style.transform = "none";
-
-                });
-
-            return;
-
-        }
-
-
-        /* ------------------------------------------
-           HERO
-        ------------------------------------------ */
-
-        anime.timeline({
-            easing: "easeOutCubic"
-        })
-
-        .add({
-            targets: ".hero-label",
-            opacity: [0, 1],
-            translateY: [18, 0],
-            duration: 800
-        })
-
-        .add({
-            targets: ".hero h1",
-            opacity: [0, 1],
-            translateY: [25, 0],
-            duration: 1100
-        }, "-=550")
-
-        .add({
-            targets: ".hero-subtitle",
-            opacity: [0, 1],
-            translateY: [18, 0],
-            duration: 850
-        }, "-=700")
-
-        .add({
-            targets: ".hero-arrow",
-            opacity: [0, 1],
-            translateY: [10, 0],
-            duration: 700
-        }, "-=500");
-
-
-        /* ------------------------------------------
-           WORK CARD INITIAL STATE
-        ------------------------------------------ */
-
-        function resetWorkCard(card) {
-
-            var artwork =
-                card.querySelector(".artwork");
-
-            var info =
-                card.querySelector(".work-info");
-
-
-            anime.remove([
-                artwork,
-                info
-            ]);
-
-
-            anime.set(
-                artwork,
-                {
-                    opacity: 0,
-                    translateY: 22
-                }
-            );
-
-
-            anime.set(
-                info,
-                {
-                    opacity: 0,
-                    translateY: 10
-                }
-            );
-
-        }
-
-
-        /* ------------------------------------------
-           WORK CARD ANIMATION
-        ------------------------------------------ */
-
-        function animateWorkCard(card) {
-
-            var artwork =
-                card.querySelector(".artwork");
-
-            var info =
-                card.querySelector(".work-info");
-
-
-            anime.remove([
-                artwork,
-                info
-            ]);
-
-
-            anime.timeline({
-                easing: "easeOutCubic"
-            })
-
-            .add({
-
-                targets: artwork,
-
-                opacity: [0, 1],
-
-                translateY: [22, 0],
-
-                duration: 1050
-
-            })
-
-            .add({
-
-                targets: info,
-
-                opacity: [0, 1],
-
-                translateY: [10, 0],
-
-                duration: 700
-
-            }, "-=700");
-
-        }
-
-
-        /* ------------------------------------------
-           SPLIT SECTION INITIAL STATE
-        ------------------------------------------ */
-
-        function resetSplitSection(section) {
-
-            var left =
-                section.querySelector(".split-left");
-
-            var right =
-                section.querySelector(".split-right");
-
-
-            if (!left || !right) {
-                return;
-            }
-
-
-            anime.remove([
-                left,
-                right
-            ]);
-
-
-            var mobile =
-                window.innerWidth <= 900;
-
-
-            if (mobile) {
-
-                anime.set(
-                    left,
-                    {
-                        opacity: 0,
-                        translateX: 0,
-                        translateY: -22
-                    }
-                );
-
-                anime.set(
-                    right,
-                    {
-                        opacity: 0,
-                        translateX: 0,
-                        translateY: 22
-                    }
-                );
-
-            } else {
-
-                anime.set(
-                    left,
-                    {
-                        opacity: 0,
-                        translateX: -45,
-                        translateY: 0
-                    }
-                );
-
-                anime.set(
-                    right,
-                    {
-                        opacity: 0,
-                        translateX: 45,
-                        translateY: 0
-                    }
-                );
-
-            }
-
-        }
-
-
-        /* ------------------------------------------
-           SPLIT SECTION ANIMATION
-           
-           The heading and text begin slightly
-           separated, then smoothly return to
-           their natural positions.
-        ------------------------------------------ */
-
-        function animateSplitSection(section) {
-
-            var left =
-                section.querySelector(".split-left");
-
-            var right =
-                section.querySelector(".split-right");
-
-
-            if (!left || !right) {
-                return;
-            }
-
-
-            anime.remove([
-                left,
-                right
-            ]);
-
-
-            var mobile =
-                window.innerWidth <= 900;
-
-
-            if (mobile) {
-
-                anime.timeline({
-                    easing: "easeOutQuart"
-                })
-
-                .add({
-
-                    targets: left,
-
-                    opacity: [0, 1],
-
-                    translateY: [-22, 0],
-
-                    duration: 900
-
-                })
-
-                .add({
-
-                    targets: right,
-
-                    opacity: [0, 1],
-
-                    translateY: [22, 0],
-
-                    duration: 1000
-
-                }, "-=780");
-
-            } else {
-
-                anime.timeline({
-                    easing: "easeOutQuart"
-                })
-
-                .add({
-
-                    targets: left,
-
-                    opacity: [0, 1],
-
-                    translateX: [-45, 0],
-
-                    duration: 1000
-
-                })
-
-                .add({
-
-                    targets: right,
-
-                    opacity: [0, 1],
-
-                    translateX: [45, 0],
-
-                    duration: 1100
-
-                }, "-=850");
-
-            }
-
-        }
-
-
-        /* ------------------------------------------
-           WORK CARDS
-           
-           The animation repeats when you scroll
-           away and then return.
-        ------------------------------------------ */
-
-        var workCards =
-            document.querySelectorAll(".work-card");
-
-
-        workCards.forEach(function(card) {
-
-            resetWorkCard(card);
-
-        });
-
-
-        /* ------------------------------------------
-           SPLIT SECTIONS
-        ------------------------------------------ */
-
-        var splitSections =
-            document.querySelectorAll(
-                ".about, .statement-grid, .exhibitions"
-            );
-
-
-        splitSections.forEach(function(section) {
-
-            resetSplitSection(section);
-
-        });
-
-
-        /* ------------------------------------------
-           INTERSECTION OBSERVER
-        ------------------------------------------ */
-
-        var observer =
-            new IntersectionObserver(
-
-                function(entries) {
-
-                    entries.forEach(function(entry) {
-
-
-                        /* WORK CARDS */
-
-                        if (
-                            entry.target.classList.contains(
-                                "work-card"
-                            )
-                        ) {
-
-                            if (entry.isIntersecting) {
-
-                                animateWorkCard(
-                                    entry.target
-                                );
-
-                            } else {
-
-                                resetWorkCard(
-                                    entry.target
-                                );
-
-                            }
-
-                            return;
-                        }
-
-
-                        /* SPLIT SECTIONS */
-
-                        if (
-                            entry.target.classList.contains(
-                                "about"
-                            ) ||
-                            entry.target.classList.contains(
-                                "statement-grid"
-                            ) ||
-                            entry.target.classList.contains(
-                                "exhibitions"
-                            )
-                        ) {
-
-                            if (entry.isIntersecting) {
-
-                                animateSplitSection(
-                                    entry.target
-                                );
-
-                            } else {
-
-                                resetSplitSection(
-                                    entry.target
-                                );
-
-                            }
-
-                        }
-
-                    });
-
-                },
-
-                {
-                    threshold: 0.18,
-                    rootMargin: "0px 0px -70px 0px"
-                }
-
-            );
-
-
-        workCards.forEach(function(card) {
-
-            observer.observe(card);
-
-        });
-
-
-        splitSections.forEach(function(section) {
-
-            observer.observe(section);
-
-        });
-
-
-        /* ------------------------------------------
-           GENTLE WORK HEADING
-        ------------------------------------------ */
-
-        anime({
-
-            targets: ".work-heading",
-
-            opacity: [0, 1],
-
-            translateY: [15, 0],
-
-            duration: 900,
-
-            delay: 250,
-
-            easing: "easeOutCubic"
-
-        });
-
 
     }
 );
 
 </script>
+
 
 </body>
 </html>
