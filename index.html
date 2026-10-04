@@ -2074,24 +2074,19 @@ document.addEventListener(
 
     var observer =
       new IntersectionObserver(
-        function(entries, obs) {
+        function(entries) {
 
           entries.forEach(function(entry) {
-
-            if (!entry.isIntersecting) {
-              return;
-            }
-
 
             var element =
               entry.target;
 
 
-            if (
-              element.classList.contains(
-                "work-card"
-              )
-            ) {
+            /* ELEMENT ENTERS THE SCREEN */
+
+            if (entry.isIntersecting) {
+
+              anime.remove(element);
 
               anime({
                 targets: element,
@@ -2101,28 +2096,18 @@ document.addEventListener(
                 easing: "easeOutCubic"
               });
 
-
-              obs.unobserve(element);
-
-              return;
-
             }
 
 
-            if (
-              element.classList.contains(
-                "reveal-element"
-              )
-            ) {
+            /* ELEMENT LEAVES THE SCREEN */
 
-             anime({
-  targets: element,
-  opacity: [0, 1],
-  translateY: [28, 0],
-  duration: 900,
-  easing: "easeOutCubic"
-});
-              obs.unobserve(element);
+            else {
+
+              anime.remove(element);
+
+              element.style.opacity = "0";
+              element.style.transform =
+                "translateY(28px)";
 
             }
 
