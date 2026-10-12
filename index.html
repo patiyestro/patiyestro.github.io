@@ -2201,6 +2201,64 @@ document.addEventListener(
   }
 );
 
+
+/* ================================= */
+/* SAVE AND RESTORE HOMEPAGE SCROLL */
+/* ================================= */
+
+document.querySelector(".explore-more-link").addEventListener(
+  "click",
+  function() {
+
+    sessionStorage.setItem(
+      "patiYestroHomeScrollY",
+      String(window.scrollY)
+    );
+
+  }
+);
+
+
+window.addEventListener("pageshow", function() {
+
+  var params = new URLSearchParams(window.location.search);
+
+  if (params.get("return") !== "scroll") {
+    return;
+  }
+
+  var savedPosition = sessionStorage.getItem(
+    "patiYestroHomeScrollY"
+  );
+
+  if (savedPosition !== null) {
+
+    document.documentElement.style.scrollBehavior = "auto";
+
+    requestAnimationFrame(function() {
+
+      window.scrollTo(0, Number(savedPosition));
+
+      requestAnimationFrame(function() {
+
+        document.documentElement.style.scrollBehavior = "";
+
+      });
+
+    });
+
+  }
+
+  sessionStorage.removeItem("patiYestroHomeScrollY");
+
+  history.replaceState(
+    null,
+    "",
+    window.location.pathname
+  );
+
+});
+
 </script>
 
 
