@@ -5,629 +5,1169 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Works | Pati Yestro</title>
+<title>Collections — Pati Yestro</title>
 
-<meta name="description" content="Selected paintings and works by Pati Yestro, contemporary Rwandan artist.">
+<meta name="description" content="Explore paintings by Pati Yestro, a Rwandan contemporary visual artist exploring memory, resilience, identity, healing, and human nature.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<script src="https://cdn.jsdelivr.net/npm/animejs@3.2.2/lib/anime.min.js"></script>
 
 <style>
+:root {
+  --background: #F5F1EA;
+  --warm-gray: #EDEAE4;
+  --text: #171513;
+  --muted: #6F6A63;
+  --placeholder: #DED8CF;
+  --dark: #2B2927;
+  --footer: #171513;
+}
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-    background: #f5f1ea;
-    color: #171513;
-    font-family: "Inter", sans-serif;
-    font-weight: 300;
-    line-height: 1.6;
+  background: var(--background);
+  color: var(--text);
+  font-family: "Inter", sans-serif;
+  font-weight: 300;
+  line-height: 1.7;
+}
+
+body.modal-open {
+  overflow: hidden;
 }
 
 a {
-    color: inherit;
-    text-decoration: none;
+  color: inherit;
+  text-decoration: none;
 }
 
-/* =========================
-   NAVIGATION
-========================= */
+img {
+  display: block;
+  width: 100%;
+}
+
+button {
+  font: inherit;
+}
+
+/* HEADER */
 
 header {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    background: rgba(245, 241, 234, 0.94);
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(23, 21, 19, 0.08);
-}
-
-.nav {
-    max-width: 1350px;
-    margin: auto;
-    padding: 22px 40px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px 40px;
+  background: var(--warm-gray);
+  border-bottom: 1px solid rgba(23, 21, 19, 0.08);
 }
 
 .logo {
-    font-size: 15px;
-    letter-spacing: 4px;
-    font-weight: 500;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 25px;
+  font-weight: 600;
+  letter-spacing: 2px;
 }
 
-.nav-links {
-    display: flex;
-    gap: 35px;
+nav {
+  display: flex;
+  align-items: center;
+  gap: 32px;
 }
 
-.nav-links a {
-    font-size: 11px;
-    text-transform: uppercase;
-    letter-spacing: 1.8px;
-    transition: opacity 0.3s ease;
+nav a {
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: opacity 0.3s ease;
 }
 
-.nav-links a:hover {
-    opacity: 0.5;
+nav a:hover {
+  opacity: 0.45;
 }
 
-/* =========================
-   PAGE HEADER
-========================= */
+/* PAGE INTRODUCTION */
 
-.page-header {
-    max-width: 1350px;
-    margin: auto;
-    padding: 120px 40px 80px;
+.page-intro {
+  padding: 110px 40px 100px;
+  background: var(--warm-gray);
+}
+
+.page-intro-inner {
+  max-width: 1350px;
+  margin: 0 auto;
+}
+
+.page-label {
+  margin-bottom: 25px;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.page-intro h1 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(65px, 10vw, 130px);
+  font-weight: 500;
+  line-height: 0.9;
+}
+
+.page-intro p {
+  max-width: 570px;
+  margin-top: 35px;
+  font-size: 13px;
+  line-height: 1.9;
+  color: var(--muted);
+}
+
+/* COLLECTION SECTIONS */
+
+.collection {
+  width: 100%;
+  max-width: 1450px;
+  margin: 0 auto;
+  padding: 110px 40px;
+}
+
+.collection + .collection {
+  padding-top: 40px;
+}
+
+.collection-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 35px;
+  margin-bottom: 65px;
 }
 
 .section-label {
-    margin-bottom: 20px;
-    font-size: 10px;
-    text-transform: uppercase;
-    letter-spacing: 2.5px;
-    opacity: 0.55;
+  margin-bottom: 20px;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--muted);
 }
 
-.page-header h1 {
-    font-family: "Cormorant Garamond", serif;
-    font-size: clamp(70px, 11vw, 150px);
-    font-weight: 400;
-    line-height: 0.85;
-    letter-spacing: -5px;
+.collection-heading h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(48px, 7vw, 85px);
+  font-weight: 500;
+  line-height: 0.95;
 }
 
-.page-intro {
-    max-width: 650px;
-    margin-top: 40px;
-    font-size: 16px;
-    line-height: 1.8;
+.collection-description {
+  max-width: 370px;
+  font-size: 12px;
+  line-height: 1.9;
+  color: var(--muted);
 }
 
-/* =========================
-   COLLECTION
-========================= */
+/* ARTWORK GRID */
 
-.collection {
-    max-width: 1350px;
-    margin: auto;
-    padding: 60px 40px 120px;
+.works-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 35px;
+  row-gap: 80px;
+  align-items: start;
 }
 
-.collection-header {
-    border-top: 1px solid rgba(23, 21, 19, 0.15);
-    padding-top: 25px;
-    display: flex;
-    justify-content: space-between;
-    gap: 30px;
+/* ARTWORK CARDS */
+
+.work-card {
+  min-width: 0;
+  align-self: start;
+  border: 0;
+  padding: 0;
+  background: transparent;
+  color: inherit;
+  text-align: left;
+  opacity: 0;
+  transform: translateY(28px);
 }
 
-.collection-header h2 {
-    font-family: "Cormorant Garamond", serif;
-    font-size: clamp(40px, 5vw, 70px);
-    font-weight: 400;
-    line-height: 1;
+.artwork-trigger {
+  display: block;
+  width: 100%;
+  border: 0;
+  padding: 0;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  text-align: left;
 }
 
-.collection-header p {
-    max-width: 500px;
-    font-family: "Cormorant Garamond", serif;
-    font-size: 23px;
-    line-height: 1.5;
+.artwork-trigger:focus-visible {
+  outline: 2px solid var(--text);
+  outline-offset: 5px;
 }
 
-/* =========================
-   PAINTINGS
-========================= */
-
-.paintings-grid {
-    margin-top: 65px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 75px 35px;
+.artwork {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+  background: var(--placeholder);
+  transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-.painting-card {
-    display: block;
+.artwork img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  transition: transform 1s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-.painting-image {
-    width: 100%;
-    aspect-ratio: 4 / 5;
-    background: #ded8cf;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
+.artwork::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.04);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
 }
 
-.placeholder {
-    text-align: center;
-    font-size: 10px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    opacity: 0.45;
+.artwork-trigger:hover .artwork::after {
+  opacity: 1;
 }
 
-.painting-info {
-    padding-top: 17px;
-    border-top: 1px solid rgba(23, 21, 19, 0.2);
-    margin-top: 12px;
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
+.artwork-trigger:hover .artwork img {
+  transform: scale(1.025);
 }
 
-.painting-title {
-    font-family: "Cormorant Garamond", serif;
-    font-size: 26px;
-    line-height: 1.2;
+/* TITLE, MEDIUM AND YEAR UNDER EACH PAINTING */
+
+.work-info {
+  padding-top: 18px;
 }
 
-.painting-details {
-    font-size: 10px;
-    text-transform: uppercase;
-    letter-spacing: 1.2px;
-    text-align: right;
-    opacity: 0.55;
+.work-title {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 27px;
+  font-weight: 500;
+  line-height: 1.2;
+  color: var(--text);
 }
 
-/* =========================
-   BACK HOME
-========================= */
+.work-meta {
+  margin-top: 7px;
+  font-family: "Inter", sans-serif;
+  font-size: 9px;
+  font-weight: 400;
+  line-height: 1.7;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* PLACEHOLDERS */
+
+.artwork-placeholder {
+  width: 100%;
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  text-align: center;
+  color: rgba(23, 21, 19, 0.45);
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  background: var(--placeholder);
+}
+
+.placeholder-card {
+  cursor: default;
+}
+
+.placeholder-card:hover .artwork::after {
+  opacity: 0;
+}
+
+.placeholder-card:hover .artwork {
+  transform: none;
+}
+
+/* BACK HOME LINK */
 
 .back-home {
-    max-width: 1350px;
-    margin: auto;
-    padding: 0 40px 80px;
+  width: 100%;
+  max-width: 1450px;
+  margin: 0 auto;
+  padding: 0 40px 80px;
 }
 
 .back-home a {
-    display: inline-block;
-    padding-bottom: 6px;
-    border-bottom: 1px solid #171513;
-    font-size: 10px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-family: "Inter", sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: opacity 0.3s ease;
 }
 
-/* =========================
-   FOOTER
-========================= */
+.back-home .back-arrow {
+  display: inline-block;
+  font-family: "Inter", sans-serif;
+  font-size: 21px;
+  line-height: 1;
+  transition: transform 0.3s ease;
+}
+
+.back-home a:hover {
+  opacity: 0.55;
+}
+
+.back-home a:hover .back-arrow {
+  transform: translateX(-5px);
+}
+
+.back-home a:focus-visible {
+  outline: 1px solid var(--text);
+  outline-offset: 6px;
+}
+
+/* FOOTER */
 
 footer {
-    max-width: 1350px;
-    margin: auto;
-    padding: 30px 40px 45px;
-    border-top: 1px solid rgba(23, 21, 19, 0.15);
-    display: flex;
-    justify-content: space-between;
-    font-size: 10px;
-    text-transform: uppercase;
+  padding: 35px 40px;
+  background: var(--footer);
+  color: var(--background);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 9px;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+}
+
+/* ARTWORK MODAL */
+
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  background: rgba(23, 21, 19, 0.82);
+}
+
+.modal.active {
+  display: flex;
+}
+
+.modal-content {
+  position: relative;
+  width: min(900px, 100%);
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 70px;
+  background: var(--background);
+  color: var(--text);
+  opacity: 0;
+  transform: translateY(25px) scale(0.985);
+}
+
+.modal-close {
+  position: absolute;
+  top: 20px;
+  right: 28px;
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  background: transparent;
+  color: var(--text);
+  font-size: 30px;
+  font-weight: 300;
+  cursor: pointer;
+}
+
+.modal-close:hover {
+  opacity: 0.5;
+}
+
+.modal-series {
+  margin-bottom: 7px;
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.modal-title {
+  margin-bottom: 25px;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 38px;
+  font-weight: 500;
+  line-height: 1.1;
+}
+
+/* LABELED ARTWORK DETAILS */
+
+.modal-details {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  padding: 18px 0;
+  border-top: 1px solid rgba(23, 21, 19, 0.18);
+  border-bottom: 1px solid rgba(23, 21, 19, 0.18);
+}
+
+.modal-details > div {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.detail-label {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.4px;
+  color: var(--muted);
+}
+
+.detail-value {
+  font-size: 12px;
+  font-weight: 300;
+  overflow-wrap: anywhere;
+}
+
+/* POEM */
+
+.modal-description {
+  margin-top: 25px;
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.65;
+  color: var(--text);
+}
+
+.modal-description p {
+  margin: 0 0 18px;
+  padding: 0;
+}
+
+.modal-description p:last-child {
+  margin-bottom: 0;
+}
+
+/* TABLET AND MOBILE */
+
+@media (max-width: 900px) {
+  header {
+    padding: 20px;
+  }
+
+  .logo {
+    font-size: 21px;
+  }
+
+  nav {
+    gap: 15px;
+  }
+
+  nav a {
+    font-size: 8px;
+    letter-spacing: 1.3px;
+  }
+
+  .page-intro {
+    padding: 85px 20px;
+  }
+
+  .page-intro h1 {
+    font-size: clamp(55px, 12vw, 90px);
+  }
+
+  .collection {
+    padding: 85px 20px;
+  }
+
+  .collection + .collection {
+    padding-top: 25px;
+  }
+
+  .collection-heading {
+    display: block;
+    margin-bottom: 45px;
+  }
+
+  .collection-description {
+    margin-top: 25px;
+  }
+
+  .works-grid {
+    grid-template-columns: 1fr;
+    row-gap: 60px;
+  }
+
+  .work-title {
+    font-size: 25px;
+  }
+
+  .artwork-placeholder {
+    min-height: 250px;
+  }
+
+  .back-home {
+    padding: 0 20px 55px;
+  }
+
+  .modal {
+    padding: 15px;
+  }
+
+  .modal-content {
+    padding: 60px 25px 35px;
+  }
+
+  .modal-title {
+    font-size: 30px;
+  }
+
+  .modal-description {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  footer {
+    padding: 30px 20px;
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 500px) {
+  nav {
+    gap: 10px;
+  }
+
+  nav a {
+    font-size: 7px;
+    letter-spacing: 1px;
+  }
+
+  .logo {
+    font-size: 18px;
     letter-spacing: 1.5px;
-    opacity: 0.55;
+  }
+
+  .page-intro h1 {
+    font-size: 55px;
+  }
+
+  .collection-heading h2 {
+    font-size: 52px;
+  }
+
+  .work-title {
+    font-size: 24px;
+  }
+
+  .work-meta {
+    font-size: 8px;
+    letter-spacing: 1.2px;
+  }
+
+  .modal-title {
+    font-size: 27px;
+  }
+
+  .modal-details {
+    gap: 8px;
+  }
+
+  .modal-details > div {
+    gap: 5px;
+  }
+
+  .detail-label,
+  .detail-value {
+    font-size: 11px;
+  }
+
+  .modal-description {
+    font-size: 13px;
+    line-height: 1.65;
+  }
 }
 
-/* =========================
-   MOBILE
-========================= */
+/* REDUCED MOTION */
 
-@media (max-width: 750px) {
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 
-    .nav {
-        padding: 18px 20px;
-    }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 
-    .logo {
-        font-size: 12px;
-        letter-spacing: 3px;
-    }
-
-    .nav-links {
-        gap: 14px;
-    }
-
-    .nav-links a {
-        font-size: 8px;
-        letter-spacing: 1px;
-    }
-
-    .page-header {
-        padding: 90px 20px 60px;
-    }
-
-    .page-header h1 {
-        font-size: clamp(65px, 20vw, 110px);
-        letter-spacing: -3px;
-    }
-
-    .collection {
-        padding: 50px 20px 90px;
-    }
-
-    .collection-header {
-        display: block;
-    }
-
-    .collection-header p {
-        margin-top: 25px;
-        font-size: 20px;
-    }
-
-    .paintings-grid {
-        grid-template-columns: 1fr;
-        gap: 60px;
-        margin-top: 50px;
-    }
-
-    .painting-info {
-        flex-direction: column;
-        gap: 7px;
-    }
-
-    .painting-details {
-        text-align: left;
-    }
-
-    .back-home {
-        padding: 0 20px 60px;
-    }
-
-    footer {
-        padding: 25px 20px 35px;
-        flex-direction: column;
-        gap: 10px;
-    }
-
+  .work-card,
+  .modal-content {
+    opacity: 1 !important;
+    transform: none !important;
+  }
 }
-
 </style>
 </head>
 
 <body>
 
-<!-- =========================
-     HEADER
-========================= -->
+<!-- HEADER -->
 
 <header>
+  <a href="index.html" class="logo">PATI YESTRO</a>
 
-    <nav class="nav">
-
-        <a href="index.html" class="logo">
-            PATI YESTRO
-        </a>
-
-        <div class="nav-links">
-
-            <a href="index.html">
-                Home
-            </a>
-
-            <a href="index.html#about">
-                About
-            </a>
-
-            <a href="index.html#contact">
-                Contact
-            </a>
-
-        </div>
-
-    </nav>
-
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="index.html#about">About</a>
+    <a href="index.html#contact">Contact</a>
+  </nav>
 </header>
-
-<!-- =========================
-     MAIN CONTENT
-========================= -->
 
 <main>
 
-    <!-- PAGE HEADER -->
+  <!-- PAGE INTRODUCTION -->
 
-    <section class="page-header">
+  <section class="page-intro">
+    <div class="page-intro-inner">
+      <div class="page-label">Selected Works</div>
 
-        <div class="section-label">
-            Selected Works
+      <h1>All Works</h1>
+
+      <p>
+        A collection of paintings exploring memory, resilience, identity, and the human experience.
+      </p>
+    </div>
+  </section>
+
+  <!-- COLLECTION ONE: WHAT SURVIVED ME -->
+
+  <section class="collection" id="what-survived-me">
+
+    <div class="collection-heading">
+      <div>
+        <div class="section-label">Collection 01</div>
+        <h2>What Survived Me</h2>
+      </div>
+
+      <p class="collection-description">
+        Paintings about depression, struggle, absence, and the parts of ourselves that remain after difficult experiences.
+      </p>
+    </div>
+
+    <div class="works-grid">
+
+      <!-- HEAVY INSIDE -->
+
+      <article class="work-card">
+
+        <button
+          type="button"
+          class="artwork-trigger"
+          aria-label="View artwork details for Heavy Inside"
+          onclick="openModal(
+            'What Survived Me',
+            'Heavy Inside',
+            '140 × 95 cm',
+            'Oil & acrylic on canvas',
+            '2026',
+            `She bows her head,
+sewing a wound that never fully closes.
+From her body flows blue like the sky,
+as if her pain has become something larger than flesh.
+Her hands try to repair what suffering keeps breaking apart.
+Beneath them, another face smiles soft, alive, and full of light.
+Not a mask, but the part of her that still remembers joy.
+Behind them, the river flows, the mountains stand still, and nature continues untouched while a human heart quietly falls apart.`
+          )"
+        >
+          <div class="artwork">
+            <img
+              src="Heavy-Inside.jpg.jpg"
+              alt="Heavy Inside by Pati Yestro"
+              loading="lazy"
+            >
+          </div>
+        </button>
+
+        <div class="work-info">
+          <h3 class="work-title">Heavy Inside</h3>
+          <p class="work-meta">Oil &amp; Acrylic on Canvas · 2026</p>
         </div>
 
-        <h1>
-            All Works
-        </h1>
+      </article>
 
-        <p class="page-intro">
-            A collection of paintings exploring memory, resilience, identity, and the human experience.
-        </p>
+      <!-- THE SHAPE OF WHAT REMAIN -->
 
-    </section>
+      <article class="work-card">
 
-    <!-- =========================
-         NEW COLLECTION: WHAT SURVIVED ME
-    ========================= -->
+        <button
+          type="button"
+          class="artwork-trigger"
+          aria-label="View artwork details for The Shape of What Remain"
+          onclick="openModal(
+            'What Survived Me',
+            'The Shape of What Remain',
+            '150 × 90 cm',
+            'Acrylic on canvas',
+            '2026',
+            `Why does this eye keep looking at me?
 
-    <section class="collection">
+Does it see the pieces
+I have hidden from myself?
+The things I buried,
+the names I gave my pain,
+the person I was before it all?
 
-        <div class="collection-header">
+I look away,
+but even in silence,
+I cannot escape my own gaze.
 
-            <h2>
-                What Survived Me
-            </h2>
+I thought surviving meant
+leaving the darkness behind.
 
-            <p>
-                A body of work exploring struggle, internal collapse,
-                endurance, and what remains after difficult experiences.
-            </p>
+But here I am,
+carrying what it left inside me.
 
+Perhaps I did not survive unchanged.
+Perhaps some parts of me are gone.
+
+And still, I remain
+
+not the woman I was,
+not yet the woman I will become,
+but the witness
+to everything that made it this far.`
+          )"
+        >
+          <div class="artwork">
+            <img
+              src="The-Shape-of-What-Remain.jpg.jpg"
+              alt="The Shape of What Remain by Pati Yestro"
+              loading="lazy"
+            >
+          </div>
+        </button>
+
+        <div class="work-info">
+          <h3 class="work-title">The Shape of What Remain</h3>
+          <p class="work-meta">Acrylic on Canvas · 2026</p>
         </div>
 
-        <div class="paintings-grid">
-
-            <!-- PAINTING 1 -->
-
-            <div class="painting-card">
-
-                <div class="painting-image">
-                    <div class="placeholder">
-                        Painting Image
-                    </div>
-                </div>
-
-                <div class="painting-info">
-
-                    <div class="painting-title">
-                        Painting Title
-                    </div>
-
-                    <div class="painting-details">
-                        Oil on Canvas<br>
-                        Year
-                    </div>
-
-                </div>
-
-            </div>
-
-            <!-- PAINTING 2 -->
-
-            <div class="painting-card">
-
-                <div class="painting-image">
-                    <div class="placeholder">
-                        Painting Image
-                    </div>
-                </div>
-
-                <div class="painting-info">
-
-                    <div class="painting-title">
-                        Painting Title
-                    </div>
-
-                    <div class="painting-details">
-                        Oil on Canvas<br>
-                        Year
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- =========================
-         EARLIER COLLECTION: WOMEN WHO REMAIN
-    ========================= -->
-
-    <section class="collection">
-
-        <div class="collection-header">
-
-            <h2>
-                Women Who Remain
-            </h2>
-
-            <p>
-                A collection exploring the strength, beauty, resilience,
-                and transformation of women.
-            </p>
-
-        </div>
-
-        <div class="paintings-grid">
-
-            <!-- PAINTING 1 -->
-
-            <div class="painting-card">
-
-                <div class="painting-image">
-                    <div class="placeholder">
-                        Painting Image
-                    </div>
-                </div>
-
-                <div class="painting-info">
-
-                    <div class="painting-title">
-                        Painting Title
-                    </div>
-
-                    <div class="painting-details">
-                        Oil on Canvas<br>
-                        Year
-                    </div>
-
-                </div>
-
-            </div>
-
-            <!-- PAINTING 2 -->
-
-            <div class="painting-card">
-
-                <div class="painting-image">
-                    <div class="placeholder">
-                        Painting Image
-                    </div>
-                </div>
-
-                <div class="painting-info">
-
-                    <div class="painting-title">
-                        Painting Title
-                    </div>
-
-                    <div class="painting-details">
-                        Oil on Canvas<br>
-                        Year
-                    </div>
-
-                </div>
-
-            </div>
-
-            <!-- PAINTING 3 -->
-
-            <div class="painting-card">
-
-                <div class="painting-image">
-                    <div class="placeholder">
-                        Painting Image
-                    </div>
-                </div>
-
-                <div class="painting-info">
-
-                    <div class="painting-title">
-                        Painting Title
-                    </div>
-
-                    <div class="painting-details">
-                        Oil on Canvas<br>
-                        Year
-                    </div>
-
-                </div>
-
-            </div>
-
-            <!-- PAINTING 4 -->
-
-            <div class="painting-card">
-
-                <div class="painting-image">
-                    <div class="placeholder">
-                        Painting Image
-                    </div>
-                </div>
-
-                <div class="painting-info">
-
-                    <div class="painting-title">
-                        Painting Title
-                    </div>
-
-                    <div class="painting-details">
-                        Oil on Canvas<br>
-                        Year
-                    </div>
-
-                </div>
-
-            </div>
-
-            <!-- PAINTING 5 -->
-
-            <div class="painting-card">
-
-                <div class="painting-image">
-                    <div class="placeholder">
-                        Painting Image
-                    </div>
-                </div>
-
-                <div class="painting-info">
-
-                    <div class="painting-title">
-                        Painting Title
-                    </div>
-
-                    <div class="painting-details">
-                        Oil on Canvas<br>
-                        Year
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- =========================
-         BACK HOME
-    ========================= -->
-
-    <div class="back-home">
-
-        <a href="index.html">
-            ← Back to Home
-        </a>
+      </article>
 
     </div>
+  </section>
+
+  <!-- COLLECTION TWO: WOMEN WHO REMAIN -->
+
+  <section class="collection" id="women-who-remain">
+
+    <div class="collection-heading">
+      <div>
+        <div class="section-label">Collection 02</div>
+        <h2>Women Who Remain</h2>
+      </div>
+
+      <p class="collection-description">
+        A collection reflecting women's strength, vulnerability, care, transformation, and the quiet power of endurance.
+      </p>
+    </div>
+
+    <div class="works-grid">
+
+      <!-- FUTURE ARTWORK 01 -->
+
+      <div class="work-card placeholder-card">
+        <div class="artwork">
+          <div class="artwork-placeholder">Artwork Coming Soon</div>
+        </div>
+      </div>
+
+      <!-- FUTURE ARTWORK 02 -->
+
+      <div class="work-card placeholder-card">
+        <div class="artwork">
+          <div class="artwork-placeholder">Artwork Coming Soon</div>
+        </div>
+      </div>
+
+      <!-- FUTURE ARTWORK 03 -->
+
+      <div class="work-card placeholder-card">
+        <div class="artwork">
+          <div class="artwork-placeholder">Artwork Coming Soon</div>
+        </div>
+      </div>
+
+      <!-- FUTURE ARTWORK 04 -->
+
+      <div class="work-card placeholder-card">
+        <div class="artwork">
+          <div class="artwork-placeholder">Artwork Coming Soon</div>
+        </div>
+      </div>
+
+      <!-- FUTURE ARTWORK 05 -->
+
+      <div class="work-card placeholder-card">
+        <div class="artwork">
+          <div class="artwork-placeholder">Artwork Coming Soon</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
 
 </main>
 
-<!-- =========================
-     FOOTER
-========================= -->
+<!-- BACK HOME: RETURNS TO THE SAVED HOMEPAGE POSITION -->
+
+<div class="back-home">
+  <a href="index.html?return=scroll">
+    <span class="back-arrow" aria-hidden="true">←</span>
+    <span>Back Home</span>
+  </a>
+</div>
+
+<!-- FOOTER -->
 
 <footer>
-
-    <div>
-        © 2026 Pati Yestro
-    </div>
-
-    <div>
-        Contemporary Artist · Rwanda
-    </div>
-
+  <div>© 2026 Pati Yestro</div>
+  <div>Contemporary Artist · Rwanda</div>
 </footer>
+
+<!-- ARTWORK MODAL -->
+
+<div
+  class="modal"
+  id="artworkModal"
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="modalTitle"
+  onclick="closeModalOutside(event)"
+>
+  <div class="modal-content">
+
+    <button
+      type="button"
+      class="modal-close"
+      onclick="closeModal()"
+      aria-label="Close artwork details"
+    >×</button>
+
+    <div class="modal-series" id="modalSeries">Artwork Details</div>
+
+    <h2 class="modal-title" id="modalTitle"></h2>
+
+    <div class="modal-details">
+
+      <div>
+        <span class="detail-label">Series:</span>
+        <span class="detail-value" id="modalSeriesDetail"></span>
+      </div>
+
+      <div>
+        <span class="detail-label">Title:</span>
+        <span class="detail-value" id="modalTitleDetail"></span>
+      </div>
+
+      <div>
+        <span class="detail-label">Size:</span>
+        <span class="detail-value" id="modalSize"></span>
+      </div>
+
+      <div>
+        <span class="detail-label">Medium:</span>
+        <span class="detail-value" id="modalMedium"></span>
+      </div>
+
+      <div>
+        <span class="detail-label">Year:</span>
+        <span class="detail-value" id="modalYear"></span>
+      </div>
+
+    </div>
+
+    <div class="modal-description" id="modalDescription"></div>
+
+  </div>
+</div>
+
+<!-- JAVASCRIPT -->
+
+<script>
+/* ARTWORK MODAL */
+
+var previousFocusedElement = null;
+
+function openModal(series, title, size, medium, year, description) {
+
+  previousFocusedElement = document.activeElement;
+
+  document.getElementById("modalSeries").textContent = "Artwork Details";
+  document.getElementById("modalTitle").textContent = title;
+  document.getElementById("modalSeriesDetail").textContent = series;
+  document.getElementById("modalTitleDetail").textContent = title;
+  document.getElementById("modalSize").textContent = size;
+  document.getElementById("modalMedium").textContent = medium;
+  document.getElementById("modalYear").textContent = year;
+
+  /* Build poem paragraphs safely */
+
+  var descriptionContainer = document.getElementById("modalDescription");
+  descriptionContainer.replaceChildren();
+
+  description.trim().split(/\n\s*\n/).forEach(function(stanza) {
+
+    var paragraph = document.createElement("p");
+
+    stanza.trim().split("\n").forEach(function(line, index) {
+
+      if (index > 0) {
+        paragraph.appendChild(document.createElement("br"));
+      }
+
+      paragraph.appendChild(document.createTextNode(line));
+    });
+
+    descriptionContainer.appendChild(paragraph);
+  });
+
+  var modal = document.getElementById("artworkModal");
+  var modalContent = modal.querySelector(".modal-content");
+
+  modal.classList.add("active");
+  document.body.classList.add("modal-open");
+  modalContent.scrollTop = 0;
+
+  if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+
+    anime.remove(modalContent);
+
+    modalContent.style.opacity = "0";
+    modalContent.style.transform = "translateY(25px) scale(0.985)";
+
+    anime({
+      targets: modalContent,
+      opacity: [0, 1],
+      translateY: [25, 0],
+      scale: [0.985, 1],
+      duration: 650,
+      easing: "easeOutCubic"
+    });
+
+  } else {
+    modalContent.style.opacity = "1";
+    modalContent.style.transform = "none";
+  }
+
+  modal.querySelector(".modal-close").focus();
+}
+
+function closeModal() {
+
+  var modal = document.getElementById("artworkModal");
+  var modalContent = modal.querySelector(".modal-content");
+
+  if (!modal.classList.contains("active")) {
+    return;
+  }
+
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+
+    modal.classList.remove("active");
+    document.body.classList.remove("modal-open");
+
+    modalContent.style.opacity = "";
+    modalContent.style.transform = "";
+
+    if (previousFocusedElement) {
+      previousFocusedElement.focus();
+    }
+
+    return;
+  }
+
+  anime.remove(modalContent);
+
+  anime({
+    targets: modalContent,
+    opacity: 0,
+    translateY: 15,
+    scale: 0.99,
+    duration: 300,
+    easing: "easeInCubic",
+
+    complete: function() {
+
+      modal.classList.remove("active");
+      document.body.classList.remove("modal-open");
+
+      modalContent.style.opacity = "";
+      modalContent.style.transform = "";
+
+      if (previousFocusedElement) {
+        previousFocusedElement.focus();
+      }
+    }
+  });
+}
+
+function closeModalOutside(event) {
+  if (event.target === document.getElementById("artworkModal")) {
+    closeModal();
+  }
+}
+
+document.addEventListener("keydown", function(event) {
+  if (event.key === "Escape") {
+    closeModal();
+  }
+});
+
+/* PAGE ENTRANCE AND SCROLL ANIMATIONS */
+
+document.addEventListener("DOMContentLoaded", function() {
+
+  var reduceMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+  ).matches;
+
+  var workCards = document.querySelectorAll(".work-card");
+  var collectionSections = document.querySelectorAll(".collection");
+
+  var revealElements = document.querySelectorAll(
+    ".page-label, .page-intro h1, .page-intro p, .collection-heading"
+  );
+
+  if (reduceMotion) {
+
+    workCards.forEach(function(card) {
+      card.style.opacity = "1";
+      card.style.transform = "none";
+    });
+
+    revealElements.forEach(function(element) {
+      element.style.opacity = "1";
+      element.style.transform = "none";
+    });
+
+    return;
+  }
+
+  /* INTRODUCTION ANIMATION */
+
+  anime.timeline({
+    easing: "easeOutCubic"
+  })
+  .add({
+    targets: ".page-label",
+    opacity: [0, 1],
+    translateY: [15, 0],
+    duration: 700
+  })
+  .add({
+    targets: ".page-intro h1",
+    opacity: [0, 1],
+    translateY: [20, 0],
+    duration: 950
+  }, "-=450")
+  .add({
+    targets: ".page-intro p",
+    opacity: [0, 1],
+    translateY: [15, 0],
+    duration: 750
+  }, "-=550");
+
+  /* SCROLL REVEALS */
+
+  var observer = new IntersectionObserver(function(entries, obs) {
+
+    entries.forEach(function(entry) {
+
+      if (!entry.isIntersecting) {
+        return;
+      }
+
+      var element = entry.target;
+
+      anime.remove(element);
+
+      anime({
+        targets: element,
+        opacity: [0, 1],
+        translateY: [28, 0],
+        duration: 900,
+        easing: "easeOutCubic"
+      });
+
+      obs.unobserve(element);
+    });
+
+  }, {
+    threshold: 0.12,
+    rootMargin: "0px 0px -40px 0px"
+  });
+
+  workCards.forEach(function(card) {
+    observer.observe(card);
+  });
+
+  collectionSections.forEach(function(section) {
+
+    var heading = section.querySelector(".collection-heading");
+
+    if (heading) {
+      heading.style.opacity = "0";
+      heading.style.transform = "translateY(25px)";
+      observer.observe(heading);
+    }
+
+  });
+
+});
+</script>
 
 </body>
 </html>
