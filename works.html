@@ -230,10 +230,13 @@ nav a:hover {
   transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
+/* PRESERVE ORIGINAL PAINTING PROPORTIONS */
+
 .artwork img {
   display: block;
   width: 100%;
   height: auto;
+  max-width: 100%;
   object-fit: contain;
   transition: transform 1s cubic-bezier(0.22, 1, 0.36, 1);
 }
@@ -816,45 +819,226 @@ to everything that made it this far.`
 
     <div class="works-grid">
 
-      <!-- FUTURE ARTWORK 01 -->
+      <!-- 01: SHE WHO STAYS -->
 
-      <div class="work-card placeholder-card">
-        <div class="artwork">
-          <div class="artwork-placeholder">Artwork Coming Soon</div>
+      <article class="work-card">
+
+        <button
+          type="button"
+          class="artwork-trigger"
+          aria-label="View artwork details for She Who Stays"
+          onclick="openModal(
+            'Women Who Remain',
+            'She Who Stays',
+            '110 × 94 cm',
+            'Oil on canvas',
+            '2024',
+            `She was not born an angel,
+yet the world expects her to carry pain with grace and silence.
+Strong and unshaken, she holds together what others abandon, protecting life while fighting to protect her own dignity.
+Her wings are not made to escape,
+but to stand firm against pressure, injustice, and the weight placed upon women.
+In her arms, the child rests and grows, while within her, battles continue unseen.
+She carries exhaustion, sacrifice, and resilience all at once.
+Even through suffering, her spirit refuses to kneel.
+What appears gentle is also powerful
+a woman demanding the right to exist beyond sacrifice, to be heard beyond motherhood, and to remain without losing herself.`
+          )"
+        >
+          <div class="artwork">
+            <img
+              src="She-Who-Stays.jpg.jpg"
+              alt="She Who Stays by Pati Yestro"
+              loading="lazy"
+            >
+          </div>
+        </button>
+
+        <div class="work-info">
+          <h3 class="work-title">She Who Stays</h3>
+          <p class="work-meta">Oil on Canvas · 2024</p>
         </div>
-      </div>
 
-      <!-- FUTURE ARTWORK 02 -->
+      </article>
 
-      <div class="work-card placeholder-card">
-        <div class="artwork">
-          <div class="artwork-placeholder">Artwork Coming Soon</div>
+      <!-- 02: THE SILENT STORM -->
+
+      <article class="work-card">
+
+        <button
+          type="button"
+          class="artwork-trigger"
+          aria-label="View artwork details for The Silent Storm"
+          onclick="openModal(
+            'Women Who Remain',
+            'The Silent Storm',
+            '140 × 110 cm',
+            'Oil and acrylic on canvas',
+            '2024',
+            `Her head is a maze of thought no shelter, no exit, only looping corridors of memory.
+Where hair should rest, a bare brain is exposed, alive with noise too heavy for words
+Split in two, she holds contradiction inside her own skull one half reason, one half rupture.
+Her mouth is open, but what escapes is not language it is the pressure of everything she has been forced to contain.
+She is not calm.
+She is what calm looks like before it breaks.
+A silent storm trapped in bone and thought, screaming without sound, thinking without mercy, enduring without end.`
+          )"
+        >
+          <div class="artwork">
+            <img
+              src="The-Silent.jpg.jpg"
+              alt="The Silent Storm by Pati Yestro"
+              loading="lazy"
+            >
+          </div>
+        </button>
+
+        <div class="work-info">
+          <h3 class="work-title">The Silent Storm</h3>
+          <p class="work-meta">Oil &amp; Acrylic on Canvas · 2024</p>
         </div>
-      </div>
 
-      <!-- FUTURE ARTWORK 03 -->
+      </article>
 
-      <div class="work-card placeholder-card">
-        <div class="artwork">
-          <div class="artwork-placeholder">Artwork Coming Soon</div>
+      <!-- 03: RECLAIMING TIME -->
+
+      <article class="work-card">
+
+        <button
+          type="button"
+          class="artwork-trigger"
+          aria-label="View artwork details for Reclaiming Time"
+          onclick="openModal(
+            'Women Who Remain',
+            'Reclaiming Time',
+            '90 × 70 cm',
+            'Oil on canvas',
+            '2023',
+            `In hues of courage, strokes of might,
+A woman stands against the plight,
+Repairing time, a broken clock,
+Symbol of struggles, etched in rock.
+
+With steady hands and eyes ablaze,
+She fights for rights, in endless ways,
+The broken gears, the shattered dreams,
+Echoes of silenced, unheard screams.
+
+Each tick, each tock, a battle won,
+In the journey fought, yet far from done,
+For women rise, reclaiming space,
+In the tapestry of time, they find their grace.
+
+With soldering iron, she mends the past,
+A symbol of resilience, built to last,
+For in repairing time, she crafts the key,
+Unlocking freedoms, for all to see.
+
+In this painting bold, the message clear,
+Of women's strength, in the face of courage,
+Reclaiming time, with every stroke,
+For a future where equality's bespoke.`
+          )"
+        >
+          <div class="artwork">
+            <img
+              src="Reclaiming.jpg.jpg"
+              alt="Reclaiming Time by Pati Yestro"
+              loading="lazy"
+            >
+          </div>
+        </button>
+
+        <div class="work-info">
+          <h3 class="work-title">Reclaiming Time</h3>
+          <p class="work-meta">Oil on Canvas · 2023</p>
         </div>
-      </div>
 
-      <!-- FUTURE ARTWORK 04 -->
+      </article>
 
-      <div class="work-card placeholder-card">
-        <div class="artwork">
-          <div class="artwork-placeholder">Artwork Coming Soon</div>
+      <!-- 04: EUPHORIC EMBRACE -->
+
+      <article class="work-card">
+
+        <button
+          type="button"
+          class="artwork-trigger"
+          aria-label="View artwork details for Euphoric Embrace"
+          onclick="openModal(
+            'Women Who Remain',
+            'Euphoric Embrace',
+            '90 × 70 cm',
+            'Oil on canvas',
+            '2024',
+            `She rises from still waters wearing beauty like survival,
+a peacock wrapped around her silence like a crown no one gave willingly.
+Her eyes are closed, not in weakness, but in remembrance.
+She is the woman who remains after the noise, after the burning,
+after time itself has tried to erase her name.
+The peacock becomes more than ornament it is pride, protection, and rebirth.
+And even in silence,
+she refuses disappearance.`
+          )"
+        >
+          <div class="artwork">
+            <img
+              src="Euphoric.jpg.jpg"
+              alt="Euphoric Embrace by Pati Yestro"
+              loading="lazy"
+            >
+          </div>
+        </button>
+
+        <div class="work-info">
+          <h3 class="work-title">Euphoric Embrace</h3>
+          <p class="work-meta">Oil on Canvas · 2024</p>
         </div>
-      </div>
 
-      <!-- FUTURE ARTWORK 05 -->
+      </article>
 
-      <div class="work-card placeholder-card">
-        <div class="artwork">
-          <div class="artwork-placeholder">Artwork Coming Soon</div>
+      <!-- 05: GUARDIAN OF ETERNITY (NDABAGA) -->
+
+      <article class="work-card">
+
+        <button
+          type="button"
+          class="artwork-trigger"
+          aria-label="View artwork details for Guardian of Eternity (Ndabaga)"
+          onclick="openModal(
+            'Women Who Remain',
+            'Guardian of Eternity (Ndabaga)',
+            '120 × 90 cm',
+            'Oil on canvas',
+            '2023',
+            `She walked into the fire where only men were named,
+Carrying the weight of a kingdom upon her shoulders.
+The drums of war did not silence her spirit,
+For her courage spoke louder than the fear of history.
+Ndabaga rose like a storm over ancient Rwanda,
+Not to destroy, but to protect what was breaking.
+In her strength lives the memory of women who remain,
+Women who bleed quietly yet continue to build nations.
+Her spear became a voice against silence,
+Her existence a wound opened inside tradition.
+She reminds us that a woman is not only life giver,
+But also guardian, warrior, and eternity itself`
+          )"
+        >
+          <div class="artwork">
+            <img
+              src="Ndabaga.jpg.jpg"
+              alt="Guardian of Eternity (Ndabaga) by Pati Yestro"
+              loading="lazy"
+            >
+          </div>
+        </button>
+
+        <div class="work-info">
+          <h3 class="work-title">Guardian of Eternity (Ndabaga)</h3>
+          <p class="work-meta">Oil on Canvas · 2023</p>
         </div>
-      </div>
+
+      </article>
 
     </div>
   </section>
