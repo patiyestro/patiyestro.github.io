@@ -1,436 +1,448 @@
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta charset="UTF-8">
+  <title>Inside the Studio — Pati Yestro</title>
+  <meta name="description" content="A glimpse inside the studio of Pati Yestro, a Rwandan contemporary visual artist.">
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-    <title>Inside the Studio — Pati Yestro</title>
+  <style>
+    :root {
+      --background: #F5F1EA;
+      --surface: #EDEAE4;
+      --text: #171513;
+      --muted: #77716A;
+      --border: rgba(23, 21, 19, 0.15);
+    }
 
-    <meta
-        name="description"
-        content="Inside the studio of Rwandan contemporary visual artist Pati Yestro."
-    >
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    html {
+      scroll-behavior: smooth;
+    }
 
-    <link
-        rel="preconnect"
-        href="https://fonts.gstatic.com"
-        crossorigin
-    >
+    body {
+      background: var(--background);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      font-weight: 300;
+      -webkit-font-smoothing: antialiased;
+    }
 
-    <link
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500&display=swap"
-        rel="stylesheet"
-    >
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
-    <style>
+    /* Navigation */
+    .site-nav {
+      width: 100%;
+      padding: 24px 7%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      border-bottom: 1px solid var(--border);
+    }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    .brand {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 25px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      white-space: nowrap;
+    }
 
-        html {
-            scroll-behavior: smooth;
-        }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
 
-        body {
-            background: #F5F1EA;
-            color: #171513;
-            font-family: "Inter", sans-serif;
-            font-weight: 300;
-            line-height: 1.6;
-        }
+    .nav-links a {
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      transition: opacity 0.3s ease;
+    }
 
-        a {
-            color: inherit;
-            text-decoration: none;
-        }
+    .nav-links a:hover {
+      opacity: 0.55;
+    }
 
-        img {
-            display: block;
-            width: 100%;
-        }
+    /* Main content */
+    .studio-container {
+      width: 86%;
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 100px 0 90px;
+    }
 
-        /* HEADER */
+    .studio-intro {
+      max-width: 760px;
+      margin-bottom: 64px;
+    }
 
-        header {
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            background: #EDEAE4;
-            border-bottom: 1px solid rgba(23, 21, 19, 0.08);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-        }
+    .section-label {
+      margin-bottom: 22px;
+      color: var(--muted);
+      font-size: 10px;
+      letter-spacing: 0.2em;
+      line-height: 1.6;
+      text-transform: uppercase;
+    }
 
-        .nav {
-            max-width: 1350px;
-            margin: auto;
-            padding: 22px 40px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
+    .studio-title {
+      margin-bottom: 24px;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(48px, 7vw, 88px);
+      font-weight: 400;
+      line-height: 0.98;
+      letter-spacing: -0.035em;
+    }
 
-        .logo {
-            font-size: 13px;
-            font-weight: 500;
-            letter-spacing: 2.5px;
-        }
+    .studio-intro-text {
+      max-width: 600px;
+      color: #55504A;
+      font-size: 14px;
+      line-height: 1.9;
+    }
 
-        .nav-links {
-            display: flex;
-            gap: 28px;
-        }
+    /* Studio photographs */
+    .studio-gallery {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 22px;
+    }
 
-        .nav-links a {
-            font-size: 10px;
-            letter-spacing: 1.8px;
-            text-transform: uppercase;
-            transition: opacity 0.3s ease;
-        }
+    .studio-image {
+      position: relative;
+      overflow: hidden;
+      background: var(--surface);
+      aspect-ratio: 4 / 5;
+    }
 
-        .nav-links a:hover {
-            opacity: 0.5;
-        }
+    .studio-image.large {
+      grid-column: 1 / -1;
+      aspect-ratio: 16 / 9;
+    }
 
-        /* PAGE INTRO */
+    .studio-image img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.7s ease;
+    }
 
-        .studio-intro {
-            max-width: 1350px;
-            margin: auto;
-            padding: 120px 40px 80px;
-        }
+    .studio-image:hover img {
+      transform: scale(1.02);
+    }
 
-        .section-label {
-            font-size: 10px;
-            letter-spacing: 2.5px;
-            text-transform: uppercase;
-            margin-bottom: 35px;
-        }
+    /* Back link */
+    .back-link-wrap {
+      padding-top: 58px;
+      text-align: center;
+    }
 
-        .studio-title {
-            font-family: "Cormorant Garamond", serif;
-            font-size: clamp(65px, 9vw, 125px);
-            font-weight: 400;
-            line-height: 0.85;
-            max-width: 1000px;
-        }
+    .back-link {
+      display: inline-block;
+      padding-bottom: 7px;
+      border-bottom: 1px solid var(--text);
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      transition: opacity 0.3s ease;
+    }
 
-        .studio-intro-text {
-            max-width: 650px;
-            margin-top: 45px;
-            font-size: 13px;
-            line-height: 1.8;
-        }
+    .back-link:hover {
+      opacity: 0.55;
+    }
 
-        /* STUDIO IMAGES */
+    /* Footer */
+    .site-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 25px 7%;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 10px;
+      letter-spacing: 0.04em;
+    }
 
-        .studio-gallery {
-            max-width: 1350px;
-            margin: auto;
-            padding: 20px 40px 120px;
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 35px;
-        }
+    .footer-name {
+      color: var(--text);
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 18px;
+    }
 
-        .studio-image {
-            background: #DED8CF;
-            overflow: hidden;
-        }
+    /* Responsive layout */
+    @media (max-width: 760px) {
+      .site-nav {
+        padding: 20px 6%;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 18px;
+      }
 
-        .studio-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.7s ease;
-        }
+      .nav-links {
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 16px 22px;
+      }
 
-        .studio-image:hover img {
-            transform: scale(1.02);
-        }
+      .nav-links a {
+        font-size: 10px;
+      }
 
-        .studio-image.large {
-            grid-column: span 2;
-        }
+      .studio-container {
+        width: 88%;
+        padding: 70px 0 65px;
+      }
 
-        .studio-image.large img {
-            aspect-ratio: 16 / 9;
-        }
+      .studio-intro {
+        margin-bottom: 40px;
+      }
 
-        .studio-image:not(.large) img {
-            aspect-ratio: 4 / 5;
-        }
+      .studio-title {
+        font-size: clamp(46px, 12vw, 68px);
+      }
 
-        /* BACK LINK */
+      .studio-intro-text {
+        font-size: 13px;
+      }
 
-        .back-section {
-            max-width: 1350px;
-            margin: auto;
-            padding: 0 40px 120px;
-        }
+      .studio-gallery {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
 
-        .back-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-            font-size: 11px;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            border-bottom: 1px solid #171513;
-            padding-bottom: 7px;
-            transition: opacity 0.3s ease;
-        }
+      .studio-image,
+      .studio-image.large {
+        grid-column: auto;
+        aspect-ratio: 4 / 5;
+      }
 
-        .back-link span {
-            font-size: 16px;
-            transition: transform 0.3s ease;
-        }
+      .back-link-wrap {
+        padding-top: 42px;
+      }
 
-        .back-link:hover {
-            opacity: 0.5;
-        }
+      .site-footer {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 22px 6%;
+        gap: 10px;
+      }
+    }
 
-        .back-link:hover span {
-            transform: translateX(-5px);
-        }
+    /* Respect visitors who prefer reduced motion */
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
 
-        /* FOOTER */
-
-        footer {
-            background: #171513;
-            color: #F5F1EA;
-            padding: 30px 40px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 9px;
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
-        }
-
-        /* MOBILE */
-
-        @media (max-width: 750px) {
-
-            .nav {
-                padding: 18px 20px;
-            }
-
-            .logo {
-                font-size: 11px;
-                letter-spacing: 2px;
-            }
-
-            .nav-links {
-                gap: 14px;
-            }
-
-            .nav-links a {
-                font-size: 8px;
-                letter-spacing: 1px;
-            }
-
-            .studio-intro {
-                padding: 80px 20px 55px;
-            }
-
-            .studio-title {
-                font-size: clamp(55px, 15vw, 85px);
-            }
-
-            .studio-intro-text {
-                margin-top: 30px;
-                font-size: 12px;
-            }
-
-            .studio-gallery {
-                grid-template-columns: 1fr;
-                padding: 20px 20px 80px;
-                gap: 20px;
-            }
-
-            .studio-image.large {
-                grid-column: span 1;
-            }
-
-            .studio-image.large img {
-                aspect-ratio: 4 / 5;
-            }
-
-            .studio-image:not(.large) img {
-                aspect-ratio: 4 / 5;
-            }
-
-            .back-section {
-                padding: 0 20px 80px;
-            }
-
-            footer {
-                padding: 25px 20px;
-                flex-direction: column;
-                gap: 10px;
-                align-items: flex-start;
-            }
-
-        }
-
-    </style>
-
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<header>
+  <nav class="site-nav">
+    <a class="brand" href="index.html">Pati Yestro</a>
 
-    <nav class="nav">
+    <div class="nav-links">
+      <a href="index.html#work">Work</a>
+      <a href="works.html">Collections</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#statement">Statement</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+  </nav>
 
-        <a href="index.html" class="logo">
-            PATI YESTRO
-        </a>
+  <main class="studio-container">
 
-        <div class="nav-links">
+    <header class="studio-intro">
+      <p class="section-label">A glimpse into my practice</p>
 
-            <a href="index.html#work">Work</a>
+      <h1 class="studio-title">Inside the<br>Studio</h1>
 
-            <a href="works.html">Collections</a>
+      <p class="studio-intro-text">
+        A closer look at the space, process, and moments behind my work.
+        This is where ideas take shape, paintings develop, and different
+        stories find their way onto the canvas.
+      </p>
+    </header>
 
-            <a href="index.html#about">About</a>
+    <section class="studio-gallery" aria-label="Studio photographs">
 
-            <a href="index.html#statement">Statement</a>
-
-            <a href="index.html#contact">Contact</a>
-
-        </div>
-
-    </nav>
-
-</header>
-
-<main>
-
-    <!-- INTRODUCTION -->
-
-    <section class="studio-intro">
-
-        <div class="section-label">
-            The Artist
-        </div>
-
-        <h1 class="studio-title">
-            Inside the Studio
-        </h1>
-
-        <p class="studio-intro-text">
-            A glimpse into the studio practice of Pati Yestro —
-            the spaces, processes, and moments behind the paintings.
-        </p>
-
-    </section>
-
-    <!-- STUDIO PHOTOGRAPHS -->
-
-    <section class="studio-gallery">
-
-        <!-- IMAGE 1: LARGE -->
-
-        <div class="studio-image large">
-
-            <img
-                src="Studio-1.jpg.jpeg"
-                alt="Pati Yestro in the studio"
-            >
-
-        </div>
-
-        <!-- IMAGE 2 -->
-
-        <div class="studio-image">
-
-            <img
-                src="Studio-2.jpg.jpeg"
-                alt="Pati Yestro working in the studio"
-            >
-
-        </div>
-
-        <!-- IMAGE 3 -->
-
-        <div class="studio-image">
-
-            <img
-                src="Studio-3.jpg.jpeg"
-                alt="Pati Yestro with paintings"
-            >
-
-        </div>
-
-        <!-- IMAGE 4 -->
-
-        <div class="studio-image">
-
-            <img
-                src="Studio-4.jpg.jpeg"
-                alt="Pati Yestro painting"
-            >
-
-        </div>
-
-        <!-- IMAGE 5 -->
-
-        <div class="studio-image">
-
-            <img
-                src="Studio-5.jpg.jpeg"
-                alt="Pati Yestro in his studio"
-            >
-
-        </div>
-
-    </section>
-
-    <!-- BACK TO WORK -->
-
-    <div class="back-section">
-
-        <a
-            href="index.html#work"
-            class="back-link"
+      <figure class="studio-image large">
+        <img
+          src="Studio-1.jpg.jpeg"
+          alt="Pati Yestro's art studio"
+          loading="eager"
+          fetchpriority="high"
         >
+      </figure>
 
-            <span>←</span>
+      <figure class="studio-image">
+        <img
+          src="Studio-2.jpg.jpeg"
+          alt="A moment in the artist's studio"
+          loading="lazy"
+        >
+      </figure>
 
-            Back to Selected Work
+      <figure class="studio-image">
+        <img
+          src="Studio-3.jpg.jpeg"
+          alt="Art materials and studio practice"
+          loading="lazy"
+        >
+      </figure>
 
-        </a>
+      <figure class="studio-image">
+        <img
+          src="Studio-4.jpg.jpeg"
+          alt="A view of the artist at work"
+          loading="lazy"
+        >
+      </figure>
 
+      <figure class="studio-image">
+        <img
+          src="Studio-5.jpg.jpeg"
+          alt="Another moment inside the studio"
+          loading="lazy"
+        >
+      </figure>
+
+    </section>
+
+    <div class="back-link-wrap">
+      <a class="back-link" href="index.html#work">
+        ← Back to Selected Work
+      </a>
     </div>
 
-</main>
+  </main>
 
-<footer>
+  <footer class="site-footer">
+    <a href="index.html" class="footer-name">Pati Yestro</a>
+    <p>© <span id="current-year">2026</span> Pati Yestro. All rights reserved.</p>
+  </footer>
 
-    <div>
-        © 2026 Pati Yestro
-    </div>
+  <!-- Animation library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js"></script>
 
-    <div>
-        Contemporary Visual Artist
-    </div>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const reduceMotion = window.matchMedia(
+        "(prefers-reduced-motion: reduce)"
+      ).matches;
 
-</footer>
+      // Update the copyright year automatically
+      document.getElementById("current-year").textContent =
+        new Date().getFullYear();
+
+      // Keep the page fully visible if animations are unavailable
+      if (reduceMotion || typeof anime === "undefined") {
+        return;
+      }
+
+      // Animate the introduction when the page opens
+      anime({
+        targets: ".section-label, .studio-title, .studio-intro-text",
+        translateY: [22, 0],
+        opacity: [0, 1],
+        duration: 950,
+        delay: anime.stagger(160),
+        easing: "easeOutCubic"
+      });
+
+      // Reveal photographs gently as visitors scroll
+      const studioImages = document.querySelectorAll(".studio-image");
+
+      if ("IntersectionObserver" in window) {
+        studioImages.forEach(function (image, index) {
+          image.style.opacity = "0";
+          image.style.transform = "translateY(28px)";
+
+          const observer = new IntersectionObserver(
+            function (entries) {
+              entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                  anime({
+                    targets: entry.target,
+                    opacity: [0, 1],
+                    translateY: [28, 0],
+                    duration: 850,
+                    delay: (index % 2) * 100,
+                    easing: "easeOutCubic",
+                    complete: function () {
+                      entry.target.style.transform = "";
+                    }
+                  });
+
+                  observer.unobserve(entry.target);
+                }
+              });
+            },
+            {
+              threshold: 0.12
+            }
+          );
+
+          observer.observe(image);
+        });
+      }
+
+      // Reveal the back link when it enters the screen
+      const backLink = document.querySelector(".back-link");
+
+      if (backLink && "IntersectionObserver" in window) {
+        const linkObserver = new IntersectionObserver(
+          function (entries) {
+            entries.forEach(function (entry) {
+              if (entry.isIntersecting) {
+                anime({
+                  targets: entry.target,
+                  opacity: [0, 1],
+                  translateY: [12, 0],
+                  duration: 700,
+                  easing: "easeOutCubic"
+                });
+
+                linkObserver.unobserve(entry.target);
+              }
+            });
+          },
+          {
+            threshold: 0.1
+          }
+        );
+
+        linkObserver.observe(backLink);
+      }
+    });
+  </script>
 
 </body>
-
 </html>
