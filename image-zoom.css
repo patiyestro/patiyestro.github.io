@@ -1,0 +1,146 @@
+
+/* PATI YESTRO — UNIVERSAL IMAGE ZOOM */
+
+#py-zoom-viewer {
+  position: fixed;
+  inset: 0;
+  z-index: 999999;
+  display: none;
+  background: rgba(18, 17, 16, 0.97);
+  color: white;
+  touch-action: none;
+  overscroll-behavior: contain;
+}
+
+#py-zoom-viewer.py-open {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#py-zoom-stage {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  touch-action: none;
+  cursor: grab;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+#py-zoom-stage.py-dragging {
+  cursor: grabbing;
+}
+
+#py-zoom-image {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  transform-origin: center center;
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-drag: none;
+  will-change: transform;
+}
+
+#py-zoom-close {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  z-index: 5;
+  width: 46px;
+  height: 46px;
+  border: 1px solid rgba(255,255,255,.25);
+  border-radius: 50%;
+  background: rgba(35,33,31,.8);
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+#py-zoom-status {
+  position: absolute;
+  top: 25px;
+  left: 22px;
+  z-index: 5;
+  padding: 10px 14px;
+  border-radius: 30px;
+  background: rgba(35,33,31,.8);
+  font: 11px/1.2 Arial, sans-serif;
+  letter-spacing: .08em;
+  pointer-events: none;
+}
+
+#py-zoom-controls {
+  position: absolute;
+  z-index: 5;
+  left: 50%;
+  bottom: 24px;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 7px;
+  border: 1px solid rgba(255,255,255,.22);
+  border-radius: 40px;
+  background: rgba(35,33,31,.9);
+}
+
+#py-zoom-controls button {
+  width: 44px;
+  height: 44px;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: white;
+  font-size: 25px;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+#py-zoom-controls button:hover,
+#py-zoom-close:hover {
+  background: rgba(255,255,255,.16);
+}
+
+#py-zoom-help {
+  position: absolute;
+  bottom: 90px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: rgba(255,255,255,.7);
+  font: 11px/1.6 Arial, sans-serif;
+  text-align: center;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.py-zoomable {
+  cursor: zoom-in;
+}
+
+@media (max-width: 600px) {
+  #py-zoom-close {
+    top: 12px;
+    right: 12px;
+  }
+
+  #py-zoom-status {
+    top: 18px;
+    left: 12px;
+  }
+
+  #py-zoom-controls {
+    bottom: 18px;
+  }
+
+  #py-zoom-help {
+    bottom: 83px;
+  }
+}
