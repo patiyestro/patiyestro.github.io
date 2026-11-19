@@ -61,7 +61,6 @@ button {
   font: inherit;
 }
 
-
 /* HEADER */
 
 header {
@@ -100,7 +99,6 @@ nav a {
 nav a:hover {
   opacity: 0.45;
 }
-
 
 /* HERO */
 
@@ -160,7 +158,6 @@ nav a:hover {
   }
 }
 
-
 /* GENERAL SECTIONS */
 
 section {
@@ -184,7 +181,6 @@ section {
   font-weight: 500;
   line-height: 0.95;
 }
-
 
 /* SELECTED WORK */
 
@@ -218,7 +214,6 @@ section {
   opacity: 0;
   transform: translateY(28px);
 }
-
 
 /* ARTWORK — ORIGINAL IMAGE PROPORTIONS */
 
@@ -254,7 +249,6 @@ section {
 .work-card:hover .artwork::after {
   opacity: 1;
 }
-
 
 /* SUBTLE PROFESSIONAL HOVER */
 
@@ -294,7 +288,6 @@ section {
   text-transform: uppercase;
   color: var(--muted);
 }
-
 
 /* EXPLORE LINKS */
 
@@ -368,7 +361,6 @@ section {
   transform: translateX(6px);
 }
 
-
 /* ABOUT */
 
 .about {
@@ -386,7 +378,6 @@ section {
   font-size: 16px;
   line-height: 1.95;
 }
-
 
 /* ARTIST STATEMENT */
 
@@ -416,7 +407,6 @@ section {
   font-size: 17px;
   line-height: 2;
 }
-
 
 /* EXHIBITIONS */
 
@@ -458,7 +448,6 @@ section {
   color: var(--muted);
 }
 
-
 /* CERTIFICATES */
 
 .certificates {
@@ -488,7 +477,6 @@ section {
   color: var(--muted);
 }
 
-
 /* QUOTE */
 
 .quote-section {
@@ -506,7 +494,6 @@ section {
   font-weight: 400;
   line-height: 1.15;
 }
-
 
 /* CONTACT */
 
@@ -560,7 +547,6 @@ section {
   border-color: transparent;
 }
 
-
 /* FOOTER */
 
 footer {
@@ -574,7 +560,6 @@ footer {
   letter-spacing: 1.8px;
   text-transform: uppercase;
 }
-
 
 /* ARTWORK MODAL */
 
@@ -661,7 +646,6 @@ footer {
   font-size: 11px;
 }
 
-
 /* POEM / DESCRIPTION */
 
 .modal-description {
@@ -682,14 +666,12 @@ footer {
   margin-bottom: 0;
 }
 
-
 /* SCROLL REVEAL */
 
 .reveal-element {
   opacity: 0;
   transform: translateY(25px);
 }
-
 
 /* MOBILE */
 
@@ -843,7 +825,6 @@ footer {
   }
 }
 
-
 @media (max-width: 500px) {
 
   nav {
@@ -892,7 +873,6 @@ footer {
   }
 }
 
-
 /* REDUCED MOTION */
 
 @media (prefers-reduced-motion: reduce) {
@@ -925,9 +905,7 @@ footer {
 
 </head>
 
-
 <body>
-
 
 <!-- HEADER -->
 
@@ -946,7 +924,6 @@ footer {
   </nav>
 
 </header>
-
 
 <!-- HERO -->
 
@@ -974,7 +951,6 @@ footer {
 
 </section>
 
-
 <!-- SELECTED WORK -->
 
 <section id="work">
@@ -999,9 +975,7 @@ footer {
 
   </div>
 
-
   <div class="works-grid">
-
 
     <!-- WORK 1 — THE PRICE OF BECOMING HUMAN -->
 
@@ -1033,8 +1007,81 @@ footer {
 
     </article>
 
+    <!-- WORK 2 — THE ROOM I MISTOOK FOR HOME -->
 
-    <!-- WORK 2 — WHAT TIME COULDN'T ERASE -->
+    <article
+      class="work-card"
+      onclick="openModal(
+        'The Room We Drown In',
+        'The Room I Mistook for Home',
+        '90 × 79 cm',
+        'Oil and mixed media on canvas',
+        '2026',
+        `“If I keep becoming who they want me to be, will I ever become who I dream of being?”
+
+I was taught how to behave, what to believe and what kind of person I should become. I listened because I wanted to belong. I made room for their rules, their judgements and their expectations, believing that perhaps they knew better than I did. I kept adjusting myself to fit into a world that had already decided who I should be. Yet somewhere inside me, there was still a voice asking what about the person I wanted to become?
+
+The more I listened, the more their voices found a place within me. Their expectations became part of my thoughts, their judgements became my doubts, and their rules slowly shaped the way I lived. I gave them so much space that I began to lose parts of myself. Still, something inside me refused to disappear completely. Like flowers reaching towards the light, my hope continued to grow. It carried the dreams I had before the world told me what was possible, and reminded me that there was still a person I wanted to become.
+
+Now I find myself caught between the person society has shaped and the person I still hope to become. I wonder how much of myself I have given away, and whether I can still find my way back. Perhaps I have not completely lost myself. Perhaps the little hope still growing within me is proof that I have not given up.
+
+“Even when the world has taken almost everything from me, I still hope to become someone of my own choosing`
+      )"
+    >
+
+      <div class="artwork">
+
+        <img
+          src="The-Room-I-Mistook-for-Home.jpeg"
+          alt="The Room I Mistook for Home by Pati Yestro"
+        >
+
+      </div>
+
+      <div class="work-info">
+        <h3 class="work-title">The Room I Mistook for Home</h3>
+        <div class="work-meta">Oil and Mixed Media · 2026</div>
+      </div>
+
+    </article>
+
+    <!-- WORK 3 — THE ROOM I NEVER THOUGHT TO QUESTION -->
+
+    <article
+      class="work-card"
+      onclick="openModal(
+        'The Room We Drown In',
+        'The Room I Never Thought to Question',
+        '80 × 65 cm',
+        'Oil and mixed media',
+        '2026',
+        `“My soul, when did you begin to believe that every voice around you knew better than your own?”
+
+I remember how easy it was to listen. They spoke about how life should be lived, what was right, what was wrong and what a person should become. I did not see any harm in hearing them. I thought listening was part of growing, that accepting their ways was part of belonging. But tell me, my soul, did we ever stop to ask whether these were the lives we wanted for ourselves?
+
+At first, their voices were distant, almost impossible to see. Yet I began to give them my attention. I allowed their words to sit beside my own beliefs, sometimes questioning what I had always known. I started making small changes, thinking they were harmless. Still, there was so much of me left untouched. My dreams were alive, my hopes were still growing, and somewhere inside, I held on to the person I wished to become. I did not know that the little space I was making for their voices could one day become so difficult to reclaim.
+
+“My soul, let us not forget who we were before we learned to become who the world wanted us to be.”`
+      )"
+    >
+
+      <div class="artwork">
+
+        <img
+          src="The-Room-I-Never-Thought-to-Question.jpeg"
+          alt="The Room I Never Thought to Question by Pati Yestro"
+        >
+
+      </div>
+
+      <div class="work-info">
+        <h3 class="work-title">The Room I Never Thought to Question</h3>
+        <div class="work-meta">Oil and Mixed Media · 2026</div>
+      </div>
+
+    </article>
+
+    <!-- WORK 4 — WHAT TIME COULDN'T ERASE -->
 
     <article
       class="work-card"
@@ -1075,8 +1122,7 @@ Even if time erases her beauty, changes her face, and takes away her youth, some
 
     </article>
 
-
-    <!-- WORK 3 — SHE CARRIES THE WORLD -->
+    <!-- WORK 5 — SHE CARRIES THE WORLD -->
 
     <article
       class="work-card"
@@ -1140,57 +1186,41 @@ but because from her strength and spirit the world will learn to stay.`
 
     </article>
 
-
-    <!-- WORK 4 — THE ANATOMY OF ABSENCE -->
+    <!-- WORK 6 — AFTER LIVING -->
 
     <article
       class="work-card"
       onclick="openModal(
         'What Survived Me',
-        'The Anatomy of Absence',
-        '100 × 100 cm',
-        'Acrylic on Canvas',
+        'After Living',
+        '100 × 60 cm',
+        'Oil and mixed media on canvas',
         '2026',
-        `I have learned that a person can disappear
-from their body.
-Something can go and leave its shape behind.
+        `They tell me, “You made it through,” as if I came out whole on the other side, as if the storm simply passed and left everything as it was. But I know what happened in the dark. I know the parts of me that did not make it. They fell silent, then slowly crumbled into the earth, leaving empty spaces where my voice and laughter once lived. What remains is not the person I used to be. It is a reconstruction across three generations, three lives leaning into one another, trying to carry a body that has become half-metal, half-ghost and half-earth.
 
-I have learned that I can hold rooms in my body that I can no longer enter, and hold memories without their doors, and have a silence in me that has learned the weight of my name.
+The grandmother, with mushrooms growing quietly through her hair, holds the roots of what remains. Beside her, the mother leans close, whispering old memories of blood into these unfamiliar circuits. From their bodies, cables stretch downwards, carrying history, memory and the weight of everything they have endured. Their currents flow into the youngest daughter, running through her skin and holding together what might otherwise fall apart. What one generation could not carry alone becomes something the next must help hold.
 
-There is something small and bright in me that I can't explain.
-It does not promise to heal me,
-or ask me to become who I was.
-
-Perhaps I am not what was left when everything else was taken away.
-Perhaps I am the shape it gave me.`
+We do not celebrate being alive; we simply acknowledge the weight of it. We have gathered the broken pieces of our own ruins and connected what remains so the youngest does not have to stand alone. We are not healed, nor are we what we once were. We are three generations of what stayed, learning to breathe with everything that is missing.`
       )"
     >
 
       <div class="artwork">
 
         <img
-          src="the-anatomy-of-absence.jpg.jpeg"
-          alt="The Anatomy of Absence by Pati Yestro"
+          src="After-Living.jpeg"
+          alt="After Living by Pati Yestro"
         >
 
       </div>
 
       <div class="work-info">
-
-        <h3 class="work-title">
-          The Anatomy of Absence
-        </h3>
-
-        <div class="work-meta">
-          Acrylic on Canvas · 2026
-        </div>
-
+        <h3 class="work-title">After Living</h3>
+        <div class="work-meta">Oil and Mixed Media · 2026</div>
       </div>
 
     </article>
 
-
-    <!-- WORK 5 — THE ROOT OF OUR BECOMING -->
+    <!-- WORK 7 — THE ROOT OF OUR BECOMING -->
 
     <article
       class="work-card"
@@ -1232,8 +1262,41 @@ Through time and storm, through loss and pain she is the one who remains.`
 
     </article>
 
+    <!-- WORK 8 — FRAGILE MECHANICS -->
 
-    <!-- WORK 6 — NOT FRAGILE AS FLOWERS, FRAGILE AS BOMB -->
+    <article
+      class="work-card"
+      onclick="openModal(
+        'What Survived Me',
+        'Fragile Mechanics',
+        '100 × 60 cm',
+        'Oil and mixed media on canvas',
+        '2026',
+        `They think that because I was rebuilt with heavy things, I can no longer feel the light things. They believe that once you fall apart, you become strong on the outside and nothing can hurt you again. But look at me sitting here in the quiet, made from old wood, copper colours and the scars I carry, resting inside what is left of me. Across my chest, the wound is still open, showing where everything inside me once broke apart.
+
+My legs rest on wooden rockers, moving between the person I used to be and the silence that came after. And yet, a butterfly lands on my fingertips, small, bright and full of life. It does not ask me to become whole again or pretend that nothing happened. It simply rests on my rebuilt hands, asking a quiet question: can something made to survive still hold something fragile without breaking it?
+
+We are not “healed.” We are just what stayed, learning how to let light touch the ruins.`
+      )"
+    >
+
+      <div class="artwork">
+
+        <img
+          src="Fragile-Mechanics.jpeg"
+          alt="Fragile Mechanics by Pati Yestro"
+        >
+
+      </div>
+
+      <div class="work-info">
+        <h3 class="work-title">Fragile Mechanics</h3>
+        <div class="work-meta">Oil and Mixed Media · 2026</div>
+      </div>
+
+    </article>
+
+    <!-- WORK 9 — NOT FRAGILE AS FLOWERS, FRAGILE AS BOMB -->
 
     <article
       class="work-card"
@@ -1279,8 +1342,7 @@ In her stillness lives survival, tension, and quiet power, making her a woman wh
 
     </article>
 
-
-    <!-- WORK 7 — THE AFTERMATH OF PARENTAL LOVE -->
+    <!-- WORK 10 — THE AFTERMATH OF PARENTAL LOVE -->
 
     <article
       class="work-card"
@@ -1323,9 +1385,7 @@ she leans toward a light the shadow cannot follow.`
 
     </article>
 
-
   </div>
-
 
   <!-- EXPLORE LINKS -->
 
@@ -1338,7 +1398,6 @@ she leans toward a light the shadow cannot follow.`
       Explore More
       <span>→</span>
     </a>
-
 
     <a
       href="studio.html"
@@ -1359,7 +1418,6 @@ she leans toward a light the shadow cannot follow.`
 
 </section>
 
-
 <!-- ABOUT -->
 
 <section id="about" class="about">
@@ -1376,7 +1434,6 @@ she leans toward a light the shadow cannot follow.`
     </h2>
 
   </div>
-
 
   <div class="about-content">
 
@@ -1408,7 +1465,6 @@ she leans toward a light the shadow cannot follow.`
 
 </section>
 
-
 <!-- ARTIST STATEMENT -->
 
 <div id="statement" class="statement-section">
@@ -1429,7 +1485,6 @@ she leans toward a light the shadow cannot follow.`
         </h2>
 
       </div>
-
 
       <div class="statement-content">
 
@@ -1457,7 +1512,6 @@ she leans toward a light the shadow cannot follow.`
 
 </div>
 
-
 <!-- EXHIBITIONS & AWARDS -->
 
 <section class="exhibitions">
@@ -1474,7 +1528,6 @@ she leans toward a light the shadow cannot follow.`
     </h2>
 
   </div>
-
 
   <div>
 
@@ -1500,7 +1553,6 @@ she leans toward a light the shadow cannot follow.`
 
       </div>
 
-
       <div class="exhibition-item">
 
         <div class="exhibition-year">
@@ -1520,7 +1572,6 @@ she leans toward a light the shadow cannot follow.`
         </div>
 
       </div>
-
 
       <div class="exhibition-item">
 
@@ -1542,7 +1593,6 @@ she leans toward a light the shadow cannot follow.`
 
       </div>
 
-
       <div class="exhibition-item">
 
         <div class="exhibition-year">
@@ -1562,7 +1612,6 @@ she leans toward a light the shadow cannot follow.`
         </div>
 
       </div>
-
 
       <div class="exhibition-item">
 
@@ -1584,7 +1633,6 @@ she leans toward a light the shadow cannot follow.`
 
       </div>
 
-
       <div class="exhibition-item">
 
         <div class="exhibition-year">
@@ -1604,7 +1652,6 @@ she leans toward a light the shadow cannot follow.`
         </div>
 
       </div>
-
 
       <div class="exhibition-item">
 
@@ -1628,7 +1675,6 @@ she leans toward a light the shadow cannot follow.`
 
     </div>
 
-
     <!-- CERTIFICATES -->
 
     <div class="certificates">
@@ -1651,7 +1697,6 @@ she leans toward a light the shadow cannot follow.`
 
         </div>
 
-
         <div class="certificate-item">
 
           <div class="certificate-title">
@@ -1672,7 +1717,6 @@ she leans toward a light the shadow cannot follow.`
 
 </section>
 
-
 <!-- QUOTE -->
 
 <section class="quote-section">
@@ -1682,7 +1726,6 @@ she leans toward a light the shadow cannot follow.`
   </div>
 
 </section>
-
 
 <!-- CONTACT -->
 
@@ -1703,7 +1746,6 @@ she leans toward a light the shadow cannot follow.`
         </h2>
 
       </div>
-
 
       <div class="contact-links">
 
@@ -1745,7 +1787,6 @@ she leans toward a light the shadow cannot follow.`
 
 </main>
 
-
 <!-- FOOTER -->
 
 <footer>
@@ -1759,7 +1800,6 @@ she leans toward a light the shadow cannot follow.`
   </div>
 
 </footer>
-
 
 <!-- ARTWORK MODAL -->
 
@@ -1789,7 +1829,6 @@ she leans toward a light the shadow cannot follow.`
       id="modalTitle"
     ></h2>
 
-
     <div class="modal-details">
 
       <div>
@@ -1805,7 +1844,6 @@ she leans toward a light the shadow cannot follow.`
 
       </div>
 
-
       <div>
 
         <span class="detail-label">
@@ -1818,7 +1856,6 @@ she leans toward a light the shadow cannot follow.`
         ></span>
 
       </div>
-
 
       <div>
 
@@ -1833,7 +1870,6 @@ she leans toward a light the shadow cannot follow.`
 
       </div>
 
-
       <div>
 
         <span class="detail-label">
@@ -1846,7 +1882,6 @@ she leans toward a light the shadow cannot follow.`
         ></span>
 
       </div>
-
 
       <div>
 
@@ -1863,7 +1898,6 @@ she leans toward a light the shadow cannot follow.`
 
     </div>
 
-
     <div
       class="modal-description"
       id="modalDescription"
@@ -1873,11 +1907,9 @@ she leans toward a light the shadow cannot follow.`
 
 </div>
 
-
 <!-- JAVASCRIPT -->
 
 <script>
-
 
 /* ================================= */
 /* ARTWORK MODAL */
@@ -1913,7 +1945,6 @@ function openModal(
   document.getElementById("modalYear").textContent =
     year;
 
-
   document.getElementById("modalDescription").innerHTML =
     description
       .trim()
@@ -1931,18 +1962,15 @@ function openModal(
       })
       .join("");
 
-
   var modal =
     document.getElementById("artworkModal");
 
   var modalContent =
     modal.querySelector(".modal-content");
 
-
   modal.classList.add("active");
 
   document.body.style.overflow = "hidden";
-
 
   /* Smooth modal entrance */
 
@@ -1973,7 +2001,6 @@ function openModal(
 
 }
 
-
 function closeModal() {
 
   var modal =
@@ -1981,7 +2008,6 @@ function closeModal() {
 
   var modalContent =
     modal.querySelector(".modal-content");
-
 
   if (
     window.matchMedia(
@@ -1995,7 +2021,6 @@ function closeModal() {
     return;
 
   }
-
 
   anime({
     targets: modalContent,
@@ -2018,7 +2043,6 @@ function closeModal() {
 
 }
 
-
 function closeModalOutside(event) {
 
   if (
@@ -2031,7 +2055,6 @@ function closeModalOutside(event) {
   }
 
 }
-
 
 document.addEventListener(
   "keydown",
@@ -2046,7 +2069,6 @@ document.addEventListener(
   }
 );
 
-
 /* ================================= */
 /* PROFESSIONAL PAGE ENTRANCE */
 /* ================================= */
@@ -2060,13 +2082,11 @@ document.addEventListener(
         "(prefers-reduced-motion: reduce)"
       ).matches;
 
-
     if (reduceMotion) {
 
       return;
 
     }
-
 
     /* HERO */
 
@@ -2102,7 +2122,6 @@ document.addEventListener(
       duration: 650
     }, "-=400");
 
-
     /* ================================= */
     /* SECTION REVEALS */
     /* ================================= */
@@ -2111,13 +2130,11 @@ document.addEventListener(
       ".about, .statement-section, .exhibitions, .quote-section, .contact-section"
     );
 
-
     revealElements.forEach(function(element) {
 
       element.classList.add("reveal-element");
 
     });
-
 
     /* ================================= */
     /* ARTWORK REVEALS */
@@ -2126,7 +2143,6 @@ document.addEventListener(
     var workCards =
       document.querySelectorAll(".work-card");
 
-
     workCards.forEach(function(card) {
 
       card.style.opacity = "0";
@@ -2134,7 +2150,6 @@ document.addEventListener(
         "translateY(28px)";
 
     });
-
 
     /* ================================= */
     /* INTERSECTION OBSERVER */
@@ -2148,7 +2163,6 @@ document.addEventListener(
 
             var element =
               entry.target;
-
 
             /* ELEMENT ENTERS THE SCREEN */
 
@@ -2165,7 +2179,6 @@ document.addEventListener(
               });
 
             }
-
 
             /* ELEMENT LEAVES THE SCREEN */
 
@@ -2188,13 +2201,11 @@ document.addEventListener(
         }
       );
 
-
     workCards.forEach(function(card) {
 
       observer.observe(card);
 
     });
-
 
     revealElements.forEach(function(element) {
 
@@ -2204,7 +2215,6 @@ document.addEventListener(
 
   }
 );
-
 
 /* ================================= */
 /* SAVE AND RESTORE HOMEPAGE SCROLL */
@@ -2221,7 +2231,6 @@ document.querySelector(".explore-more-link").addEventListener(
 
   }
 );
-
 
 window.addEventListener("pageshow", function() {
 
@@ -2264,7 +2273,6 @@ window.addEventListener("pageshow", function() {
 });
 
 </script>
-
 
 </body>
 </html>
